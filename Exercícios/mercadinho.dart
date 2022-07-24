@@ -29,6 +29,9 @@ void main() {
         print("Valor fora da faixa! ");
     }
     acumulador += valor;
-  }
+    print("Você deseja continuar esta operção ?\n" +
+        "se sim digite [sim] se não digite não [nao]");
+        continua = stdin.readLineSync();
+  } while (continua == "sim");
   print("O valor total a ser pago é de ${acumulador}");
 }
