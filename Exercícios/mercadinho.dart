@@ -1,9 +1,9 @@
 import 'dart:io';
 
 void main() {
-  int continua = 1;
-  double acumulador = 0;
-  while (continua >= 1) {
+  String? continua = "";
+  double acumulador = 0.0;
+  do {
     double valor = 0;
     print("======Menu======");
     print("Digite [1] para caderno 12 reais");
@@ -11,8 +11,8 @@ void main() {
     print("Digite [3] para borracha 0.25 centavos");
     print("Digite [4] para mochila 50.00 reais");
     String? op = stdin.readLineSync();
-    int continua = int.parse(op!);
-    switch (continua) {
+    int opcao = int.parse(op!);
+    switch (opcao) {
       case 1:
         valor = 12.00;
         break;

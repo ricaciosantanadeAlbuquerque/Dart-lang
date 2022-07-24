@@ -2,7 +2,7 @@ import 'dart:io';
 
 void main() {
   int j = 0;
-  while (j < 2) {
+  while (j < 10) {
     print("Digite sua primeira nota! ");
     String? nota1 = stdin.readLineSync();
     print("Digite sua segunda Nota");
