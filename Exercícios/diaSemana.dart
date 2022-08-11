@@ -1,5 +1,6 @@
 import 'dart:io';
-
+/*6 - Faça um programa que receba um número e exiba o dia correspondente (1 – domingo, 2 – segunda, 3 – terça, 
+4 – quarta, 5 – quinta, 6 – sexta e 7 – sábado). */
 void main() {
   print("======MEUNU======");
   print("Digite [1] para Domingo.");

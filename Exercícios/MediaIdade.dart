@@ -1,5 +1,7 @@
 import 'dart:io';
-
+/* – Faça um programa que receba a idade e a altura de várias pessoas, calcule e mostre a média das alturas 
+daquelas com mais de 50 anos. Para encerrar a entrada de dados, digite uma idade que seja menor ou igual a 
+zero. Use a estrutura de repetição do ... while para resolver este problema. */
 void main() {
   int idade = 1;
   int x = 0;

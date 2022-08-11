@@ -1,5 +1,14 @@
 import 'dart:io';
-
+/*1 - O índice de massa corpórea (IMC) de um indivíduo é obtido dividindo-se o seu peso (em Kg) pelo quadrado da 
+altura (em metros). Assim, por exemplo, uma pessoa de 1,67m e pesando 55kg tem IMC igual a 19,73. Escreva um 
+programa que solicite ao usuário o seu peso em kg e sua altura em metros e, a partir deles, calcule o índice de 
+massa corpórea e apresente o resultado de acordo com a situação abaixo.
+IMC Situação
+< 18,5 Magro
+18,5 – 24,9 Normal
+25,0 – 29,9 Sobrepeso
+30,0 – 34,9 Obeso
+35,0 – 39,9 Obesidade mórbida */
 void main() {
   print("Digite sua altura Metros");
   String? altura = stdin.readLineSync();

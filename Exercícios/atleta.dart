@@ -1,5 +1,9 @@
 import 'dart:io';
-
+/*6 - Faça um programa que repita as seguintes tarefas, até que a palavra ‘não’ seja digitada:
+1. Leia a distância percorrida por um atleta;
+2. Leia o tempo que o atleta levou para percorrer a distância;
+3. Calcule e exiba sua velocidade média (Velocidade = distancia / tempo);
+Pergunte ao usuário se ele deseja continuar a executar o programa (o usuário responderá ‘sim’ ou ‘não’)*/
 void main() {
   String? continua = "sim";
   while (continua == "sim") {
