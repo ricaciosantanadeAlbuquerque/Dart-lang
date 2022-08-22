@@ -1,5 +1,5 @@
 import 'dart:io';
-
+/*10 – Faça um programa que calcula a média de 3 notas de 10 alunos. */
 void main() {
   int j = 0;
   while (j < 10) {

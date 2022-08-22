@@ -1,5 +1,10 @@
 import 'dart:io';
-
+/*7 - Faça um programa que repita as seguintes tarefas, até que o número zero seja digitado:
+a) Leia o código do produto.
+b) Leia a quantidade adquirida.
+c) Se o código for 1, escreva ‘Caderno – R$ 12.00’; Se for 2, escreva ‘Régua – R$ 2.50’; Se for 3, escreva ‘Borracha –
+R$ 0.25’; Se for 4, escreva ‘Mochila – R$ 50.00’.
+d) Calcule e exiba o total a ser pago (valor * quantidade). */
 void main() {
   int num1 = 1;
   double acumulador = 0.0;

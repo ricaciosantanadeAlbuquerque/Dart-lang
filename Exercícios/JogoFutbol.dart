@@ -1,5 +1,6 @@
 import 'dart:io';
-
+/*5 - Faça um programa para ler o número de gols marcados pelo Nacional de Patos e o número de gols marcados 
+pelo Treze. Escrever o nome do time vencedor. Caso não haja vencedor, escrever EMPATE. */
 void main() {
   print("Digite o número de gols marcados pelo nacional de Patos.");
   String? patos = stdin.readLineSync();

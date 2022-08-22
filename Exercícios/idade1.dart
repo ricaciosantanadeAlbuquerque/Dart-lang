@@ -1,5 +1,7 @@
 import 'dart:io';
-
+/*3 – Faça um programa que receba a idade de 10 pessoas e escreva a quantidade de pessoas com idades entre 0 
+e 12 anos.
+ */
 void main() {
   int cont = 0;
   String? idade;

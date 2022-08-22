@@ -1,5 +1,5 @@
 import 'dart:io';
-
+/*7 - Faça um programa que leia três valores inteiros A, B e C e diga se a soma de A + B é menor que C. */
 void main() {
   print("Digite um Valor para variável [A] ");
   String? A = stdin.readLineSync();

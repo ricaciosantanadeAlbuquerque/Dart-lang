@@ -1,5 +1,8 @@
 import 'dart:io';
-
+/*4 - Faça um programa que fique recebendo números inteiros e contando quantos números foram iguais a 2. Caso 
+o usuário digite o número zero, o programa deverá parar de receber valores e exibir quantos números foram 
+iguais a 2;
+ */
 void main() {
   int num1 = 1;
   int cont = 0;

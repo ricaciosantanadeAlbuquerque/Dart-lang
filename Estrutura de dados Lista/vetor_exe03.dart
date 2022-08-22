@@ -1,5 +1,6 @@
 import 'dart:io';
-
+/*3 - Escreva um programa que leia 10 números inteiros e os armazene em um vetor. Exiba os elementos do vetor 
+e, em seguida mostre qual é o maior elemento e a posição que ele se encontra dentro do vetor. */
 void main() {
   var lista = []; //uma lista dinâmica
   for (int i = 0; i < 10; i++) {
