@@ -1,4 +1,4 @@
-import '../model/Home_pessoa.dart';
+import '../pasta3/Home_pessoa.dart';
 
 class HomeController {
   
