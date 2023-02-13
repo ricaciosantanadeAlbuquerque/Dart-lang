@@ -16,7 +16,11 @@ void main() {
 
   print("Parabéns pelo seu aniversário, sua idade é ${Pessoa.fazerAniversario()} anos");
 
-  // função identical para comparar objetos 
+  // função identical para comparar objetos
 
-  if()
+  if (identical(p1, p2)) {
+    print("Sim eles são iguais !");
+  } else {
+    print("Não eles não sao iguais !");
+  }
 }
