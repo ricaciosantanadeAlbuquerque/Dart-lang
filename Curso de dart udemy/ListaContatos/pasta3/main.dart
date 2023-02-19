@@ -1,8 +1,8 @@
 import 'dart:io';
 
-import '../controller/Home_Controller.dart';
-import '../model/Home_pessoa.dart';
+
 import '../pasta2/Home_Controller.dart';
+import 'Home_pessoa.dart';
 
 void main() {
     HomeController controle = new HomeController();
