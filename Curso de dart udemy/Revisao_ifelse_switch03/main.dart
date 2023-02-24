@@ -18,29 +18,64 @@ repetir o laço e exibir os resultados finais.
 import 'dart:io';
 
 void main() {
-  int numeroProduto = 1;
-
-  while (numeroProduto != -1) {
-    switch (numeroProduto) {
-
-      case 1:
-       print(" Digite a quantidade ");
-       String? entrada = stdin.readLineSync();
-       
-        break;
-      case 2:
-
-        break;
-      case 3:
-
-        break;
-      case 4:
-
-        break;
-      case 5:
-
-        break;
-
+  double valorTotla = 0;
+  int numeroProduto = 0;
+  print("============VAREJO=============");
+  print("Digite o número do produto entre 1 e 5 !");
+  print("Para encerrar digite 0");
+  String? num1 = stdin.readLineSync();
+  if (num1 != null) {
+    numeroProduto = int.parse(num1);
+    while (numeroProduto > 0) {
+      switch (numeroProduto) {
+        case 1:
+          print(" Digite a quantidade ");
+          String? entrada = stdin.readLineSync();
+          if (entrada != null) {
+            int qtd = int.parse(entrada);
+            valorTotla += qtd * 2.98;
+          }
+          break;
+        case 2:
+          print(" Digite a quantidade ");
+          String? entrada = stdin.readLineSync();
+          if (entrada != null) {
+            int qtd = int.parse(entrada);
+            valorTotla += qtd * 4.50;
+          }
+          break;
+        case 3:
+          print(" Digite a quantidade ");
+          String? entrada = stdin.readLineSync();
+          if (entrada != null) {
+            int qtd = int.parse(entrada);
+            valorTotla += qtd * 9.98;
+          }
+          break;
+        case 4:
+          print(" Digite a quantidade ");
+          String? entrada = stdin.readLineSync();
+          if (entrada != null) {
+            int qtd = int.parse(entrada);
+            valorTotla += qtd * 4.49;
+          }
+          break;
+        case 5:
+          print(" Digite a quantidade ");
+          String? entrada = stdin.readLineSync();
+          if (entrada != null) {
+            int qtd = int.parse(entrada);
+            valorTotla += qtd * 6.87;
+          }
+          break;
+        default:
+          print("\nValor fora da faixa\n ");
+      }
+      print("Digite o número do produto !");
+      String? num1 = stdin.readLineSync();
+      numeroProduto = int.parse(num1!);
     }
+
+    print("O valor Total dos produtos é ${valorTotla.toStringAsFixed(2)} ");
   }
 }
