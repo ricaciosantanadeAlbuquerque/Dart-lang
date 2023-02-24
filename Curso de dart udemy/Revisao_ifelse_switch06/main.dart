@@ -1,5 +1,5 @@
 /**
- * Construa um algoritmo de PORTUGOL para determinar se o indivíduo esta com um peso
+ * Construa um algoritmo para determinar se o indivíduo esta com um peso
 favorável. Essa situação é determinada através do IMC (Índice de Massa Corpórea), que é
 definida como sendo a relação entre o peso (PESO) e o quadrado da Altura (ALTURA) do
 indivíduo. Ou seja.
