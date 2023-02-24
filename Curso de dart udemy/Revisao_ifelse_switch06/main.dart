@@ -22,25 +22,25 @@ void main() {
            double IMC = peso/(altura * altura);
 
            if(IMC < 20 ){
-            print("Abaixo do peso ");
+            print("\nAbaixo do peso\n");
            }else if(IMC >= 20 && IMC <25){
-            print(" Peso Normal ");
+            print("\nPeso Normal\n");
            }else if(IMC >= 25 && IMC < 30){
-            print(" Sobre Peso ");
+            print("\nSobre Peso\n");
            }else if(IMC >= 30 && IMC < 40){
-            print("Obeso");
+            print("\nObeso\n");
            }else{
-            print("Obeso Mórbido");
+            print("\nObeso Mórbido\n");
            }
 
         }catch(NumberFormatException){
-          print("Digite apenas valores numericos ");
+          print("\nDigite apenas valores numericos \n");
           }
     }else{
-      print(" Digite um valor válido por favor ");
+      print("\nDigite um valor válido por favor\n");
     }
   }else{
-    print("Digite um valor por favor !");
+    print("\nDigite um valor por favor !\n");
   }
 
 }
