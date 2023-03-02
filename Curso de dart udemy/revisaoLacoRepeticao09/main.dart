@@ -5,7 +5,9 @@
 import 'dart:math';
 
 void main(List<String> args) {
+
   Random p = new Random();
+  
   for (int i = 0; i < 100; i++) {
     var valor = p.nextInt(1999 + 1);
 
