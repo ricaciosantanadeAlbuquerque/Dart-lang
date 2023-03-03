@@ -13,7 +13,7 @@ void main() {
   double somaValor = 0;
   double contQtd = 0;
 
-  for (var i = 0; i < 3; i++) {
+  for (var i = 0; i < 10; i++) {
     print(" Digite a quantidade do produto ");
     String? entrada = stdin.readLineSync();
     print("Digite o valor do produto !");
