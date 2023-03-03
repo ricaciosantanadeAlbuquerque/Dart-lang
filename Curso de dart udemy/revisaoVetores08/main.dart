@@ -9,11 +9,11 @@ import 'dart:io';
 
 void main() {
   List<String> nome = [];
+  List<String> nomeAp = [];
   List<double> N = [];
   List<double> p = [];
 
-  for (var i = 0; i < 10; i++) {
-    
+  for (var i = 0; i < 3; i++) {
     for (var j = 0; j < 1; j++) {
       print("Digite o seu nome !");
       String? entradaNome = stdin.readLineSync();
@@ -45,16 +45,17 @@ void main() {
   }
   print(N);
 
-  for (var notaF in N) {
-    double media = notaF / 3;
+  for (var notaF = 0; notaF < N.length; notaF++) {
+    double media = N[notaF] / 3;
 
     if (media >= 6) {
       p.add(media);
+      nomeAp.add(nome[notaF]);
     }
   }
   print(p);
   for (var i = 0; i < p.length; i++) {
     //0 a 2
-    print("Parabéns Aluno(a) ${nome[i]} você está aprovada! com a média ${p[i].truncate()}");
+    print("Parabéns Aluno(a) ${nomeAp[i]} você está aprovada! com a média ${p[i].truncate()}");
   }
 }
