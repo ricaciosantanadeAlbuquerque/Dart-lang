@@ -16,9 +16,5 @@ void main() {
   }
   int cont1 = 0;
   //print(cont);
-  for (var x = 0; x < hotel.length; x++) {
-    for (var y = 0; y < cont; y++) {
-      print("Quarto ${cont1++} == ${hotel[x][y]}");
-    }
-  }
+
 }

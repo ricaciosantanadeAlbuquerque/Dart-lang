@@ -5,6 +5,7 @@ import "dart:io";
 
 void main() {
   var cinema = ["B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "B9", "B10"];
+  print(cinema);
   print("----------------------------------------------------------------------------");
   String opcao = "s";
 
