@@ -1,19 +1,44 @@
 /**
- * Faça uma classe que simule a ocupação dos quartos de um Hotel. Considere que existe cinco andares e dez quartos por andar. O objetivo é saber se um quarto está ocupado ou não, a classe deve possuir um menu com as opções: 1 imprimir lista de quatros 2 definir ocupação e 3- sair. Apoção 1 lista todos os quartos , informmando se estão  ou não ocupados, a opção 2  permite definir o status  ocupado ou livre para qualquer um dos quartos. A ocpção 3 encerra o programa.  
+ * Faça uma classe que simule a ocupação dos quartos de um Hotel. 
  */
+import 'dart:io';
+
 void main() {
-  List<List<String>> hotel = []; // matriz  essa  lista recebe uma outra lista. 0 a 4
-  int cont = 0;
-  for (var i = 0; i < 5; i++) {
-    List<String> quartos = []; // 0 a 9
+  int cont1 = 1;
+  String resposta = "sim";
+  List<String> hotel = ['livre', "livre", "livre", "livre", "livre"];
 
-    for (var j = 0; j < 10; j++) {
-      quartos.add("livre");
+  do {
+
+    int cont = 1;
+    for (var element in hotel) {
+      print("Quarto ${cont++}, $element");
     }
-    cont = quartos.length;
 
-    hotel.add(quartos);
-  }
-  int cont1 = 0;
-  //print(cont);
+    print("Digite o número do quarto que você deseja ocupar ");
+    String? entrada = stdin.readLineSync();
+    if (entrada != null) {
+      if (entrada.isNotEmpty)
+        try {
+          int numero = int.parse(entrada);
+
+          for (int j = 0; j < hotel.length; j++) {
+            if (numero - 1 == j) {
+              if (hotel[j] == "livre") {
+                hotel[j] = "ocupado";
+              }
+            }
+          }
+          for (int i = 0; i < hotel.length; i++) {
+            print(hotel[i]);
+          }
+        } catch (e) {
+          throw Exception("Digite apenas valores numéricos");
+        }
+    }
+
+    print("Digite [sim] para continuar e [nao] para sair ");
+    String? entrada1 = stdin.readLineSync();
+    resposta = entrada1!;
+  } while (resposta == "sim");
 }
