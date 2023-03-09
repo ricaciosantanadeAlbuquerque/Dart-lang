@@ -1,0 +1,37 @@
+/**
+ *  Faça uma função que recebe, por parâmetro, uma matriz A(6,6) e retorna a soma dos elementos da sua diagonal principal e da sua  *  *  diagonal secundária.
+ */
+void main() {
+  List<List<int>> Matrizz = [];
+  int cont = 0;
+  for (var i = 0; i < 3; i++) {
+    List<int> lista = [];
+    for (var j = 0; j < 3; j++) {
+      cont++;
+      lista.add(cont);
+    }
+    Matrizz.add(lista);
+  }
+
+  somarValor(p: Matrizz);
+}
+
+void somarValor({required List<List<int>> p}) {
+  for (var element in p) {
+    // mostrar matriz
+    print(element);
+  }
+
+  int coluna = 3;
+  for (var i = 0; i < 3; i++) {
+    for (var j = 0; j < 3; j++) {
+      if (i == j) {
+        print(p[i][j]);
+      }
+    }
+  }
+  print("=============");
+  for (var j = 0; j < 3; j++) {
+    print(p[j][coluna - 1 - j]);
+  }
+}
