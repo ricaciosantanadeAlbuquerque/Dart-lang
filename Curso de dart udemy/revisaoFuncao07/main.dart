@@ -17,6 +17,8 @@ void main() {
 }
 
 void somarValor({required List<List<int>> p}) {
+  int principal = 0;
+  int secundaria = 0;
   for (var element in p) {
     // mostrar matriz
     print(element);
@@ -26,12 +28,14 @@ void somarValor({required List<List<int>> p}) {
   for (var i = 0; i < 3; i++) {
     for (var j = 0; j < 3; j++) {
       if (i == j) {
-        print(p[i][j]);
+        principal += p[i][j]; // acumulando valores
       }
     }
   }
   print("=============");
   for (var j = 0; j < 3; j++) {
-    print(p[j][coluna - 1 - j]);
+    secundaria += p[j][coluna - 1 - j]; // 0 a 2 - indice que vai interar
   }
+  print("\nA soma da diagonal principal é $principal\n");
+  print("\nA soma da diagonal secundária é $secundaria\n");
 }
