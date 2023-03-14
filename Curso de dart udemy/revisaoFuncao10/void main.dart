@@ -32,6 +32,8 @@ void closuresFuncao() {
 
   Function media1(num n1, num n2, num n3) => (qtd) => (n1 + n2 + n3) / qtd;
 
+  Function porcentagem(desconto) => (valor) => desconto * valor;
+
   print(saudacao);
   saudacao('ricacio');
 
@@ -47,4 +49,8 @@ void closuresFuncao() {
   var quantidade = media1(7, 5, 10);
   print(quantidade);
   print(quantidade(3));
+
+  var valorDesconto = porcentagem(0.9);
+  print(valorDesconto);
+ print(valorDesconto(1000));
 }
