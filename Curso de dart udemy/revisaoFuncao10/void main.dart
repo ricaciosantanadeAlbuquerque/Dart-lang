@@ -50,7 +50,9 @@ void closuresFuncao() {
   print(quantidade);
   print(quantidade(3));
 
-  var valorDesconto = porcentagem(0.9);
-  print(valorDesconto);
- print(valorDesconto(1000));
+  var valorDesconto10 = porcentagem(0.9);
+  print(valorDesconto10);
+  print(valorDesconto10(1000));
+  var desconta20 = porcentagem(0.8);
+  print(desconta20(1000));
 }
