@@ -34,6 +34,15 @@ void closuresFuncao() {
 
   Function porcentagem(desconto) => (valor) => desconto * valor;
 
+  var novoObjeto = () {
+    int id = 0;
+    var objetoCriado = (String nome, descricao) {
+      return 'id: ${(++id).toString().padLeft(2, '0')} nome: $nome descrição: $descricao ';
+    };
+
+    return objetoCriado;
+  };
+
   print(saudacao);
   saudacao('ricacio');
 
@@ -55,4 +64,15 @@ void closuresFuncao() {
   print(valorDesconto10(1000));
   var desconta20 = porcentagem(0.8);
   print(desconta20(1000));
+
+  var objeto = novoObjeto();
+  print(objeto);
+
+  var listaObjetos = [objeto('Celular', 2000)];
+  listaObjetos.add(objeto('casa', 30.000));
+  listaObjetos.add(objeto('Moto', 18.000));
+
+  for (var p in listaObjetos) {
+    print(p);
+  }
 }
