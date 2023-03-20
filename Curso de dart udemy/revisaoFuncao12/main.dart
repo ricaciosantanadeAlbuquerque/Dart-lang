@@ -10,6 +10,6 @@ void main() {
 Function media = () {
   return (double a, double b, double c, double d) {
     var mensagem = (a + b + c + d) / 4;
-    print(mensagem);
+    print("\nMédia ${mensagem}\n");
   };
 };
