@@ -1,11 +1,10 @@
 import 'dart:io';
 
 void main() {
-  executar(() {
-    // função Anônima passa como argumento para uma função Arrow executar() => p()
+  executar(() {// função Anônima passa como argumento para uma função Arrow executar() => p()
     var maior = 0;
     var menor = 10000;
-    for (var i = 0; i < 4; i++) {
+    for (var i = 0; i < 4; i++) { // 0 a 3
       print("Digite sua idade ");
       String? entradaIdade = stdin.readLineSync();
 
