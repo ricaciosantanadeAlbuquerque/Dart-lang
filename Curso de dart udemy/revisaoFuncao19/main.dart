@@ -1,3 +1,11 @@
+/**
+ * Elabore uma função em que o usuário  fornece dois numeros e uma letra correspondente a uma operação  desejada de acordo com a tabela.
+ * A Somar
+ * B Subtrair
+ * C multiplicar
+ * D dividir
+ *  e retorna um resultado.
+ */
 import 'dart:io';
 
 void main() {
