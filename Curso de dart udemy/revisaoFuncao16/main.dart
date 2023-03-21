@@ -1,5 +1,7 @@
 import 'dart:io';
-
+/**
+ *  faça um método que recebe uma String e um array de String e verifica se nesse array de String  existe a palavra 'sexo' caso exista  retorne sim, caso contrario retorne não.
+ */
 void main() {
   var lista1 = ['ana','sexo Feminino', 'curso de informática', '36', 'anos'];
   print("Digite a palavra que você busca !");

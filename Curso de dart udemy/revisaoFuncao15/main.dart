@@ -1,6 +1,6 @@
 import 'dart:math';
 import 'dart:io';
-
+/** Faça Um método que recebe um número inteiro e um array de inteiro, pesquise se esse número  existe no array e retorne true caso o valor seja encontrado  ou false caso o valor não exista  */
 void main() {
   List<int> listaInteiro = [];
 
