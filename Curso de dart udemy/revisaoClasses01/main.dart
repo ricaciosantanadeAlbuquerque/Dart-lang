@@ -11,6 +11,7 @@ void main() {
   c1.ponta = 2.0;
   c1.tampar(); // esta tampada
   c1.status();
+  c1.rabiscar();
   print("===============================================================================================");
   Caneta c2 = Caneta();
   c2.cor = ' Azul'; // Atráves da instância da classe caneta (c2) podemos acessar todos os atribultos da Classe.
@@ -19,5 +20,6 @@ void main() {
   c2.ponta = 1.5;
   c2.destampar();
   c2.status();
+  c2.rabiscar();
   print("===============================================================================================");
 }

@@ -10,7 +10,7 @@ class Caneta {
       if (this.tampada == true) {
         print("ERRO! não podemos rabiscar !");
         print("\n A caneta está tampada.");
-      } else {
+      } else{
         print("Rabiscando");
       }
     
