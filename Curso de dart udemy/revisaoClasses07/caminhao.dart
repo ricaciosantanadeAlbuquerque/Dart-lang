@@ -14,6 +14,10 @@ class Caminhao {
     this.velocidade++;
   }
 
+  void reduzirVelocidade() {
+    this.velocidade--;
+  }
+
   void painel() {
     print("Combustível: $combustivel ");
     print("Velocidade $velocidade ");
