@@ -7,4 +7,9 @@ void main() {
   print("============================================================================================================================");
   Animal animal01 = Animal("Anta","mamifero",);
   print("Nome ${animal01.nome}, Raça ${animal01.raca}, Idade: ${animal01.idade}");
+
+  /**
+   * Embora sejam instâncias da mesma classe e compartilhem os mesmo atribultos e métodos 
+   * os valores são diferentes. 
+   */
 }
