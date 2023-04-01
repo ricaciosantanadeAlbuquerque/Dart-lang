@@ -11,4 +11,5 @@ void main() {
   print("=============================================================================================================================");
   Usuario4 usuario3 = Usuario4.admin('ricacio', '123', idade: 28, nome: 'Matheus');
   print("Nome: ${usuario3.nome}, Idade: ${usuario3.idade}, Usuário: ${usuario3.cargo}, Senha: ${usuario3.senha}");
+  usuario3.autenticar();
 }
