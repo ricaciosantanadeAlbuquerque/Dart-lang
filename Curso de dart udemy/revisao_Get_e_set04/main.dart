@@ -24,4 +24,9 @@ void main() {
     ..deposito = 5000
     ..saque = 5000;
   print(conta3.informacao);
+  print('===================================================================================================');
+  Conta conta4 = Conta.vip('Ricacio',limite: 15000);
+  conta4
+    ..deposito = 20000;
+  conta4.saque = 15000;
 }
