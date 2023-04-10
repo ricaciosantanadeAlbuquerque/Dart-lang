@@ -65,6 +65,6 @@ class Caneta {
 
   @override
   String toString() {
-    return 'Modelo:${this._modelo}, Ponta: ${this._ponta}, Cor: ${this._cor}, tampada: ${_tampada}';
+    return 'Modelo:${this.modelo}, Ponta: ${this.ponta}, Cor: ${this.cor}, tampada: ${tampada}';
   }
 }
