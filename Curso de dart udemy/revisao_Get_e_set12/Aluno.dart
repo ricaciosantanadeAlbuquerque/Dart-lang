@@ -80,6 +80,6 @@ class Aluno {
   // his._nome, this._idade, this._nota1, this._nota2, this._nota3, this._nota4
   @override
   String toString() {
-    return "Nome: $_nome, Idade: $_idade, Nota1: $_nota1, Nota2: $_nota2, Nota3: $_nota3 nota4: $_nota4, Media: $_media ";
+    return "Nome: $_nome, Idade: $_idade, Nota1: $_nota1, Nota2: $_nota2, Nota3: $_nota3 nota4: $_nota4, Media: ${this.media?.toStringAsFixed(2)} ";
   }
 }
