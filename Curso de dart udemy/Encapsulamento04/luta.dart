@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'lutador.dart';
 
-class Luta {
+class Luta {  // luta agrega a Lutador
   Lutador? desafiado;
   Lutador? desafiante;
   int? rounds;
