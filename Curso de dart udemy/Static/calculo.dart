@@ -5,7 +5,7 @@
 import 'dart:math';
 
 class Calculo {
-  double pi = 3.14; // objeto
+  double _pi = 3.14; // objeto
   static double piEstatico = 3.14; // classe
 
   double calculoArea(double raio) {
@@ -16,5 +16,11 @@ class Calculo {
 
   static double calcularAreaCirculoStatic(double raio) {
     return piEstatico * (raio * raio);
+  }
+
+  double get pi => this._pi;
+
+  void set pi(double pi) {
+    this._pi = pi;
   }
 }
