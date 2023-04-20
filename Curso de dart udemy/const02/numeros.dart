@@ -6,8 +6,7 @@
 
 /// classe imutável
 class Numero {
-  final List<int>
-      lista; // não pode ser 'static const' porque o valor será passado pelo construtor, se fosse 'static const' teria que ser declarado e inicializado em tempo de compilação, e não em tempo de execução. traduzaindo teria que ser declarado e inicializado na classe.
+  final List<int> lista; // não pode ser 'static const' porque o valor será passado pelo construtor, se fosse 'static const' teria que ser declarado e inicializado em tempo de compilação, e não em tempo de execução. traduzaindo teria que ser declarado e inicializado na classe.
   const Numero({required this.lista});
 
   void localizarMaiorNumero() {
