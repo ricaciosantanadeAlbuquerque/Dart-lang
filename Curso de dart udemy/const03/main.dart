@@ -26,5 +26,10 @@ void main() {
   // Em listas const todo seu conteúdo é constante, tanto a lista e constante como seu conteúdo e constante.
 
   final List<dynamic> vetor = const [1, 'j', 55, 'p'];
- // Erro ! vetor.add(66); está lista, possui seus valores constantes.
+  // Erro ! vetor.add(66); está lista, possui seus valores constantes.
+
+  for (var j = 0; j < 5; j++) {
+    final indice = j;
+    //const mensagem = j; ERRO elá não pode ser sobreposta a cada loop, é constante em tempo de compilação 
+  }
 }
