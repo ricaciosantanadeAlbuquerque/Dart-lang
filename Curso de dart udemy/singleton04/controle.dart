@@ -8,11 +8,20 @@ class Controle {
     return _instancia;
   }
 
+  bool get ligado => this._ligado;
+
+  void set ligado(bool ligado) {
+    this._ligado = ligado;
+  }
+
   void ligar() {
-    this._ligado = true;
+    this.ligado = true;
   }
 
   void desligar() {
-    this._ligado = false;
+    this.ligado = false;
   }
+
+  @override
+  String toString() => 'Ligado: ${(this.ligado == true) ? 'Sim' : 'Nao'}';
 }
