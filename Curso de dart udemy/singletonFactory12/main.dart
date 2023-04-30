@@ -12,6 +12,7 @@ void main() {
 
   print(controle2.ligado);
   print(controle2.volume);
-
+  print(identical(controle1, controle2));
+  print(controle2 == ControleFactory.instancia);
   // sempre será retornado a primeira instância
 }

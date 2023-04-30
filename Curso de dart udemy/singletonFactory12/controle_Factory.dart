@@ -1,12 +1,12 @@
 import 'dart:math';
 
 class ControleFactory {
-  static ControleFactory? _instancia; // deve set static para ser usado dentro do construtor factory
+  static ControleFactory? instancia; // deve set static para ser usado dentro do construtor factory
   bool? ligado;
   double? volume;
 
   factory ControleFactory({bool? ligar, double? volume}) {
-    return _instancia ??= ControleFactory._nomeado(ligar: ligar!, volume: volume);
+    return instancia ??= ControleFactory._nomeado(ligar: ligar!, volume: volume);
   }
 
   ControleFactory._nomeado({required bool? ligar, required double? volume}) {
