@@ -18,9 +18,10 @@ void main() {
 
         if (senha == senha123) {
           print("Acesso liberado");
-        } else {
+        } else{
           print("Acesso negado");
         }
+        
       } catch (e) {
         throw Exception('ERRO!');
       }
