@@ -13,6 +13,7 @@ IMC Situação
 import 'dart:io';
 
 void main() {
+  
   print("==============IMC===============\n");
   print("Digite sua altura ! ");
   String? entradaAltura = stdin.readLineSync(); // pode ser nula
@@ -33,23 +34,23 @@ void main() {
         double imc = peso / (altura * altura);
 
         if (imc < 18.5) {
-          print("Você é magro! Seu IMC é de ${imc.truncate()}");
+          print("Você é magro! Seu IMC é de ${imc.truncate()}\n");
         } else if (imc >= 18.5 && imc <= 24.9) {
-          print("Você é Normal! Seu IMC é de ${imc.truncate()}");
+          print("Você é Normal! Seu IMC é de ${imc.truncate()}\n");
         } else if (imc >= 25.0 && imc <= 29.9) {
-          print("Você está com Sobrepeso! Seu IMC é de ${imc.truncate()}"); // truncate() elimina tudo após a virgula
+          print("Você está com Sobrepeso! Seu IMC é de ${imc.truncate()}\n"); // truncate() elimina tudo após a virgula
         } else if (imc >= 30.0 && imc < 34.9) {
           print("Você está Obeso! Seu IMC é de ${imc.truncate()}");
         } else if (imc >= 35.0 && imc <= 39.9) {
-          print(" Obesidade mórbida ! Seu IMC é de ${imc.truncate()}");
+          print(" Obesidade mórbida ! Seu IMC é de ${imc.truncate()}\n");
         }
       } catch (e) {
         throw Exception('ERRO! o $entradaAltura ou o $entradaPeso não é um numero!');
       }
     } else {
-      print("Digite valores válidos");
+      print("Digite valores válidos\n");
     }
   } else {
-    print("Digite valores válidos ");
+    print("Digite valores válidos !!\n");
   }
 }
