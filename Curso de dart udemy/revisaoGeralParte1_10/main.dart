@@ -16,5 +16,5 @@ void main(List<String> args) {
       contador++;
     }
   }
-  print("A Quantidade de pessoas que tem a idade entre 0 e 12 ${contador}");
+  print("A Quantidade de pessoas que tem a idade entre 0 e 12 [==${contador}==]");
 }
