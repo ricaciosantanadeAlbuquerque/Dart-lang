@@ -28,6 +28,8 @@ void main() {
           print("Júnior ");
         } else if (idade >= 21 && idade <= 25) {
           print("Profissional");
+        } else {
+          print("Você não tem idade para competir !");
         }
       } catch (e) {
         throw Exception('ERRO! [$idadeEntrada] não é um número !');
