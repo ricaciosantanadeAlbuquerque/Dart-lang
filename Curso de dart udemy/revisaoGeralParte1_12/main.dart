@@ -20,7 +20,7 @@ void main() {
             contadora++;
           }
         } catch (e) {
-          throw Exception("ERRO! [$idadeEntrada] não é um valor númerico ):");
+          throw Exception("ERRO! [ $idadeEntrada ] não é um valor númerico ):");
         }
       } else {
         print("Digite valores válidos !!");
