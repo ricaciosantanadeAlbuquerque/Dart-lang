@@ -32,7 +32,7 @@ int buscarMaior(List<int> p) {
       maior = j;
     }
   }
-
+  return maior;
 }
 
 int buscarMenor(List<int> p) {
