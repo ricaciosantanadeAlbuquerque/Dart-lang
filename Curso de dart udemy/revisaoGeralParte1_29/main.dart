@@ -8,20 +8,26 @@ import 'dart:io';
 
 void main() {
   double salarioFinal = 0;
-
+  double valorTentrada = 0;
+  double acumulador = 0;
   print("Digite o numero de carros vendidos!");
   String? numeroEntrada = stdin.readLineSync();
-  print("Digite o valor total da venda ");
-  String? valorTentrada = stdin.readLineSync();
-
-  if (numeroEntrada != null && valorTentrada != null) {
-    if (numeroEntrada.isNotEmpty == true && valorTentrada.isNotEmpty == true) {
+  for (var i = 0; i < int.parse(numeroEntrada!); i++) {
+    print("Digite o valor total da venda ");
+    String? valor = stdin.readLineSync();
+    valorTentrada = double.parse(valor!);
+    acumulador += valorTentrada;
+  }
+  if (numeroEntrada != null && acumulador != null) {
+    if (numeroEntrada.isNotEmpty == true && !acumulador.isNaN) {
       try {
         int numeroCarros = int.parse(numeroEntrada);
-        double valorTotal = double.parse(valorTentrada);
+        double valorTotal = acumulador;
+        print("Valor total das vendas $valorTotal ");
         double porcento = (valorTotal * 5) / 100;
         salarioFinal = 622.00 + (numeroCarros * 30.00) + porcento;
         print("O seu Salário é de ${622.00}R\$, comissão por cada carro ${numeroCarros * 30.00}R\$, + 5% do valor total das vendas ${porcento}R\$ ");
+        print("Seu salário final é de $salarioFinal R\$");
       } catch (e) {
         throw Exception('ERRO! valor .$numeroEntrada ou $valorTentrada não é um número !');
       }
