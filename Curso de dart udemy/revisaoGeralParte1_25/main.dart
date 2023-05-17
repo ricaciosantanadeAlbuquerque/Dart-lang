@@ -14,6 +14,6 @@ void main() {
 
   double real = dolar * cotacao;
 
-  print("O valor de $dolar Dolares em reais é de $real");
+  print("O valor de $dolar Dolares em reais é de ${real.toStringAsFixed(2)}");
 
 }
