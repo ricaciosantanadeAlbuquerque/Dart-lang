@@ -1,3 +1,8 @@
+/**
+ *  - Faça um programa que receba do usuário um vetor com 10 posições. Em seguida deverá ser exibido o maior 
+e o menor elemento do vetor.
+ */
+
 import 'dart:math';
 
 void main() {
