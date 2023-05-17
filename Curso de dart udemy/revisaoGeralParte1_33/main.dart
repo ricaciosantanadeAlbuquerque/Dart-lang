@@ -34,7 +34,7 @@ int buscarMaior(List<int> p) {
   }
 
 }
-Function
+
 int buscarMenor(List<int> p) {
   int menor = 1000000;
 
