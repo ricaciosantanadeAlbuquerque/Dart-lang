@@ -3,6 +3,7 @@ e, em seguida mostre qual é o maior elemento e a posição que ele se encontra 
 import 'dart:io';
 
 void main() {
+  int maior = 0;
   List<int> numero = [];
 
   for (var i = 0; i < 10; i++) {
@@ -24,5 +25,13 @@ void main() {
       print("ERRO! o valor digitado é nulo ");
     }
   }
+
+
+  for (var j in numero) {
+    if (j > maior) {
+      maior = j;
+    }
+  }
+  print("O maior valor da lista é $maior");
   print(numero);
 }
