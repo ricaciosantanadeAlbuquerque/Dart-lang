@@ -26,7 +26,7 @@ String faixaEtaria({required int idade}) {
 
   if (idade >= 0 && idade <= 2) {
     retorno = 'Bebé';
-  } else if (idade >= 3 && idade <= 7) {
+  } else if (idade >= 3 && idade <= 11) {
     retorno = 'Criança';
   } else if (idade >= 12 && idade <= 19) {
     retorno = 'Adolescente';
