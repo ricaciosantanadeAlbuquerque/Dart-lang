@@ -29,4 +29,5 @@ void funcaoArrow() {
   print(verificarMaiorIdade('Lucas', 34));
   print(calcularAreadocirculo(2));
   print(desconto(2));
+  calcularSalario(nome: 'Ricacio', salario: 1697, bonus: 100, faltas: 1);
 }
