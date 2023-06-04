@@ -37,6 +37,11 @@ void funcaoClosures() {
   var resultado2 = porcentagem(0.8);
   print(resultado2);
   print(resultado2(100));
+  //================================================================
+  Function numerador(num valor1) => (num denominador) => valor1 * denominador;
+
+  var resultado3 = numerador(100);
+  print(resultado3);
 }
 
 void main() {
