@@ -26,6 +26,7 @@ void main(List<String> argument) {
    * segundo * e / 
    * terceiro + -
    */
+  // o código é lido de baixo para cima da esquerda para direita
 
   var numero = 3 + ((2 * 4) + (10 / 5));
 
@@ -58,4 +59,19 @@ void main(List<String> argument) {
   print(dados.runtimeType);
 
   /// O tipo dynamic, pode receber qualquer valor.
+  //=========================================================================================
+  print("====================================================================================");
+  Object dados1 = 10;
+  print(dados1);
+  print(dados1.runtimeType);
+  dados1 = 10.5;
+  print(dados1);
+  print(dados1.runtimeType);
+  dados1 = 'ola';
+  print(dados1);
+  print(dados1.runtimeType);
+  dados1 = true;
+  print(dados1);
+  print(dados1.runtimeType);
+  // toda variável em dart é um objeto.
 }
