@@ -48,6 +48,7 @@ void main(List<String> argument) {
   double altura = 1.72;
   bool valor = true;
   dynamic dados = 10;
+  print("$nome1 tem $idade e possui ${altura}"); // $ para variáveis e ${} para operações mais complexas
   print(dados.runtimeType);
   dados = "ana";
   print(dados.runtimeType);
