@@ -7,5 +7,5 @@ void main() {
   Animal animal2 = Animal("leão", 'felino', 12);
   print("Nome:${animal2.nome}, raça:${animal2.raca}, Idade:${animal2.idade}\n");
 
-  print("Os objetos são iguais: ${identical(animal,animal2)? 'Sim! são iguais.\n':'Não! não são iguais.'}\n");
+  print("Os objetos são iguais? ${identical(animal,animal2)? 'Sim! são iguais.\n':'Não! não são iguais.'}\n");
 }
