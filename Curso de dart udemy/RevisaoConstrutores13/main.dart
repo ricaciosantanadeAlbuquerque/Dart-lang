@@ -2,13 +2,14 @@ import 'usuario.dart';
 
 void main() {
   Usuario usuario = Usuario(
-    'Lucas',
+    'ricacio',
     "123",
     nome: "Lucas",
   );
   print("Nome: ${usuario.nome}, Cargo: ${usuario.cargo}, Usuário: ${usuario.user}, Senha: ${usuario.senha}\n");
-  usuario.idade = 36;
+  usuario.idade = 30;
   print(usuario.idade);
+  usuario.autenticar();
 
   // ===========================================================================================================
 
@@ -17,5 +18,6 @@ void main() {
   usuarioAdimin.idade = 26;
   print(usuarioAdimin.idade);
 
-  print("Igual ? ${identical(usuario,usuarioAdimin) ? 'Sim !':'Não !'}");
+  print("Igual ? ${identical(usuario, usuarioAdimin) ? 'Sim !' : 'Não !'}");
+  usuarioAdimin.autenticar();
 }
