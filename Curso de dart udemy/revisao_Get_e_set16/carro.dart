@@ -13,7 +13,7 @@ class Carro {
     this._fabricante = (fabricante != null) ? fabricante : 'indefinido';
     this._modelo = (modelo != null) ? modelo : 'indifinido';
     this._velocidade = velocidade;
-    print("Carro:${this._modelo}, ${this.toString()}");
+    print("${this._modelo}, ${this.toString()}");
   }
   // construtor nomeado
   Carro.ferrari(
