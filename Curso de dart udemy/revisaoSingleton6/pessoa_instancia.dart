@@ -18,7 +18,7 @@ class PessoaInstancia {
 
   String? get nome => this._nome;
 
-  void set nome(String? nome) {
+  void set nome(String? nome){
     this._nome = nome;
   }
 }
