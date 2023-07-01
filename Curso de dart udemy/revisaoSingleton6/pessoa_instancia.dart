@@ -5,7 +5,7 @@ class PessoaInstancia {
   String? _nome; // atribulto enchergado pela objeto da classe
   final int _identidade;
 
-  factory PessoaInstancia({String nome = 'indefinido', int? identidade}) {
+  factory PessoaInstancia({required String nome,int? identidade}) {
     identidade = (identidade == null) ? Random().nextInt(9999 + 1) : identidade;
     return _instancia ??= new PessoaInstancia._construtorNomeado(identidade, nome);
   }
