@@ -5,7 +5,7 @@ class PessoaGet {
 
   PessoaGet._nomeado();
 
-  static PessoaGet get instancia => _instancia;
+  static PessoaGet get instancia => _instancia; // retornando o objeto
 
   String? get nome => _nome;
 
