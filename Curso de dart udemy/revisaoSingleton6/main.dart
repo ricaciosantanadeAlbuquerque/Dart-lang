@@ -9,4 +9,5 @@ void main() {
   print(p2.nome);
   print(p1 == p2);
   print(identical(p1, p2));
+  print(p1 == PessoaInstancia.instancia);
 }

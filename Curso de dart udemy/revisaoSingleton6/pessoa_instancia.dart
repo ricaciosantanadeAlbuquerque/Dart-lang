@@ -1,8 +1,8 @@
 import 'dart:math';
 
 class PessoaInstancia {
-  static PessoaInstancia? _instancia;
-  String? _nome;
+  static PessoaInstancia? _instancia; // atribulto  enchergado  pela classe
+  String? _nome; // atribulto enchergado pela objeto da classe
   final int _identidade;
 
   factory PessoaInstancia({String nome = 'indefinido', int? identidade}) {
@@ -14,9 +14,9 @@ class PessoaInstancia {
 
   int get identidade => this._identidade;
 
-  static PessoaInstancia get instancia => _instancia!;
+  static PessoaInstancia get instancia => _instancia!; // método enchergado pela classe
 
-  String? get nome => this._nome;
+  String? get nome => this._nome; // método enchergado pelo objeto da classe
 
   void set nome(String? nome){
     this._nome = nome;
