@@ -27,7 +27,7 @@ class Cao extends Mamifero {
   Cao(this.nome, this.raca, String sexo, {String? idade, bool? docil}) : super(sexo, idade, docil); // super() refere-se ao construtor da super classe Mamifero! .
 
   void acao() {
-    print("Late como um cão !");
+    print("Late como um cão !.");
   }
 }
 
