@@ -1,3 +1,4 @@
+import 'abelha.dart';
 import 'cao.dart';
 
 void main() {
@@ -13,4 +14,11 @@ void main() {
   print(cao);
 
   print('${cao.nome} ${(cao.docil == true) ? 'está amigável' : 'não está amigavél'}');
+  print(" ");
+  print(" ");
+  var abelha = Abelha('Amarela', 6, true, '1', false);
+  abelha
+    ..domir()
+    ..alimentar()
+    ..voa();
 }
