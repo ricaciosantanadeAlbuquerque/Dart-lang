@@ -11,4 +11,6 @@ void main() {
     ..reproduzir();
   print('');
   print(cao);
+
+  print('${cao.nome} ${(cao.docil == true) ? 'está amigável' : 'não está amigavél'}');
 }
