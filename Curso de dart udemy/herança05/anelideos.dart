@@ -3,7 +3,7 @@ import 'animal.dart';
 abstract class Anelideos extends Animal {
   int? comprimento;
   bool? parasita;
-  String tipo;
+  String? tipo;
 
   Anelideos.naoParasita(this.comprimento, this.parasita, this.tipo, String? idade, bool? docil) : super.invertebrado(idade, docil: docil);
 
@@ -19,7 +19,7 @@ abstract class Anelideos extends Animal {
   @override
   String toString() {
 
-    return 'comprimento: $comprimento, parasita:$parasita, tipo:$tipo' + super.toString();
+    return 'comprimento: $comprimento, parasita: $parasita, tipo: $tipo ' + super.toString();
     
   }
 }

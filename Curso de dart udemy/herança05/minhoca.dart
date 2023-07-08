@@ -1,9 +1,14 @@
 import 'anelideos.dart';
 
 class Minhoca extends Anelideos {
-  String sexo;
+  String? sexo;
 
-  Minhoca(this.sexo, int? comprimento, bool? parasita, String tipo, {String? idade, bool? docil}) : super.naoParasita(comprimento, parasita, tipo, idade, docil);
+  Minhoca({this.sexo, int? comprimento, String? tipo, bool? parasita = false, String? idade, bool? docil = false}) : super.naoParasita(comprimento, parasita, tipo, idade, docil);
+  
+  @override
+  void domir() {
+    print("Dorme como uma minhoca ");
+  }
 
   @override
   void alimentar() {
@@ -14,7 +19,7 @@ class Minhoca extends Anelideos {
   void reproduzir() {
     print(" Se reproduz como minhoca");
   }
-  
+
   @override
   String toString() => 'Sexo: $sexo, ' + super.toString();
 }

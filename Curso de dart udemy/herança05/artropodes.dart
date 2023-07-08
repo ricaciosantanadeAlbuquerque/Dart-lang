@@ -3,7 +3,7 @@ import 'animal.dart';
 abstract class Atropodes extends Animal {
   int? numeroPatadas;
   bool? podeVoar;
-  String tipo;
+  String? tipo;
 
   Atropodes.terrestres(this.tipo, this.numeroPatadas, String? idade, {bool? docil, this.podeVoar}) : super.invertebrado(idade, docil: docil);
 
