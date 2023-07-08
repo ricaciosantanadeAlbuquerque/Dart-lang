@@ -11,6 +11,11 @@ abstract class Atropodes extends Animal {
 
   Atropodes.aereos(this.tipo, this.numeroPatadas, String? idade, {bool? docil, this.podeVoar}) : super.invertebrado(idade, docil: docil);
 
+  @override
+  void domir() {
+    print("Dorme como um atropode");
+  }
+
   void alimentar() {
     print("Se alimenta como um atrópode !");
   }
