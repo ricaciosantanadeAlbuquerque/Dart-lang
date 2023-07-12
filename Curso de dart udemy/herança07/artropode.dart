@@ -27,4 +27,7 @@ abstract class Atropode extends Animal {
   void set desenvolvimento(String? desenvolvimento) {
     this._desenvolvimento = desenvolvimento;
   }
+
+ @override
+  String toString() => 'Sexo:$_sexo, Desenvolvimento:$_desenvolvimento ';
 }

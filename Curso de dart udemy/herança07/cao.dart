@@ -42,4 +42,6 @@ class Cao extends Mamifero {
   void set raca(String? raca) {
     this._raca = raca;
   }
+  @override
+  String toString() => 'Nome:$_nome, Raça:$_raca, ' + super.toString();
 }

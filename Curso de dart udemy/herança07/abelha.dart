@@ -17,6 +17,27 @@ class Abelha extends Atropode {
 
   @override
   void reproduzir() => print("Reproduz como uma abelha");
-
+  @override
   void dormir() => print('Dorme como uma abelha! ');
+  @override
+  void alimentar() {
+    super.alimentar();
+    print("Abelha !");
+  }
+  // get and set
+
+  String? get id => this._id;
+
+  void set id(String? id) {
+    this._id = id;
+  }
+
+  String? get raca => _raca;
+
+  void set raca(String? raca) {
+    this._raca = raca;
+  }
+
+  @override
+  String toString() => 'Id:$id, Raça:$_raca ' + super.toString();
 }

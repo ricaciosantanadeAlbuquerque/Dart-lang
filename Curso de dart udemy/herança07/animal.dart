@@ -30,6 +30,7 @@ abstract class Animal {
   }
 
   bool? get coluna => this._coluna;
-
-
+  
+  @override
+  String toString() => 'Idade:$_idade, Docil:$_docil, vertebrado:$_coluna';
 }

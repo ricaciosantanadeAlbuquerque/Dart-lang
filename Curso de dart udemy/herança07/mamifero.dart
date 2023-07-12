@@ -23,7 +23,8 @@ abstract class Mamifero extends Animal {
   void alimentar() {
     print("Se alimenta como um ");
   }
-
+  @override
+  String toString() => 'Sexo:$_sexo, Desenvolvimento:$_desenvolvimento '+super.toString();
   // get and set
 
   String? get sexo => this._sexo;
