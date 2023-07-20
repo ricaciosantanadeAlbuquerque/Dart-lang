@@ -15,7 +15,11 @@ abstract class Veiculo implements Interface {
 
   @override
   void desligado() {
-    this.status = false;
+    
+    if(status == true){
+      this.status = false;
+    }
+    
   }
 
   @override

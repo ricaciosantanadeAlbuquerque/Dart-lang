@@ -3,10 +3,12 @@ import 'veiculo.dart';
 class Automovel extends Veiculo {
   @override
   void acelerar() {
-    super.acelerar();
-    print("como um carro ");
+    if(status == true){
+       super.acelerar();
+       print("como um carro ");
+    }
   }
-
+ 
   /**
    * Quando estendemos uma classe, ganhamos dela, ou herdamos, todos os métodos e atributos que ela possui.
    * por isso se diz; Automovel() é um veiculo().
