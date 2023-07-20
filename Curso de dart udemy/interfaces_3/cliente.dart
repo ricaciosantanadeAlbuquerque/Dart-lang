@@ -35,7 +35,7 @@ class Cliente implements Dao {
 
   @override
   void localizar() {
-    toString();
+     print(toString());
   }
 
   @override

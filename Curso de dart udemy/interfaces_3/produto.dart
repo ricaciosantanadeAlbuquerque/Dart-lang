@@ -52,7 +52,7 @@ class Produto implements Dao {
 
   @override
   void localizar() {
-    toString();
+    print(toString());
   }
 
   @override

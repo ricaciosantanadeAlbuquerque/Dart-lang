@@ -40,7 +40,7 @@ class Fornecedor implements Dao {
   }
 
   @override
-  void localizar() => toString();
+  void localizar() =>  print(toString());
 
   @override
   String toString() => 'CNPJ:$cnpj, RazãoSocial:$razaoSocial';
