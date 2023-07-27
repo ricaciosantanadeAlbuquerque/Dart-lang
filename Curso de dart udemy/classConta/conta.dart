@@ -1,3 +1,4 @@
+import 'estrutura_dados.dart';
 import 'interfaceConta.dart';
 
 class Conta implements Interface {
@@ -46,7 +47,7 @@ class Conta implements Interface {
   bool? get status => this._status;
 
   void set status(bool? status) {
-    this._status;
+    this._status = status;
   }
 
 // Interface =======================================
@@ -60,6 +61,8 @@ class Conta implements Interface {
     } else if (this.tipo == 'CP') {
       this.saldo = 150;
     }
+
+    EstruturaDados.addDados(this); // cadastrando   instância
   }
 
   @override
@@ -91,7 +94,7 @@ class Conta implements Interface {
   @override
   void sacar(double? sacar) {
     if (this.status == true) {
-      if (this.saldo! > sacar!) {
+      if (this.saldo! >= sacar!) {
         this.saldo = this.saldo! - sacar;
       } else {
         print("Você não possui saldo o suficiente para o saque !");
@@ -110,13 +113,33 @@ class Conta implements Interface {
     } else if (this.tipo == 'CP') {
       taxa = 20;
     }
-    
- // apartir desta linha,  já sabemos o valor  da taxa
+
+    // apartir desta linha,  já sabemos o valor  da taxa
 
     if (this.status == true) {
       if (this.saldo! > taxa) {
         this.saldo = this.saldo! - taxa;
       }
     }
+  }
+
+  void transferencia({required int numeroConta, required String dono, required double valor}) {
+    if (this.status == true) {
+      if (this.saldo! > 0) { // tem dinheiro para transferir
+        this.saldo = this.saldo! - valor; // o valor diminuido  dessa conta constará em uma outra
+        EstruturaDados.buscaDados(numeroConta, dono, valor); // o mesmo valor será passado para esta outra conta
+      } else {
+        print("Saldo insuficiente para transação !");
+      }
+    } else {
+      print("Erro !");
+    }
+  }
+
+  @override
+  String toString() => 'NumeroConta: $numeroConta, titular: $dono, Saldo:$saldo, Conta: ${(status == true) ? 'ativada' : 'encerrada'}';
+
+  void exibirDados() {
+    EstruturaDados.listarObjetos();
   }
 }

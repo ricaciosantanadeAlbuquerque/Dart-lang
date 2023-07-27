@@ -18,4 +18,12 @@ class EstruturaDados {
       }
     }
   }
+
+  static void listarObjetos() {
+    for (var element in dados) {
+
+      print(element.toString());
+      
+    }
+  }
 }
