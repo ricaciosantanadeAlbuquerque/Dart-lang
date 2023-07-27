@@ -1,9 +1,9 @@
-abstract class Controle {
+abstract class InterfaceControle {
   void ligar();
   void desligar();
   void abrirMenu();
   void fecharMenu();
-  void mainVolume();
+  void maisVolume();
   void menosVolume();
   void ligarMudo();
   void desligarMudo();
