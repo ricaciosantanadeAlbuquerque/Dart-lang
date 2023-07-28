@@ -43,8 +43,15 @@ void main() {
     ..pause()
     ..desligar();
 
-    
   print('');
+
+  print(controle.toString());
+
+  controle
+    ..ligar()
+    ..maisVolume()
+    ..ligarMudo()
+    ..abrirMenu();
 
   print(controle.toString());
 }
