@@ -1,6 +1,8 @@
-import '../Encapsulamento04/interface_lutador.dart';
 
-class Lutador implements InterfaceLutador{
+
+import 'interface_lutador.dart';
+
+class Lutador implements InterfaceLutador {
   // atribulto
   String? _nome;
   String? _nacionalidade;
@@ -23,7 +25,7 @@ class Lutador implements InterfaceLutador{
 
   String? get getCategoria => this._categoria;
 
-  void set setCategoria(_) {
+  void set _setCategoria(_) {
     if (this._getPeso! < 52.2) {
       this._categoria = 'Inválido';
     } else if (this._getPeso! <= 70.3) {
@@ -37,7 +39,7 @@ class Lutador implements InterfaceLutador{
     }
   }
 
-  String? get _getNome => this._nome;
+  String? get getNome => this._nome;
 
   void set _setNome(String? nome) {
     this._nome = nome;
@@ -65,7 +67,7 @@ class Lutador implements InterfaceLutador{
 
   void set _setPeso(double? peso) {
     this._peso = peso;
-    this.setCategoria = '';
+    this._setCategoria = '';
   }
 
   int? get _getVitoria => this._vitoria;
@@ -88,27 +90,37 @@ class Lutador implements InterfaceLutador{
 
 // Interface =========================
 
- @override
- void apresentar(){
+  @override
+  void apresentar() {
+    print(this.toString());
+  }
 
- }
+  @override
+  void status() {
+    print("Nome: $getNome");
+    print("É um Peso $getCategoria");
+    print('$_getVitoria Vitórias');
+    print('$_getDerrota Derrotas');
+    print('$_getEmpates Empates');
+  }
 
-@override
- void status(){
+  @override
+  void ganharLuta() {
+    this._setVitoria = _getVitoria! + 1;
+  }
 
- }
-@override
- void ganharLuta(){
+  @override
+  void perderLuta() {
+    this._setDerrota = _getDerrota! + 1;
+  }
 
- }
-@override
-void perderLuta(){
+  @override
+  void empatarLuta() {
+    this._setEmpate = _getEmpates! + 1;
+  }
 
-}
-@override
-void empatarLuta(){
-  
-}
-
-
+  @override
+  String toString() {
+    return 'Nome: $_nome, Nacionalidade: $_nacionalidade, Idade: $_idade, Altura: $_altura, Peso: $_peso, Categoria: $_categoria, vitoria: $_vitoria, Derrotas: $_derrota, Empates: $_empates';
+  }
 }
