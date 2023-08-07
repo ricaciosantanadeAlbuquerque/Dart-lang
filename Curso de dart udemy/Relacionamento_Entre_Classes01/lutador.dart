@@ -88,10 +88,7 @@ class Lutador1 implements InterfaceLutador {
     this._empate = empate;
   }
 
-  @override
-  String toString() {
-    return 'Nome: $_nome, Nacionalidade: $_nacionalidade, Idade: $_idade, Altura: $_altura, Peso: $_peso, Categoria: $_categoria, Vitórias: $_vitoria, Derrotas: $_derrota, Empate: $_empate';
-  }
+  
 
   // interface
   @override
@@ -120,6 +117,11 @@ class Lutador1 implements InterfaceLutador {
 
   @override
   void apresentar() {
-    this.toString();
+    print(this.toString());
+  }
+
+  @override
+  String toString() {
+    return 'Nome: $_nome, Nacionalidade: $_nacionalidade, Idade: $_idade, Altura: $_altura, Peso: $_peso, Categoria: $_categoria, Vitórias: $_vitoria, Derrotas: $_derrota, Empate: $_empate';
   }
 }
