@@ -23,4 +23,8 @@ void main() {
   lista[2].status();
 
   print("\n");
+
+  /**
+   * Agregação é quando um objeto tem outro objeto dentro de sí, quando uma classe tem como atributo um objeto de outra classe, sendo que a mesma não nescessita está agregada dentro de outra classe para existir por si só.
+   */
 }
