@@ -43,7 +43,9 @@ class Luta implements InterfaceLuta {
       this._setDesafido = l1;
       this._setDesafiante = l2;
       this._setAprovada = true;
+      print("Luta aprovada !");
     } else {
+      print("Não podem lutar");
       this._aprovada = false;
       this._desafiante = null;
       this._desafiado = null;
@@ -54,9 +56,12 @@ class Luta implements InterfaceLuta {
   void lutar() {
     if (this._aprovada == true) {
       this._desafiado!.apresentar();
+      //print(this._desafiado);
       this._desafiante!.apresentar();
+      //print(this._desafiante);
 
-      var vencedor = Random().nextInt(2);
+      var vencedor = Random().nextInt(3); // 0 a 2
+     // print(vencedor);
 
       switch (vencedor) {
         case 0:

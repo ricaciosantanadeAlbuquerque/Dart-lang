@@ -1,5 +1,3 @@
-
-
 import 'interface_lutador.dart';
 
 class Lutador implements InterfaceLutador {
@@ -10,9 +8,9 @@ class Lutador implements InterfaceLutador {
   double? _altura;
   double? _peso;
   String? _categoria;
-  int? _vitoria;
-  int? _derrota;
-  int? _empates;
+  int? _vitoria = 0;
+  int? _derrota = 0;
+  int? _empates = 0;
   // ============== construtor ===============
   Lutador({required String? nome, required String? nacionalidade, required int? idade, required double? altura, required double? peso, required int? vitoria, required int? derrota, required int? empates}) {
     this._setNome = (nome != null) ? nome : 'indefinido';
@@ -20,6 +18,9 @@ class Lutador implements InterfaceLutador {
     this._setIdade = (idade != null) ? idade : 0;
     this._setAltura = (altura != null) ? altura : 0.0;
     this._setPeso = (peso != null) ? peso : 0.0;
+    this._setVitoria = (vitoria != null) ? vitoria : 0;
+    this._setDerrota = (derrota != null) ? derrota : 0;
+    this._setEmpate = (empates != null) ? empates : 0;
   }
   //  ============== get and set ==============
 
@@ -107,6 +108,7 @@ class Lutador implements InterfaceLutador {
   @override
   void ganharLuta() {
     this._setVitoria = _getVitoria! + 1;
+   // print(this._getVitoria);
   }
 
   @override
