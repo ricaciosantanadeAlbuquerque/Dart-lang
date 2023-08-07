@@ -1,6 +1,4 @@
 import 'dart:math';
-
-import '../classConta/interfaceConta.dart';
 import 'interface_luta.dart';
 import 'lutador.dart';
 
