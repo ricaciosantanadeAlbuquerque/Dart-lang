@@ -2,6 +2,13 @@ class Pessoa {
   String? _nome;
   int? _idade;
   String? _sexo;
+  // construtor
+
+  Pessoa({required String? nome, required int? idade, required String? sexo}) {
+    this._nome = (nome != null) ? nome : 'indefinido';
+    this._idade = (idade != null) ? idade : 0;
+    this._sexo = (sexo != null) ? sexo : 'indefinido';
+  }
 
 // get and set
 
@@ -26,4 +33,6 @@ class Pessoa {
   void fazerAniversario() {
     this.idade = this.idade! + 1;
   }
+
+  String oString() => 'Nome:$_nome, Idade:$_idade, Sexo:$_sexo';
 }
