@@ -36,6 +36,5 @@ class Pessoa{
   void fazerAniversario() {
     this.idade = this.idade! + 1;
   }
-  @override
-  String toString() => 'Nome:$_nome, Idade:$_idade, Sexo:$_sexo';
+  
 }
