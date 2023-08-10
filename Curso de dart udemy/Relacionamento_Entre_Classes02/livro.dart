@@ -1,6 +1,7 @@
+import 'interface_livro.dart';
 import 'pessoa.dart';
 
-class Livro {
+class Livro implements InterfaceLivro {
   String? _titulo;
   String? _autor;
   int? _totPagina;
@@ -57,6 +58,35 @@ class Livro {
 
   void detalhes() {
     this.toString();
+  }
+
+  // interface
+  @override
+  void abrir() {
+    this.aberto = true;
+  }
+
+  @override
+  void fechar() {
+    this.aberto = false;
+  }
+
+  @override
+  void folhear(int? numero) {
+    if (this.totPagina! > numero! && this.aberto == true) {
+      this._pagAtual = numero;
+    } else {
+      print("Não pode folhear !");
+    }
+  }
+
+  void avancarPagina() {
+    this.pagAtual = this.pagAtual! + 1;
+  }
+
+  @override
+  void voltarPagina() {
+    this.pagAtual = this.pagAtual! - 1;
   }
 
   @override

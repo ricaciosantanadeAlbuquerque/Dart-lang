@@ -1,7 +1,7 @@
 abstract class InterfaceLivro {
   void abrir();
   void fechar();
-  void folhear();
+  void folhear(int? pagina);
   void avancarPagina();
   void voltarPagina();
 }

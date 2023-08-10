@@ -1,4 +1,7 @@
-class Pessoa {
+import 'interface_livro.dart';
+
+class Pessoa{
+
   String? _nome;
   int? _idade;
   String? _sexo;
@@ -33,6 +36,6 @@ class Pessoa {
   void fazerAniversario() {
     this.idade = this.idade! + 1;
   }
-
-  String oString() => 'Nome:$_nome, Idade:$_idade, Sexo:$_sexo';
+  @override
+  String toString() => 'Nome:$_nome, Idade:$_idade, Sexo:$_sexo';
 }
