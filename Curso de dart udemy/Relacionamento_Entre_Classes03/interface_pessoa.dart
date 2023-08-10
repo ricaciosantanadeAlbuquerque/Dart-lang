@@ -9,4 +9,5 @@ abstract class InterfacePessoa {
   void apertarBotaoFecharMenu();
   void apertarBotaoLigarMudo();
   void apertarBotaoDesligarMudo();
+ 
 }
