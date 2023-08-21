@@ -1,8 +1,6 @@
 import 'interface_controle.dart';
-import 'tv.dart';
 
 class Controle implements InterfaceCotrole {
-  TV? _tv;
   int? _volume;
   bool? _ligado;
   bool? _tocando;
@@ -14,10 +12,6 @@ class Controle implements InterfaceCotrole {
   }
 
   // get and set
-
-  TV? get tv => this._tv;
-
-  void set tv(TV? tv) => this._tv = tv;
 
   int? get volume => this._volume;
 
