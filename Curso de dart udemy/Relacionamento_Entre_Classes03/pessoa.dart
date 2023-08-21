@@ -1,15 +1,13 @@
-
 import 'controle.dart';
 import 'interface_pessoa.dart';
 
-class Pessoa implements InterfacePessoa{
-
+class Pessoa implements InterfacePessoa {
   String? _nome;
   int? _idade;
-  Controle? _controle;
-  bool? _permitido;
+  final Controle _controle;
 
-  Pessoa({required String? nome, required int? idade}) {
+
+  Pessoa(this._controle, {required String? nome, required int? idade}) {
     this._nome = (nome != null) ? nome : 'indefinido';
     this._idade = (idade != null) ? idade : 12;
   }
@@ -26,58 +24,55 @@ class Pessoa implements InterfacePessoa{
     this._idade = idade;
   }
 
-  Controle? get controle => this._controle;
+  Controle get controle => this._controle;
 
-  void set controle(Controle? controle) {
-    this._controle = controle;
+  @override
+  void apertarBotaoLigar() {
+    this.controle.ligar();
   }
 
-  bool? get permitido => this._permitido;
-
-  void set permitido(bool? permitido) {
-    this._permitido = permitido;
+  @override
+  void apertarBotaoDesLigar() {
+    this.controle.desligar();
   }
 
-@override
- void apertarBotaoLigar(){
-   
- }
+  @override
+  void apertarBotaoMaisVolume() {
+    this.controle.maisVolume();
+  }
 
- @override
- void apertarBotaoDesLigar(){
-  
- }
-@override
-void apertarBotaoMaisVolume(){
+  @override
+  void apertarBotaoMenosVolume() {
+    this.controle.menosVolume();
+  }
 
-}
-@override
-void apertarBotaoMenosVolume(){
+  @override
+  void apertarBotaoPlay() {
+    this.controle.play();
+  }
 
-}
-@override
-void apertarBotaoPlay(){
-  
-}
-@override
-void apertarBotaoPausa(){
+  @override
+  void apertarBotaoPausa() {
+    this.controle.pause();
+  }
 
-}
-@override
-void apertarBotaoAbrirMenu(){
+  @override
+  void apertarBotaoAbrirMenu() {
+    this.controle.abrirMenu();
+  }
 
-}
-@override
-void apertarBotaoFecharMenu(){
+  @override
+  void apertarBotaoFecharMenu() {
+    this.controle.fecharMenu();
+  }
 
-}
-@override
-void apertarBotaoLigarMudo(){
+  @override
+  void apertarBotaoLigarMudo() {
+    this.controle.ligarMudo();
+  }
 
-}
-@override
-void apertarBotaoDesligarMudo(){
-
-}
-
+  @override
+  void apertarBotaoDesligarMudo() {
+    this.controle.desligarMudo();
+  }
 }

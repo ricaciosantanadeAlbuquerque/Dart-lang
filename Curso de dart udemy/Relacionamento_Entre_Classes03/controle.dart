@@ -26,7 +26,7 @@ class Controle implements InterfaceCotrole {
   bool? get ligado => this._ligado;
 
   void set ligado(bool? ligado) {
-    this._tocando = tocando;
+    this._ligado = ligado;
   }
 
   bool? get tocando => this._tocando;
@@ -122,7 +122,7 @@ class Controle implements InterfaceCotrole {
   void play() {
     if (this.ligado == true) {
       if (this.tocando == false) {
-        this.tocando == true;
+        this.tocando = true;
       } else {
         print("ERRO!");
       }
@@ -146,6 +146,6 @@ class Controle implements InterfaceCotrole {
 
   @override
   String toString() {
-    return 'Ligado:${(this.ligado == true) ? 'sim' : 'nao'}, Volume:$_volume, Tocando:${(this._tocando == true) ? 'SIM' : 'NAO'}';
+    return 'Ligado:${(this.ligado == true) ? 'sim' : 'nao'}, Volume:$_volume, Tocando:${(this.tocando == true) ? 'SIM' : 'NAO'}';
   }
 }

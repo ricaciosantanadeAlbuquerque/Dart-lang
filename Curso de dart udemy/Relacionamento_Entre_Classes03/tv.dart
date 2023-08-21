@@ -1,48 +1,61 @@
+import 'controle.dart';
 import 'pessoa.dart';
 
 class TV {
-  bool? _ligado;
-  Pessoa? _idade;
+  Controle? _controle;
+  Pessoa? _usuario;
+
+  TV({required Pessoa? usuario, required Controle? controle}) {
+    this._controle = (controle != null) ? controle : null;
+    this._usuario = (usuario != null) ? usuario : null;
+  }
   void sinal() {
-    if (this._ligado == true) {
-      if (this.idade!.idade! < 12) {
-        this.programacaoInfantil();
-      } else if (this.idade!.idade! <= 17) {
-        this.programacaoJovens();
+    if (usuario != null && controle != null) {
+      if (this._controle!.ligado == true) {
+        if (this._usuario!.idade! < 12) {
+          this._programacaoInfantil();
+        } else if (this._usuario!.idade! <= 17) {
+          this._programacaoJovens();
+        } else {
+          this._programacaoAdulto();
+        }
       } else {
-        this.programacaoAdulto();
+        print("ERRO! não pode ligar");
       }
     } else {
-      print("ERRO! não pode ligar");
+      print("ERRO FATAL !!");
     }
   }
 
-  void programacaoInfantil() {
+  void _programacaoInfantil() {
+    print("Bem vindo ${this._usuario!.nome}");
     print("");
     print("Assistindo desenhos !!!");
     print("");
   }
 
-  void programacaoAdulto() {
+  void _programacaoAdulto() {
+    print("Bem vindo ${this._usuario!.nome}");
     print("");
     print("Filmes para maiores de 18 anos");
     print("");
   }
 
-  void programacaoJovens() {
+  void _programacaoJovens() {
+    print("Bem vindo ${this._usuario!.nome}");
     print("");
     print("Filmes para maiores de 14 anos ");
   }
 
-  bool? get ligado => this._ligado;
+  Controle? get controle => this._controle;
 
-  void set ligado(bool? legado) {
-    this._ligado = ligado;
+  void set ligado(Controle? controle) {
+    this._controle = controle;
   }
 
-  Pessoa? get idade => this._idade;
+  Pessoa? get usuario => this._usuario;
 
-  void set idade(Pessoa? idade) {
-    this._idade = idade;
+  void set usuario(Pessoa? usuario) {
+    this._usuario = usuario;
   }
 }
