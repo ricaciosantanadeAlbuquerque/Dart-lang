@@ -1,4 +1,6 @@
-class Lutador {
+import 'interface_lutador.dart';
+
+class Lutador implements InterfaceLutador {
   // atributos
   String? _nome;
   String? _nacionalidade;
@@ -62,4 +64,39 @@ class Lutador {
   void set empates(int? empates) => this._empates = empates;
 
   // interface
+
+  @override
+  void apresentar() {
+    print("Lutador: $nome");
+    print("Origem: $nacionalidade");
+    print("$idade anos de idade ");
+    print("$altura de altura");
+    print("Peando ${peso} em KG");
+    print("Ganhou: $vitorias");
+    print("Perdeu: $derrotas");
+    print("Empatou: $empates");
+  }
+
+  @override
+  void status() {
+    print(this.toString());
+  }
+
+  @override
+  void ganharLuta() {
+    this.vitorias = this.vitorias! + 1;
+  }
+
+  @override
+  void perderLuta() {
+    this.derrotas = this.derrotas! + 1;
+  }
+
+  @override
+  void empatarLuta() {
+    this.empates = this.empates! + 1;
+  }
+
+  @override
+  String toString() => 'Nome: $nome, Peso: $peso, vitórias: $vitorias, Derrotas, $derrotas Empates: $empates';
 }
