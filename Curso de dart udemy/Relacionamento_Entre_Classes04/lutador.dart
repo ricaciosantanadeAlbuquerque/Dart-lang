@@ -68,7 +68,7 @@ class Lutador implements InterfaceLutador {
 
   int? get vitorias => this._vitorias;
 
-  void set vitorias(int? vitoria) => this._vitorias = vitorias;
+  void set vitorias(int? vitorias) => this._vitorias = vitorias;
 
   int? get derrotas => this._derrotas;
 
