@@ -15,4 +15,8 @@ class Aluno extends Pessoa {
   void set curso(String? curso) {
     this._curso = curso;
   }
+
+  void cancelarMatricula() {
+    print("Matrícula cancelada ");
+  }
 }
