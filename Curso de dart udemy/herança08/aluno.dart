@@ -1,4 +1,6 @@
-class Aluno {
+import 'pesssoa.dart';
+
+class Aluno extends Pessoa {
   int? _matricula;
   String? _curso;
 

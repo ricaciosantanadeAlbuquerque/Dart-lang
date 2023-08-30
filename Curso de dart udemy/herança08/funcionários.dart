@@ -1,4 +1,6 @@
-class Funcionario {
+import 'pesssoa.dart';
+
+class Funcionario extends Pessoa{
   String? _setor;
   bool? _trabalhando;
 
