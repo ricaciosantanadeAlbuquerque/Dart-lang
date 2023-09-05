@@ -8,11 +8,11 @@ class Aluno extends Pessoa {
 
   void set matricula(int? matricula) => this._matricula = matricula;
 
-  String? get curso => this._curso;
+  String? get curso => this._curso ;
 
-  void set curso(String? curso) => this._curso;
-  
-  void pagarMensalidade() {
+  void set curso(String? curso) => this._curso = curso;
+
+  void  pagarMensalidade() {
     print('Pagando Mensalidade');
   }
 }

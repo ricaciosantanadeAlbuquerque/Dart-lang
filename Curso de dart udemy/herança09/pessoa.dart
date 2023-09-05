@@ -13,7 +13,7 @@ abstract class Pessoa {
 
   String? get sexo => this._sexo;
 
-  void set sexo(String? sexo) => this._sexo;
+  void set sexo(String? sexo) => this._sexo = sexo;
 
   void fazerAniversario() {
     this.idade = this.idade! + 1;
