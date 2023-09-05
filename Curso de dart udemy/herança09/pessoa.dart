@@ -15,5 +15,7 @@ abstract class Pessoa {
 
   void set sexo(String? sexo) => this._sexo;
 
-  void fazerAniversario() {}
+  void fazerAniversario() {
+    this.idade = this.idade! + 1;
+  }
 }
