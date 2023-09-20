@@ -5,3 +5,5 @@ class Tartaruga extends Reptil {
     print('Anda bem devagar !');
   }
 }
+
+// Herança pré- diferença
