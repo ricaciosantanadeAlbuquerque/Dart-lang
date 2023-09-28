@@ -6,7 +6,9 @@ abstract class Pessoa {
   String? _sexo;
   double? _experiencia;
 
-  Pessoa(this._nome, this._idade, this._sexo, this._experiencia);
+  Pessoa(this._nome, this._idade, this._sexo) {
+    this.experiencia = 0;
+  }
 
   // get end set
   get nome => this._nome;

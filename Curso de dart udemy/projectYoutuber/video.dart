@@ -10,13 +10,11 @@ class Video implements AcoesVideo {
 
 // construtor
   Video({required String title}) {
-
     this.titulo = title;
     this.avaliacao = 1;
     this.curtidas = 0;
     this.view = 0;
     this.reproduzir = false;
-
   }
 
 // get and set
@@ -43,19 +41,22 @@ class Video implements AcoesVideo {
 
   // interface
   @override
-  void play(){
-
+  void play() {
+    this.reproduzir = true;
   }
 
   @override
-  void pause(){
-
+  void pause() {
+    this._reproduzindo = false;
   }
 
- @override
-  void like(){
-
+  @override
+  void like() {
+    this.curtidas = this.curtidas! + 1;
   }
 
-
+  @override
+  String toString() {
+    return 'Vídeos: Title:$_titulo, Avaliação $_avaliacao  Visualização:$_views Curtidas: $_curtidas, Reproduzindo $_reproduzindo';
+  }
 }
