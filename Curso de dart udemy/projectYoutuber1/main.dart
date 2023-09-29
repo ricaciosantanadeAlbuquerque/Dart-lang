@@ -36,4 +36,10 @@ void main() {
   visualiazar1.avaliacao(porcentagem: 50);
   print('');
   print(visualiazar1.toString());
+  visualiazar1.filme!.like();
+  print('');
+  print(visualiazar1.toString());
+  visualiazar1.espectador!.ganharExp();
+  print('');
+  print(visualiazar1.toString());
 }
