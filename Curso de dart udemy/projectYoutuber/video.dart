@@ -23,9 +23,15 @@ class Video implements AcoesVideo {
 
   void set titulo(String? titulo) => this._titulo = titulo;
 
-  int? get avaliacao => this._avaliacao;
+  get avaliacao => this._avaliacao;
 
-  void set avaliacao(int? avaliacao) => this._avaliacao = avaliacao;
+  void set avaliacao(avaliacao) {
+    var totAvaliacao = 0;
+
+    totAvaliacao = ((this._avaliacao! + avaliacao!) / this._views!) as int;
+
+    this.avaliacao = totAvaliacao;
+  }
 
   int? get view => this._views;
 
