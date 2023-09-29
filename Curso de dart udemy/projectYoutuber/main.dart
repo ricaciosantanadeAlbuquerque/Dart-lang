@@ -9,19 +9,24 @@ void main() {
     Video(title: 'Aula 10 HTML5'),
   ];
 
-  print(listaVideo[0].titulo);
+  // print(listaVideo[0].titulo);
 
   List<Gafanhoto> listaGafanhoto = [Gafanhoto('Ana', 34, 'F', 'ana123'), Gafanhoto('Lucas', 26, 'M', 'lucas12')];
 
- /**
-  *  print(Visualizacao(listaGafanhoto[0], listaVideo[0]).toString());
-  print('');
-  print(Visualizacao(listaGafanhoto[0], listaVideo[1]).toString());
-  print('');
-  print(Visualizacao(listaGafanhoto[1], listaVideo[0]).toString());
-  print('');
-  print(Visualizacao(listaGafanhoto[1], listaVideo[1]).toString());
-  */
+  var visi = Visualizacao(listaGafanhoto[1], listaVideo[1]);
 
-  var visualizacao = new Visualizacao(listaGafanhoto[0], listaVideo[0]);
+  print(visi.toString());
+  print('');
+
+  visi.avaliar();
+  print('');
+  print(visi.toString());
+  visi.avaliar(porcentagem: 50);
+  print('');
+  print(visi.toString());
+  visi.filme!.play();
+  print('');
+  visi.espectador!.viuMaisUm();
+  print('');
+  print(visi.toString());
 }

@@ -11,7 +11,7 @@ class Video implements AcoesVideo {
 // construtor
   Video({required String title}) {
     this.titulo = title;
-    this.avaliacao = 1;
+    this._avaliacao = 1;
     this.curtidas = 0;
     this.view = 0;
     this.reproduzir = false;
@@ -23,14 +23,13 @@ class Video implements AcoesVideo {
 
   void set titulo(String? titulo) => this._titulo = titulo;
 
-  get avaliacao => this._avaliacao;
+ int? get avaliacao => this._avaliacao;
 
-  void set avaliacao(avaliacao) {
-    var totAvaliacao = 0;
+  void set avaliacao(int? avaliacao) {
+    int totAvaliacao = 0;
 
-    totAvaliacao = ((this._avaliacao! + avaliacao!) / this._views!) as int;
-
-    this.avaliacao = totAvaliacao;
+    totAvaliacao = ((this._avaliacao! + avaliacao!) ~/ this._views!);
+    this._avaliacao = totAvaliacao;
   }
 
   int? get view => this._views;

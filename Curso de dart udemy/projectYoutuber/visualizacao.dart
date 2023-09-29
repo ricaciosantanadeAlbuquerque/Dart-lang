@@ -12,11 +12,11 @@ class Visualizacao {
     this._filme!.view = this._filme!.view! + 1;
   }
 
-  get espectador => this._espectador;
+ Gafanhoto? get espectador => this._espectador;
 
   set espectador(value) => this._espectador = value;
 
-  get filme => this._filme;
+  Video? get filme => this._filme;
 
   set filme(value) => this._filme = value;
 
@@ -30,7 +30,7 @@ class Visualizacao {
     }
 
     if (porcentagem != null && porcentagem.isNaN == false) {
-      double tot = 0;
+      int tot = 0;
 
       if (porcentagem <= 20) {
         tot = 3;
