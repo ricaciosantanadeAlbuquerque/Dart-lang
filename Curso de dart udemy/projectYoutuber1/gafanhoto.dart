@@ -1,3 +1,32 @@
-class Gafanhoto{
-  
+import 'pessoa.dart';
+
+class Gafanhoto extends Pessoa1 {
+  String? _login;
+  int? _totAssistido;
+
+  Gafanhoto({String nome = 'indefinido', int idade = 0, String sexo = 'indefinido', String? login}) : super(nome: nome, idade: idade, sexo: sexo) {
+    this._login = (login != null) ? login : 'indefinido';
+    this._totAssistido = 0;
+  }
+
+  String? get login => this._login;
+
+  void set login(String? login) {
+    this._login = login;
+  }
+
+  int? get totAssistido => this._totAssistido;
+
+  void set totAssistido(int? totAssistid) {
+    this._totAssistido = (totAssistid != null && totAssistido!.isNaN == false) ? totAssistido : 0;
+  }
+
+  @override // polimorfismo de sobreposição obrigatória
+  void ganharExp() {
+    this.experiencia = this.experiencia! + 1;
+  }
+
+  void viuMaisUm() {
+    this.totAssistido = this.totAssistido! + 1;
+  }
 }

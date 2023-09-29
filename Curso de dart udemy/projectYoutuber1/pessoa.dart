@@ -7,7 +7,7 @@ abstract class Pessoa1 { // classe modelo
   String? _sexo;
   double? _experiencia;
 // construtor ==============================================================
-  Pessoa1(String nome, int idade, String sexo) {
+  Pessoa1({required String nome, required int idade, required String sexo}) {
     this._nome = nome;
     this._idade = idade;
     this._sexo = sexo;
