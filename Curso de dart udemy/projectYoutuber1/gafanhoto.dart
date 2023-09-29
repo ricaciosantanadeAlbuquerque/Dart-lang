@@ -1,10 +1,10 @@
 import 'pessoa.dart';
 
-class Gafanhoto extends Pessoa1 {
+class Gafanhoto1 extends Pessoa1 {
   String? _login;
   int? _totAssistido;
 
-  Gafanhoto({String nome = 'indefinido', int idade = 0, String sexo = 'indefinido', String? login}) : super(nome: nome, idade: idade, sexo: sexo) {
+  Gafanhoto1({String nome = 'indefinido', int idade = 0, String sexo = 'indefinido', String? login}) : super(nome: nome, idade: idade, sexo: sexo) {
     this._login = (login != null) ? login : 'indefinido';
     this._totAssistido = 0;
   }

@@ -1,6 +1,6 @@
 import 'acoes_video.dart';
 
-class Viedo1 implements AcoesVideo1 {
+class Video1 implements AcoesVideo1 {
 // atributos ==============================================================
   String? _titulo;
   int? _avaliacao;
@@ -8,7 +8,7 @@ class Viedo1 implements AcoesVideo1 {
   int? _curtidas;
   bool? _reproduzindo;
 // construtor ==============================================================
-  Viedo1({required String titulo}) {
+  Video1({required String titulo}) {
     this._titulo = titulo;
     this._avaliacao = 1;
     this._views = 0;
