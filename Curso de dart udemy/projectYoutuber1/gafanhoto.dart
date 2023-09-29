@@ -18,7 +18,7 @@ class Gafanhoto1 extends Pessoa1 {
   int? get totAssistido => this._totAssistido;
 
   void set totAssistido(int? totAssistid) {
-    this._totAssistido = (totAssistid != null && totAssistido!.isNaN == false) ? totAssistido : 0;
+    this._totAssistido = totAssistid;
   }
 
   @override // polimorfismo de sobreposição obrigatória
@@ -28,5 +28,10 @@ class Gafanhoto1 extends Pessoa1 {
 
   void viuMaisUm() {
     this.totAssistido = this.totAssistido! + 1;
+  }
+
+  @override
+  String toString() {
+    return 'Pessoa:' + super.toString() + ' Login:$_login, TotAssistido:$_totAssistido';
   }
 }

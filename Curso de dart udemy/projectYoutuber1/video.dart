@@ -25,12 +25,15 @@ class Video1 implements AcoesVideo1 {
   int? get avaliacao => this._avaliacao;
 
   void set avaliacao(int? avaliacao) {
-    this._avaliacao = avaliacao;
+    int valor = 0;
+    valor = (this._avaliacao! + avaliacao!) ~/ this._views!;
+
+    this._avaliacao = valor;
   }
 
   int? get views => this._views;
 
-  void set viwes(int? views) {
+  void set views(int? views) {
     this._views = views;
   }
 
@@ -64,6 +67,6 @@ class Video1 implements AcoesVideo1 {
 
   @override // polimorfismo de sobreposição
   String toString() {
-    return 'Vídeo (Título:$_titulo, Avaliação:$_avaliacao, Visualização:$_views, Curtidas: $_curtidas, Reproduzindo:$_reproduzindo )';
+    return 'Vídeo ( Título: $_titulo, Avaliação: $_avaliacao, Visualização: $_views, Curtidas: $_curtidas, Reproduzindo:$_reproduzindo )';
   }
 }

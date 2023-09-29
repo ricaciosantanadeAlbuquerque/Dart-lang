@@ -1,4 +1,5 @@
-abstract class Pessoa1 { // classe modelo
+abstract class Pessoa1 {
+  // classe modelo
 
 // atributos ==============================================================
 
@@ -33,4 +34,9 @@ abstract class Pessoa1 { // classe modelo
   void set experiencia(double? experiencia) => this._experiencia = experiencia;
 
   void ganharExp();
+
+  @override
+  String toString() {
+    return 'Nome: $_nome, Idade: $_idade, Sexo:$_sexo Experiencia: $_experiencia';
+  }
 }

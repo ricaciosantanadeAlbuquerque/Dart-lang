@@ -2,7 +2,6 @@ import 'gafanhoto.dart';
 import 'video.dart';
 
 class Visualizacao {
-  
   Gafanhoto1? _espectador;
   Video1? _filme;
 
@@ -10,6 +9,8 @@ class Visualizacao {
     if (gafanhoto != null && filme != null) {
       this._espectador = gafanhoto;
       this._filme = filme;
+      this._espectador!.viuMaisUm();
+      this._filme!.views = this._filme!.views! + 1;
     } else {
       print("ERRO! os parâmetros não foram passados");
     }
@@ -27,7 +28,7 @@ class Visualizacao {
     this._filme = filme;
   }
 
-  void avaliacao({required int? nota, required double? porcentagem}) {
+  void avaliacao({int? nota, double? porcentagem}) {
     if (nota == null && porcentagem == null) {
       this._filme!.avaliacao = 5;
     }
@@ -52,5 +53,10 @@ class Visualizacao {
 
       this._filme!.avaliacao = valor;
     }
+  }
+
+  @override
+  String toString() {
+    return this._espectador.toString() + '\n' + this._filme.toString();
   }
 }
