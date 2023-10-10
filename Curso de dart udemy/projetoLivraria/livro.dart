@@ -16,6 +16,7 @@ class Livro implements InterfaceLivro {
     this.preco = (preco > 0) ? preco : 50;
     this.nota = (nota > 0) ? nota : 0;
     this.quantidade = (quantidade > 0) ? quantidade : 1;
+    this.editora = editora;
   }
 // get ande set
   String? get titulo => this._titulo;

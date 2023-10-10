@@ -19,7 +19,10 @@ class Editora {
     this._email = email;
   }
 
-  void consultar(){
-    // todo
+  String consultar() {
+    return toString();
   }
+
+  @override
+  String toString() => 'Nome:$_nome,\nEmail:$_email';
 }
