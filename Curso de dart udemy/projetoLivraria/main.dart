@@ -7,4 +7,8 @@ void main() {
   final livro1 = Livro(titulo: 'Dart', anoPublicacao: 2022, preco: 140, nota: 10, quantidade: 1, editora: editora);
 
   print(livro1.editora!.consultar());
+  
+  /**
+   * Classe livro está associada a a classe editora;
+   */
 }
