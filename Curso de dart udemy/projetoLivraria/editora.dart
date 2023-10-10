@@ -24,5 +24,5 @@ class Editora {
   }
 
   @override
-  String toString() => 'Nome:$_nome,\nEmail:$_email';
+  String toString() => 'Editora:$_nome,\nEmail:$_email';
 }
