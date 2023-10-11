@@ -2,7 +2,7 @@ import 'autor.dart';
 import 'editora.dart';
 import 'interface_livro.dart';
 
-class Livro implements InterfaceLivro {
+abstract class Livro implements InterfaceLivro {
   // atribultos ou variáveis da classe
   String? _titulo;
   int? _anoPublicacao;
