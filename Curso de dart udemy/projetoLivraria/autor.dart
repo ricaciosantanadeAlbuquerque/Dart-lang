@@ -30,6 +30,8 @@ class Autor implements InterfaceAutor {
     this._abreviatura = abreviatura;
   }
 
+  List<Contato> get listacontato => this._contatosAutor;
+
   @override
   void consultar() {
     print(toString());
