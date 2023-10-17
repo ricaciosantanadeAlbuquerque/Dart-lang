@@ -1,4 +1,5 @@
 class Movimento {
+  
   int? _tipoMovimento;
   DateTime? _dataMovimento;
   DateTime? _horaMovimento;
