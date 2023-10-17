@@ -1,3 +1,5 @@
+import 'conta_comum.dart';
+
 abstract class Pessoa {
   String? _nomePessoa;
   String? _ederecoPessoa;
@@ -5,8 +7,14 @@ abstract class Pessoa {
   int? _telefonePessoa;
   double? _rendaPessoa;
   int _situacaoPessoa = 1;
+  ContaComum? _contaComum;
+  Pessoa(this._nomePessoa, this._ederecoPessoa, this._cepPessoa, this._telefonePessoa, this._rendaPessoa, this._situacaoPessoa, this._contaComum);
 
-  Pessoa(this._nomePessoa, this._ederecoPessoa, this._cepPessoa, this._telefonePessoa, this._rendaPessoa, this._situacaoPessoa);
+  ContaComum? get contaComum => this._contaComum;
+
+  void set contaComum(ContaComum? contaComum) {
+    this._contaComum = contaComum;
+  }
 
   String? get nomePessoa => this._nomePessoa;
 
@@ -43,5 +51,4 @@ abstract class Pessoa {
   void set situacaoPessoa(int situacaoPessoa) {
     this._situacaoPessoa = situacaoPessoa;
   }
-  
 }
