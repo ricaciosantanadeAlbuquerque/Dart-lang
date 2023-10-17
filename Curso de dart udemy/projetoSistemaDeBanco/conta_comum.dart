@@ -1,4 +1,5 @@
 class ContaComum {
+
   int? _numeroConta;
   DateTime? _aberturaConta;
   DateTime? _fechamentoConta;
