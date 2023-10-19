@@ -9,13 +9,8 @@ class ContaComum {
   double? _saldoConta;
   Movimento? _movimento;
 
-  ContaComum({required int numeroConta, required DateTime aberturaConta, required DateTime fechamentoConta, required int situacaoConta, required int senhaConta, required double saldoConta, required Movimento? movimento}) {
-    this.numeroConta = numeroConta;
-    this.aberturaConta = aberturaConta;
-    this.fechamentoConta = fechamentoConta;
-    this.situacaoConta = situacaoConta;
-    this.senhaConta = senhaConta;
-    this.saldoConta = saldoConta;
+  ContaComum({required Movimento? movimento}) {
+  
     this._movimento = movimento;
   }
 

@@ -18,7 +18,7 @@ class ContaPoupanca extends ContaComum {
 
   DateTime? get aniversarioConta => this._aniverSarioConta;
 
-  Movimento? get movimento => this.movimento;
+  Movimento? get movimento => this._movimento;
 
   void set movimento(Movimento? movimento) {
     this._movimento = movimento;
