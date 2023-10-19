@@ -1,5 +1,4 @@
 class ContaComum {
-
   int? _numeroConta;
   DateTime? _aberturaConta;
   DateTime? _fechamentoConta;
@@ -54,19 +53,62 @@ class ContaComum {
 
   // =============================================
 
-  void abrirConta() {}
+  void abrirConta({required int numeroConta, required DateTime aberturaConta, required int senhaConta, required double saldoConta}) {
+    this.numeroConta = numeroConta;
+    this.aberturaConta = aberturaConta;
+    this.senhaConta = senhaConta;
+    this.saldoConta = saldoConta;
+    this.situacaoConta = 1;
+  }
 
-  void consultarConta(int numeroConta) {}
+  void consultarConta(int numeroConta) {
+    if (numeroConta == this.numeroConta) {
+      print('Numero da conta: ${numeroConta}\n');
+      print('Saldo: $_saldoConta \n');
 
-  void validarSenha(int numeroSenha) {}
+      if (this.situacaoConta == 1) {
+        print(" conta  está aberta \n");
+      } else {
+        print("Conta está fechada \n");
+      }
+    } else {
+      print(" A conta  de número $_numeroConta não existe ! \n");
+    }
+  }
 
-  void emitirSaldo() {}
+  bool? validarSenha(int numeroSenha) {
+    return numeroSenha == this.senhaConta;
+  }
 
-  void emitirExtrato() {}
+  double? emitirSaldo() {
+    return this.saldoConta;
+  }
 
-  void sacarValor(double valor) {}
+  void emitirExtrato() {
+    print("Numero da conta ${_numeroConta}\n");
+    print("Saldo ${this.saldoConta}");
+  }
 
-  void depositarValor(double valor) {}
+  void sacarValor(double valor) {
+    print("O saldo atual é de ${saldoConta}\n");
 
-  void encerrarConta() {}
+    if (valor < this.saldoConta!) {
+      this.saldoConta = this.saldoConta! - valor;
+    }
+    print('O valor do saque $valor, saldo atual $saldoConta');
+  }
+
+  void depositarValor(double valor) {
+    this.saldoConta = this.saldoConta! + valor;
+  }
+
+  int encerrarConta() {
+    int valor = 0;
+
+    if (this.saldoConta == 0) {
+      valor = 1;
+    }
+
+    return valor;
+  }
 }
