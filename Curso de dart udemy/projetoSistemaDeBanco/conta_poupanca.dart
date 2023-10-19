@@ -5,7 +5,10 @@ class ContaPoupanca extends ContaComum {
   DateTime? _aniverSarioConta;
   Movimento? _movimento;
 
-  ContaPoupanca({required DateTime? aniverSarioConta, required Movimento? movimento}) : super(movimento: movimento);
+  ContaPoupanca({required DateTime? aniverSarioConta, required Movimento? movimento}) : super(movimento: movimento) {
+    this.aniverSarioConta = aniverSarioConta;
+    this.movimento = movimento;
+  }
 
   DateTime? get aniversarioConta => this._aniverSarioConta;
 
@@ -22,7 +25,8 @@ class ContaPoupanca extends ContaComum {
   void rendaConta(DateTime data, double valor) {
     print('A renda é de 5% sobre o valor ${(this.saldoConta! * 5) / 100}');
   }
- @override
+
+  @override
   String toString() {
     return ' Aniversário $_aniverSarioConta ' + super.toString();
   }

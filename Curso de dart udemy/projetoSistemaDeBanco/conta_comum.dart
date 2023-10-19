@@ -1,7 +1,6 @@
 import 'movimento.dart';
 
 class ContaComum {
-  
   int? _numeroConta;
   DateTime? _aberturaConta;
   DateTime? _fechamentoConta;
@@ -104,6 +103,8 @@ class ContaComum {
 
   void depositarValor(double valor) {
     this.saldoConta = this.saldoConta! + valor;
+    this._movimento!.registrarMovimento(2, valor);
+    this._movimento!.informaData(DateTime.now());
   }
 
   int encerrarConta() {

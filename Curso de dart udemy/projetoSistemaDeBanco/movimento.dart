@@ -1,7 +1,7 @@
 class Movimento {
   int? _tipoMovimento;
   DateTime? _dataMovimento;
-  DateTime? _horaMovimento;
+
   double? _valorMovimento;
 
   Movimento();
@@ -10,17 +10,13 @@ class Movimento {
 
   set tipoMovimento(int? value) => this._tipoMovimento = value;
 
-  get dataMovimento => this._dataMovimento;
+  DateTime? get dataMovimento => this._dataMovimento;
 
-  set dataMovimento(value) => this._dataMovimento = value;
+  void set dataMovimento(DateTime? value) => this._dataMovimento = value;
 
-  get horaMovimento => this._horaMovimento;
+  double? get valorMovimento => this._valorMovimento;
 
-  set horaMovimento(value) => this._horaMovimento = value;
-
-  get valorMovimento => this._valorMovimento;
-
-  set valorMovimento(value) => this._valorMovimento = value;
+  set valorMovimento(double? value) => this._valorMovimento = value;
 
 //=============================================================
 
@@ -29,10 +25,22 @@ class Movimento {
       case 1:
         print('saque');
         this.tipoMovimento = 1;
+        this._valorMovimento = valor;
         break;
       case 2:
         print('Deposito');
         this.tipoMovimento = 2;
+        this._valorMovimento = valor;
+        break;
+      case 3:
+        print('Abertura de conta');
+        this.tipoMovimento = 3;
+         this._valorMovimento = valor;
+        break;
+      case 4:
+        print('fechamento de conta');
+        this.tipoMovimento = 4;
+         this._valorMovimento = valor;
         break;
     }
   }
@@ -42,13 +50,8 @@ class Movimento {
     print("Data do movimento ${this.dataMovimento}");
   }
 
-  void informarHora(DateTime hora) {
-    this._horaMovimento = hora;
-    print("Horário da movimentação ${this.horaMovimento}");
-  }
-
   @override
   String toString() {
-    return ' Tipo de movimentação ${tipoMovimento == 1 ? 'Saque' : 'Deposito'} Data: $_dataMovimento  Hora: $_horaMovimento Valor: $_valorMovimento ';
+    return ' Tipo de movimentação ${(tipoMovimento == 1) ? 'Saque' :(this.tipoMovimento == 2) ? 'Deposito' : (this.tipoMovimento == 3) ? 'Abertura de conta' : 'fechamento de conta'} Data: $_dataMovimento, Valor: $_valorMovimento ';
   }
 }
