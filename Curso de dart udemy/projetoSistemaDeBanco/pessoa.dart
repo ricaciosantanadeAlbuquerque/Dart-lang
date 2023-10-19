@@ -9,7 +9,7 @@ abstract class Pessoa {
   int _situacaoPessoa = 1;
   ContaComum? _contaComum;
   
-  Pessoa(this._nomePessoa, this._ederecoPessoa, this._cepPessoa, this._telefonePessoa, this._rendaPessoa, this._situacaoPessoa, this._contaComum);
+  Pessoa(this._nomePessoa, this._ederecoPessoa, this._cepPessoa, this._telefonePessoa, this._rendaPessoa, this._situacaoPessoa);
 
   ContaComum? get contaComum => this._contaComum;
 
