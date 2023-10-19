@@ -114,4 +114,9 @@ class ContaComum {
 
     return valor;
   }
+
+  @override
+  String toString() {
+    return 'Numero da Conta: $_numeroConta, Data de abertura da conta: $_aberturaConta, Data de fechamento da Conta $_fechamentoConta, Situação da Conta $_situacaoConta, Senha da conta $senhaConta, Saldo: $saldoConta, ';
+  }
 }
