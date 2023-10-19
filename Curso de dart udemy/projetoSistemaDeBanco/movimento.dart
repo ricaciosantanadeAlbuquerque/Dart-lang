@@ -1,5 +1,4 @@
 class Movimento {
-
   int? _tipoMovimento;
   DateTime? _dataMovimento;
   DateTime? _horaMovimento;
@@ -39,6 +38,7 @@ class Movimento {
   }
 
   void consultarMovimento(DateTime date) {
+    this.dataMovimento = date;
     print("Data do movimento ${this.dataMovimento}");
   }
 }

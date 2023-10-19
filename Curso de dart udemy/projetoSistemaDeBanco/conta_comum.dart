@@ -10,7 +10,6 @@ class ContaComum {
   Movimento? _movimento;
 
   ContaComum({required Movimento? movimento}) {
-  
     this._movimento = movimento;
   }
 
@@ -50,6 +49,11 @@ class ContaComum {
     this._saldoConta = saldoConta;
   }
 
+  Movimento? get movimento => this._movimento;
+
+  void set movimento(Movimento? movimento) {
+    this._movimento = movimento;
+  }
   // =============================================
 
   void abrirConta({required int numeroConta, required DateTime aberturaConta, required int senhaConta, required double saldoConta}) {

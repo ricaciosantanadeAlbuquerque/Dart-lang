@@ -7,7 +7,7 @@ class ContaEspecial extends ContaComum {
 
   ContaEspecial(
     this._movimento,
-  ) : super(movimento: _movimento) {}
+  ) : super(movimento: _movimento);
 
   double? get limiteConta => this._limiteConta;
 
