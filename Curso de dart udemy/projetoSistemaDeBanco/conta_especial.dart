@@ -24,4 +24,9 @@ class ContaEspecial extends ContaComum {
   void sacar(double sacar) {
     super.sacarValor(sacar);
   }
+
+  @override
+  String toString() {
+    return 'Limite da conta: $_limiteConta'+ super.toString();
+  }
 }
