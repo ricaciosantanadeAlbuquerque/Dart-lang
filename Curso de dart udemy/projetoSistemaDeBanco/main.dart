@@ -8,8 +8,9 @@ void main() {
   Movimento movimento = Movimento();
 
   ContaEspecial contaBanco1 = ContaEspecial(movimento);
-
+  cliente.situacaoPessoa = 1;
   cliente.contaComum = contaBanco1;
+  
 
   cliente.contaComum!.abrirConta(numeroConta: 77, aberturaConta: DateTime.now(), senhaConta: 123, saldoConta: 1500);
   cliente.contaComum!.consultarConta(77);
@@ -22,8 +23,10 @@ void main() {
   cliente.contaComum!.consultarConta(77);
   print('');
   cliente.contaComum!.sacarValor(500);
-  cliente.contaComum!.movimento!.registrarMovimento(1,500);
+  cliente.contaComum!.movimento!.registrarMovimento(1, 500);
   cliente.contaComum!.movimento!.consultarMovimento(DateTime.now());
   print('');
   cliente.contaComum!.consultarConta(77);
+  print('');
+  print(cliente.toString());
 }

@@ -52,9 +52,9 @@ abstract class Pessoa {
   void set situacaoPessoa(int situacaoPessoa) {
     this._situacaoPessoa = situacaoPessoa;
   }
-  
+
  @override
   String toString() {
-    return 'Nome: $_nomePessoa, Endereço: $_ederecoPessoa,  Cep: $_cepPessoa, Telefone: $_telefonePessoa, Renda: $_rendaPessoa \n status conta ${situacaoPessoa == 1 ? ' aberta' : 'fechada'}';
+    return 'Nome: $_nomePessoa, Endereço: $_ederecoPessoa,  Cep: $_cepPessoa, Telefone: $_telefonePessoa, Renda: $_rendaPessoa \n status conta ${situacaoPessoa == 1 ? ' aberta ' : 'fechada'}';
   }
 }

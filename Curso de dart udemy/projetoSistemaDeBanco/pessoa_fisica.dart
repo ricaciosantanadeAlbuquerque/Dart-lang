@@ -63,5 +63,9 @@ class PessoaFisica extends Pessoa {
 
     return procura;
   }
-  
+
+  @override
+  String toString() {
+    return super.toString() + 'CPF: $_cpfPessoa, RG: $_rgPessoa, Idade: $_idadePessoa';
+  }
 }

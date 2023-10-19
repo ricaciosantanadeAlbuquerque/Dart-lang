@@ -11,9 +11,9 @@ class PessoaJuridica extends Pessoa {
     required int? telefonePessoa,
     required double? rendaPessoa,
     required int situacaoPessoa,
-  }):super(nomePessoa,ederecoPessoa,cepPessoa,telefonePessoa,rendaPessoa,situacaoPessoa) {
+  }) : super(nomePessoa, ederecoPessoa, cepPessoa, telefonePessoa, rendaPessoa, situacaoPessoa) {
     this.cnpjPessoa = (cnpjPessoa != null) ? cnpjPessoa : 0;
-     this.nomePessoa = (nomePessoa != null) ? nomePessoa : 'indefinido';
+    this.nomePessoa = (nomePessoa != null) ? nomePessoa : 'indefinido';
     this.ederecoPessoa = (ederecoPessoa != null) ? ederecoPessoa : 'indefinido';
     this.cepPessoa = (cepPessoa != null) ? cepPessoa : 0;
     this.telefonePessoa = (telefonePessoa != null) ? telefonePessoa : 0;
@@ -42,5 +42,10 @@ class PessoaJuridica extends Pessoa {
       valor = 'CNPJ: ${cnpjPessoa}';
     }
     return valor;
+  }
+
+  @override
+  String toString() {
+    return super.toString() + 'CNPJ $_cnpjPessoa';
   }
 }
