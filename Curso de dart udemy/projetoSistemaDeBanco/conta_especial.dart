@@ -3,11 +3,11 @@ import 'movimento.dart';
 
 class ContaEspecial extends ContaComum {
   double? _limiteConta;
-   Movimento? _movimento;
+  Movimento? _movimento;
 
-  ContaEspecial(this._movimento,) : super(movimento: _movimento) {
-   
-  }
+  ContaEspecial(
+    this._movimento,
+  ) : super(movimento: _movimento) {}
 
   double? get limiteConta => this._limiteConta;
 
@@ -16,10 +16,10 @@ class ContaEspecial extends ContaComum {
   }
 
   // ==================================================
-      void abrirContaEspecial({required double limiteConta,required int numeroConta, required DateTime aberturaConta, required int senhaConta, required double saldoConta}){
-        this._limiteConta = limiteConta;
-        super.abrirConta(numeroConta: numeroConta, aberturaConta: aberturaConta, senhaConta: senhaConta, saldoConta: saldoConta)
-      }
+  void abrirContaEspecial({required double limiteConta, required int numeroConta, required DateTime aberturaConta, required int senhaConta, required double saldoConta}) {
+    this._limiteConta = limiteConta;
+    super.abrirConta(numeroConta: numeroConta, aberturaConta: aberturaConta, senhaConta: senhaConta, saldoConta: saldoConta);
+  }
 
   void sacar(double sacar) {
     super.sacarValor(sacar);

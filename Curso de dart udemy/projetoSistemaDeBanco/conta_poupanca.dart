@@ -5,16 +5,7 @@ class ContaPoupanca extends ContaComum {
   DateTime? _aniverSarioConta;
   Movimento? _movimento;
 
-  ContaPoupanca(
-      {required DateTime? aniverSarioConta,
-      required int numeroConta,
-      required DateTime aberturaConta,
-      required DateTime fechamentoConta,
-      required int situacaoConta,
-      required int senhaConta,
-      required double saldoConta,
-      required Movimento? movimento})
-      : super(numeroConta: numeroConta, aberturaConta: aberturaConta, fechamentoConta: fechamentoConta, situacaoConta: situacaoConta, senhaConta: senhaConta, saldoConta: saldoConta, movimento: movimento) {}
+  ContaPoupanca({required DateTime? aniverSarioConta, required Movimento? movimento}) : super(movimento: movimento);
 
   DateTime? get aniversarioConta => this._aniverSarioConta;
 
