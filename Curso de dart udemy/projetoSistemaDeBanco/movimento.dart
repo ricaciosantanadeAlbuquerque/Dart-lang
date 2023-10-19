@@ -37,8 +37,18 @@ class Movimento {
     }
   }
 
-  void consultarMovimento(DateTime date) {
+  void informaData(DateTime date) {
     this.dataMovimento = date;
     print("Data do movimento ${this.dataMovimento}");
+  }
+
+  void informarHora(DateTime hora) {
+    this._horaMovimento = hora;
+    print("Horário da movimentação ${this.horaMovimento}");
+  }
+
+  @override
+  String toString() {
+    return ' Tipo de movimentação ${tipoMovimento == 1 ? 'Saque' : 'Deposito'} Data: $_dataMovimento  Hora: $_horaMovimento Valor: $_valorMovimento ';
   }
 }

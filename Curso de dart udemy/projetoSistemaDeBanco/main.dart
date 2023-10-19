@@ -18,13 +18,13 @@ void main() {
   cliente.contaComum!.depositarValor(2500);
   print('');
   cliente.contaComum!.movimento!.registrarMovimento(2, 2500);
-  cliente.contaComum!.movimento!.consultarMovimento(DateTime.now());
+  cliente.contaComum!.movimento!.informaData(DateTime.now());
   print('');
   cliente.contaComum!.consultarConta(77);
   print('');
   cliente.contaComum!.sacarValor(500);
   cliente.contaComum!.movimento!.registrarMovimento(1, 500);
-  cliente.contaComum!.movimento!.consultarMovimento(DateTime.now());
+  cliente.contaComum!.movimento!.informaData(DateTime.now());
   print('');
   cliente.contaComum!.consultarConta(77);
   print('');
