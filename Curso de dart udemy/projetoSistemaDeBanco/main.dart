@@ -38,6 +38,27 @@ void main() {
   print('');
   print('');
   cliente.contaPoupanca = contaPoupanca;
-  cliente.contaPoupanca!.abrirConta(aberturaConta: DateTime.now(), numeroConta: 222, saldoConta: 35000, senhaConta: 1700,);
+  cliente.contaPoupanca!.abrirConta(
+    aberturaConta: DateTime.now(),
+    numeroConta: 222,
+    saldoConta: 35000,
+    senhaConta: 1700,
+  );
   print(cliente.contaPoupanca.toString());
+// extrato =============================================================
+  cliente.contaEspecial!.emitirExtrato();
+  print('==============================================================');
+// extrato poupança ====================================================
+  cliente.contaPoupanca!.emitirExtrato();
+  print('===============================================================');
+  print(cliente.contaEspecial!.saldoConta);
+  print('===============================================================');
+  print(cliente.contaEspecial!.saldoConta);
+  var test = cliente.contaEspecial!.validarSenha(123);
+  print('Teste de senha ${(test == true) ? 'Senha correta' : 'senha incorreta'}');
+
+  // ============================Pessoa cliente=================================================================
+  ;
+  print(cliente.consultarCpf(10822233450408));
+  print(cliente.validarCpf(10822233450408) == 1 ? 'CPF válido' : 'inválido');
 }
