@@ -13,4 +13,10 @@ class Autor {
   void set abreviaturas(String? abreviaturas) {
     this._abreviaturas = abreviaturas;
   }
+
+  void consultar(){}
+
+  void adicionar(String tipo,String contato){}
+
+  void remover(String tipo,String contato){}
 }

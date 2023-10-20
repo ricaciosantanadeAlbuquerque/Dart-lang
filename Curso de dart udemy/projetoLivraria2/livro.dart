@@ -9,6 +9,7 @@ abstract class Livro {
   int? _nota;
   int? _quantidade;
   Editora? _editora;
+  List<Autor> listaAutor = [];
 
   Livro({required String titulo, required DateTime date, required double preco, required int nota, required int quantidade, required Editora editora}) {
     this.titulo = titulo;
@@ -59,7 +60,13 @@ abstract class Livro {
 
   void atualizar() {}
 
-  void adicionarAutor(Autor autor) {}
+  void adicionarAutor(Autor autor) {
+    listaAutor.add(autor);
+  }
 
-  void removerAutor(Autor autor) {}
+  void removerAutor(Autor autor) {
+    listaAutor.removeWhere((aut) {
+      return aut.nome == autor.nome;
+    });
+  }
 }
