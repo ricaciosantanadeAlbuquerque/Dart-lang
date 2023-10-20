@@ -2,6 +2,7 @@ import '../projetoLivraria/autor.dart';
 import '../projetoLivraria/editora.dart';
 
 abstract class Livro {
+  
   String? _titulo;
   DateTime? _anoPublicacao;
   double? _preco;
