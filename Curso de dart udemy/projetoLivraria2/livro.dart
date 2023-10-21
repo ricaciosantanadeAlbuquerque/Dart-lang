@@ -1,8 +1,8 @@
-import '../projetoLivraria/autor.dart';
-import '../projetoLivraria/editora.dart';
 
-abstract class Livro {
-  
+import 'autor.dart';
+import 'editora.dart';
+
+class Livro {
   String? _titulo;
   DateTime? _anoPublicacao;
   double? _preco;
@@ -68,5 +68,10 @@ abstract class Livro {
     listaAutor.removeWhere((aut) {
       return aut.nome == autor.nome;
     });
+  }
+
+  @override
+  String toString() {
+    return 'Título: $_titulo, Ano: $_anoPublicacao, Preço: $_preco, Nota:$_nota, Quantidade: $_quantidade ';
   }
 }

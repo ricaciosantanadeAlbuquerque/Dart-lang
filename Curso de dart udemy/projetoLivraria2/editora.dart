@@ -2,7 +2,10 @@ class Editora {
   String? _nome;
   String? _email;
 
-  Editora({required String? nome, required String? email});
+  Editora({required String? nome, required String? email}) {
+    this.nome = (nome != null) ? nome : 'indefinido';
+    this.email = (email != null) ? email : 'indefinido';
+  }
 
   String? get nome => this._nome;
 
@@ -16,9 +19,10 @@ class Editora {
     this._email = email;
   }
 
-  void consultar(){
-
+  void consultar() {
+    this.toString();
   }
 
-  
+  @override
+  String toString() => 'Nome $_nome, Email: $_email';
 }
