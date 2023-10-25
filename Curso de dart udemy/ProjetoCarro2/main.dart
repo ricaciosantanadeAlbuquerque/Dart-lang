@@ -26,6 +26,15 @@ void main() {
   motorista.acionarBotaoLigar();
   motorista.apertarAcelerador();
   motorista.carro!.radio!.ligar();
-  print('');
+  print('=====================================================================================================');
   print(carro.status());
+
+  motorista.carro!.Acelerador();
+  motorista.carro!.Acelerador();
+  print('======================================================================================================');
+  print(carro.status());
+  motorista.carro!.Freio();
+  print('======================================================================================================');
+  print(carro.status());
+  print(motorista.carro!.listaPeneu[0].toString());
 }
