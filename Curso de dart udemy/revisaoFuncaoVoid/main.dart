@@ -35,7 +35,7 @@ void semRetorno() {
     for (var item in array) {
       print('$item\t KM/h em Milhas/h ${(item * milhas).toStringAsFixed(2)}');
     }
-    
+
   }
   // Toda função em Dart deve ser invocada após a sua declaração.
 
@@ -43,7 +43,7 @@ void semRetorno() {
   somarValores(15, 45);
   verificarMaiorIdade('Lucas', 28);
   contagemRegressiva(30);
-  converterKparaMilhas([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+  converterKparaMilhas([1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11]);
 }
 
 void main() {
