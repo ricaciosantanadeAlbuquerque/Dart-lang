@@ -29,6 +29,15 @@ void funcaoParametros() {
     p();
   }
 
+  void executor({required void Function(String nome, double nota) p}) {
+    String nome = 'ana';
+    double nota = 10;
+    p(nome, 10);
+  }
+
+  void test(String nome, double nota) => print('nome: $nome, nota $nota');
+
+  
   exibirDados('Lana');
   print('');
   exibirDados('Lucas', 80, 1.82);
@@ -42,6 +51,8 @@ void funcaoParametros() {
   saudacao2('Ana', p: texto);
 
   saudacao2('Moisés', p: () => print('tudo oks no teste !! '));
+
+  executor(p: test);
 }
 
 void main() {
