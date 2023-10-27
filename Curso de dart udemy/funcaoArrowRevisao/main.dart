@@ -4,7 +4,6 @@ void funcaoArrow() {
   String somarValores(int valorA, int valorB) => 'soma: $valorA + $valorB = ${valorA + valorB}';
   
   String verificarMaiorIdade(String nome, int idade) => (idade >= 18) ? '$nome é maior de idade' : '$nome não é maior de idade';
-  
   String calcularAreaCirculo(int raio) => 'Área do circulo: ${3.14 * raio * raio}';
 
   double desconto(int faltas) => (faltas > 1)
