@@ -1,5 +1,5 @@
 class Usuario {
-  String? usuario;
+  String? usuario; // criamos um atributo de nome "usuario" e o declaramos como sendo String e que aceita valores null ?
   String? senha;
 
   void autenticar() {
@@ -9,7 +9,7 @@ class Usuario {
     if (this.usuario == usuario && this.senha == senha) {
       print('Usuário autenticado!\n');
     } else {
-      print('ERRO! senha ou e-mail inválido');
+      print('ERRO! senha ou e-mail inválido\n');
     }
   }
 }
