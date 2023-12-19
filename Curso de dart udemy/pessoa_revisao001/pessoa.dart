@@ -3,6 +3,6 @@ class Pessoa {
   String? idade;
 
   void info() {
-    print('Nome:$nome, idade: $idade');
+    print('Nome:$nome, idade: $idade\n');
   }
 }
