@@ -45,12 +45,17 @@ class Conta {
   double get limite => this._limite;
 
   void set limite(double limite) {
-    this._limite = limite;
+    if (alteraLimite == true) {
+      this._limite = limite;
+      print('Limite alterado para o valor tal $limite');
+    } else {
+      print('Não foi possível alterar o limite do titular');
+    }
   }
 
 // get and set costumizado
 
-  String get informacao => 'Títular: ${this.nome}, Número da conta: ${this.numeroConta}, Saldo:${this.saldo}, Limite:${this.limite}';
+  String get informacao => '\nTítular: ${this.nome}, Número da conta: ${this.numeroConta}, Saldo:${this.saldo}, Limite:${this.limite}\n';
 
   void set deposito(double deposito) {
     if (deposito > 0) {
