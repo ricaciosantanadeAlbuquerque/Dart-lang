@@ -1,4 +1,5 @@
 class PessoaGet {
+
   static final PessoaGet _instancia = PessoaGet._construtorNomeado();
   String? _nome;
 
@@ -8,5 +9,10 @@ class PessoaGet {
     return _instancia;
   }
 
-  get nome => this._nome;
+  String? get nome => this._nome;
+
+  void set nome(String? nome) {
+    this._nome = nome;
+  }
+  
 }
