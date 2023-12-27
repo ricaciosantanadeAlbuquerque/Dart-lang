@@ -31,5 +31,10 @@ void main() {
   p2.nome = 'João';
 
   print(p1.nome);
+
+  p1.texto();
+  print('');
+
+  PessoaStatic.instance.texto();
 }
 // PessoaStatic.instance : sempre retorna uma mesma instância;
