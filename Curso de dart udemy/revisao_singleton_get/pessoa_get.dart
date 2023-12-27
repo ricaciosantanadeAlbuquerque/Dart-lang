@@ -8,5 +8,5 @@ class PessoaGet {
     return _instancia;
   }
 
-  get nome => this.nome;
+  get nome => this._nome;
 }
