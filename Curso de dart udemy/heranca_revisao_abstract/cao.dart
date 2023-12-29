@@ -33,4 +33,7 @@ class Cao extends Mamifero {
   void acao() {
     print('Late como um cao!');
   }
+  
+  @override
+  String toString() => 'Instance of ${this.runtimeType}, nome: $nome, Raca: $raca, sexo:$sexo';
 }

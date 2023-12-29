@@ -9,5 +9,10 @@ void main() {
   cao
     ..dormir()
     ..alimentar()
-    ..reproduzir();
+    ..reproduzir()
+    ..acao();
+
+  print(cao.toString());
+  print('');
+  print(cao);
 }
