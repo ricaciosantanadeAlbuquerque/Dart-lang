@@ -29,5 +29,8 @@ class Cao extends Mamifero {
   void reproduzir() {
     print('Reproduz como um cão !');
   }
-  
+
+  void acao() {
+    print('Late como um cao!');
+  }
 }
