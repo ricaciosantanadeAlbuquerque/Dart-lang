@@ -5,7 +5,9 @@ import 'interface_presidenciavel.dart';
 class Candidato extends Cidadao implements Postagem, Presidenciavel {
   String? objetivo;
 
-  Candidato(String nome) : super(nome);
+  Candidato(String nome, {this.ideologia, this.partido}) : super(nome) {
+    direitosDeveres();
+  }
 
   @override
   void objetivosPessoais() {
