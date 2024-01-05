@@ -34,6 +34,7 @@ class ControleRemoto implements InterfaceControle {
   @override
   void ligar() {
     this._setLigado = true;
+    this._setTocando = true;
   }
 
   @override
