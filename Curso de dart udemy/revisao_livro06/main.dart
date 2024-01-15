@@ -11,6 +11,7 @@ void main() {
 
 void test() {
   print('Digite um valor numerico entre 1 e 7');
+  //String? entradaValor; para teste
   String? entradaValor = stdin.readLineSync();
 
   // tratamento
