@@ -1,5 +1,7 @@
 import 'dart:io';
-
+/**
+ * Elabore um programa  em  que o usuário fornece uma letra e dois números, A para somar ,B para subtrair C para multiplicar,d para     dividir
+ */
 void main() {
   print('Digite A para somar');
   print('Digte B  para subtrair');
