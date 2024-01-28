@@ -42,9 +42,52 @@ void semRetorno() {
   verificarMaiorIdade('Lucas', 23);
   verificarMaiorIdade('Ana', 3);
   contagemRegressiva(5);
-  convertendoKmParaMilhas([1,5,10,30,40,60,80,100,140,160,180,200]);
+  convertendoKmParaMilhas([1, 5, 10, 30, 40, 60, 80, 100, 140, 160, 180, 200]);
+}
+
+void comRetorno() {
+  String conceito() {
+    return 'funções com retorno!';
+  }
+
+  String somarValores(int valorA, int valorB) {
+    var resultado = valorA + valorB;
+    return 'A soma  de $valorA + $valorB == $resultado';
+  }
+
+  String verificarMaiorIdade(String nome, int idade) {
+    var resposta;
+
+    if (idade >= 18) {
+      resposta = 'é maior';
+    } else {
+      resposta = 'Não é maior';
+    }
+
+    return '$nome $resposta de idade.';
+  }
+
+  String contagemRegressiva(int numero) {
+    var resultado;
+
+    for (var i = numero; i >= 0; i--) {
+
+      (i != 0) ? print(' Contagem: $i') : resultado = 'Contagem vai !!!';
+    }
+
+     return resultado;
+
+  }
+
+  print(conceito());
+  var receber = somarValores(20, 220);
+  print(receber);
+  print(verificarMaiorIdade('Ricacio', 28));
+  print(contagemRegressiva(5));
 }
 
 void main() {
   semRetorno(); // chamada a funcao semRetorno
+  print('=======================================================');
+  comRetorno();
 }
