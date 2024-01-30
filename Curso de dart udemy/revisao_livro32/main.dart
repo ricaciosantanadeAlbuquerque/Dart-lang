@@ -29,10 +29,10 @@ void main() {
 }
 
 void contagem(num n, String j) {
-  print('');
+  print('=====');
   print(j);
-  print('');
-  
+  print('=====');
+
   for (var j = 1; j <= n; j++) {
     for (var i = j; i <= n; i++) {
       print(i);
