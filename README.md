@@ -6,7 +6,7 @@ Todos os algoritmos implementados no Dart, são para fins de aprendizagem e trei
 
 ## Exercícios praticados e revisados no Dart.
 
-### Algoritmos Estrutural
+### Algoritmo Estrutural.
 
 * Variáveis e seus tipos.
    * var 
@@ -17,10 +17,20 @@ Todos os algoritmos implementados no Dart, são para fins de aprendizagem e trei
    * num
    * dynacmin
 * Operadores.
+   * Lógico.
+   * Relacional.
+   * Aritmético.
 * Condicionais.
+   * if else
+   * switch case
 * Loops.
+   * while
+   * do while
+   * for
+   * for in
 * Array.
 * Funções.
+   
 
 
 
