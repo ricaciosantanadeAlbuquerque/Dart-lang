@@ -57,4 +57,4 @@ Todos os algoritmos implementados no Dart, são para fins de aprendizagem e trei
   * Associação composição e agregação.
 
  ### Exemplo:
- ![Exercício de Livraria em Dart.](assets\agregação_composicao_herança_classesAbstratas.png)
+ ![Exercício de Livraria em Dart.](agregação_composicao_herança_classesAbstratas.png)
