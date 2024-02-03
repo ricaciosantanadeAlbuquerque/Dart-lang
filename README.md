@@ -30,6 +30,13 @@ Todos os algoritmos implementados no Dart, são para fins de aprendizagem e trei
    * for in
 * **Array**.
 * **Funções**.
+  * Funções sem parâmetro e sem retorno.
+  * Funções com parâmetro e com retorno.
+  * Funções com parâmetros posicionados.
+  * Funções com parâmetros nomeados.
+  * Funções Arrow.
+  * Funções Anonimas.
+  * Closures.
    
 
 
