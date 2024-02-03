@@ -53,4 +53,5 @@ Todos os algoritmos implementados no Dart, são para fins de aprendizagem e trei
   * Heranças.
   * Sobrescrita de método.
   * Interfaces.
-  * Mixin
+  * Mixin.
+  * Associação composição e agregação.
