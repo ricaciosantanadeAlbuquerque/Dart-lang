@@ -38,12 +38,17 @@ Todos os algoritmos implementados no Dart, são para fins de aprendizagem e trei
   * Funções Anonimas.
   * Closures.
    
-   
+
 ### Orientação a Objetos
   * Classes e Objetos.
   * Construtores.
+    * Construtor Padrão.
+    * Construtor Factory.
+    * Construtor Nomeado.
   * Encapsuladores.
   * Modificadores.
+    * const.
+    * final.
   * Singletons.
   * Heranças.
   * Sobrescrita de método.
