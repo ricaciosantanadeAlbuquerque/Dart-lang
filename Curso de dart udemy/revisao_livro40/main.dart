@@ -5,7 +5,7 @@ void main() {
 
   print('Nome:${cao.nome}, Raça: ${cao.raca}, Sexo:${cao.sexo}, Idade:${cao.idade}, Docil:${cao.docil}');
 
-  final cao2 = Cao('Julho', 'Box', 'Macho');
+  final cao2 = Cao('Julho', 'Box',null);
   print('');
   print('Nome:${cao2.nome}, Raça: ${cao2.raca}, Sexo:${cao2.sexo}, Idade:${cao2.idade}, Docil:${cao2.docil}');
 
