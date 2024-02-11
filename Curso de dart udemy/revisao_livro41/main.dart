@@ -31,4 +31,7 @@ void main() {
     ..dormir()
     ..alimentar()
     ..acao();
+
+  print('Testando objetos');
+  print('Os objetos são iguais ? ${identical(cao, cao2) ? 'Sim' : 'Nao'}');
 }
