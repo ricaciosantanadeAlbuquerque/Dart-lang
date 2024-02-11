@@ -1,3 +1,4 @@
+import 'aranha.dart';
 import 'cao.dart';
 
 void main() {
@@ -13,5 +14,21 @@ void main() {
     ..dormir()
     ..alimentar()
     ..reproduzir()
+    ..acao();
+  print('');
+  print('====================================================================================================================');
+// =============================================================================================================================
+
+  var aranha = Aranha.domestica('Tuta', 'Armadeira', sexo: 'Femea', idade: '1', docil: true);
+
+  print(aranha.toString());
+
+  final aranhaBraba = Aranha.selvagem('Ferroada', 'Marrom', sexo: 'Femea', idade: '1', docil: false);
+
+  print(aranhaBraba.toString());
+
+  aranhaBraba
+    ..dormir()
+    ..alimentar()
     ..acao();
 }
