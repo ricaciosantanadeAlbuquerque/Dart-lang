@@ -61,4 +61,7 @@ class Video implements InterfaceVideo {
   void like() {
     this.curtidas = this.curtidas! + 1;
   }
+
+  @override
+  String toString() => ' Título:$titulo, Avaliação:$avaliacao, Visualização:$views Curtidas:$curtidas, Reproduzindo:$reproduzindo ';
 }
