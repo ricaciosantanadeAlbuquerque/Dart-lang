@@ -19,11 +19,11 @@ void main() {
 
   var visualizacao = Visualizacao(espectador: gafanhoto[0], filme: listaVideo[1]);
   print('');
-  print(visualizacao.toString());
+  //print(visualizacao.toString());
 
   var visualizacao2 = Visualizacao(espectador: gafanhoto[0], filme: listaVideo[0]);
   print('');
-  print(visualizacao2.toString());
+ // print(visualizacao2.toString());
   visualizacao.avaliar(porct: 10);
   print('');
   print('=========================================================================================================');

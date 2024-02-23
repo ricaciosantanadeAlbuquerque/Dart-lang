@@ -19,7 +19,7 @@ class Gafanhoto  extends Pessoa{
   void set totAssistido(int? totAssistido) {
     this._totAssistido = totAssistido;
   }
-
+  
   @override
   String toString() => super.toString() + ' Login:$login, Total Assistido: $_totAssistido';
 }

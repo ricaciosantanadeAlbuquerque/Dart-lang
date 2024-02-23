@@ -2,14 +2,14 @@ import 'interface_acoes_video.dart';
 
 class Video implements AcoesVideo {
   String? _titulo;
-  int _avaliacao = 1;
-  int _views = 1;
+  int? _avaliacao;
+  int? _views;
   int? _curtidas;
   bool? _reproduzir;
 
   Video(this._titulo) {
     this.avaliacao = 1;
-  //  this.views = 0;
+    this.views = 0;
     this.curtidas = 0;
     this.reproduzir = false;
   }
@@ -18,17 +18,15 @@ class Video implements AcoesVideo {
 
   void set titulo(String? titulo) => this._titulo = titulo;
 
-  int get avaliacao => this._avaliacao;
+  int? get avaliacao => this._avaliacao;
 
-  void set avaliacao(int avaliacao) {
-    int nova = 0;
-    nova = (this._avaliacao + avaliacao) ~/  this.views;
-    this._avaliacao = nova;
+  void set avaliacao(int? avaliacao) {
+    this._avaliacao = avaliacao;
   }
 
-  int get views => this._views;
+  int? get views => this._views;
 
-  void set views(int views) => this._views = views;
+  void set views(int? views) => this._views = views;
 
   int? get curtidas => this._curtidas;
 

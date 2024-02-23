@@ -9,7 +9,7 @@ class Visualizacao {
     this.espectador = espectador;
     this.filme = filme;
     this.espectador!.totAssistido = this.espectador!.totAssistido! + 1;
-    this.filme!.views = this.filme!.views + 1;
+    this.filme!.views = this.filme!.views! + 1;
   }
 
   Gafanhoto? get espectador => this._espectador;
