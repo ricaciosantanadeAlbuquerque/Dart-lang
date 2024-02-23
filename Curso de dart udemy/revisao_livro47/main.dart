@@ -23,7 +23,8 @@ void main() {
 
   var visualizacao2 = Visualizacao(espectador: gafanhoto[0], filme: listaVideo[0]);
   print('');
- // print(visualizacao2.toString());
+  print(visualizacao2.toString());
+  print('');
   visualizacao.avaliar(porct: 10);
   print('');
   print('=========================================================================================================');
