@@ -21,8 +21,8 @@ void main() {
 
   print('======================================================================================================');
 
+  print(carro.motor.toString());
   print('');
-
   var carro2 = Carro(
       motorista: motorista1,
       peneu: [Peneu(marca: 'Pirele', calibre: 400), Peneu(marca: 'Pirele', calibre: 400), Peneu(marca: 'Pirele', calibre: 400), Peneu(marca: 'Pirele', calibre: 400), Peneu(marca: 'Pirele', calibre: 400)],
@@ -33,4 +33,12 @@ void main() {
   print(carro2.toString());
   print('');
   print(identical(carro, carro2) ? 'Sim são identicos' : 'Não são identicos');
+
+  /**
+   * motorista  é declarada fora no corpo do método main, e passada via contrutor(Carro) como associação simples.
+   * Já o Objeto motor e a lista de objetos peneus, "devem ser instânciados dentro do construtor da classe Carro" para que somente 
+   * a classe carro seja responsável por instâncialos(criá-los) e gerenciá los, estes objetos só podem ser acessados pelos todo(objeto/carro) não podendo ser compartilhados com outros objetos Carros. É isso que Caracterize a composição.
+   * 
+   * No caso da agregação, o Todo(carro) pode exitir antes da parte(radio) que será agregada mais a frente, ou o objeto agregado(radio) pode existir antes do todo(carro),   a parte(radio) deve ser intânciada fora do todo(carro) e passada para o todo(carro)  por função caracterizando agregação.
+   */
 }
