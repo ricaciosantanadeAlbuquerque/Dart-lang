@@ -33,7 +33,6 @@ void main() {
   print('\n');
 
   print('');
-  
-  
- 
+
+  print(mesa.toString()); // mesmo que  todo (sala) seja deletado a parte mesa continua a existir na memória;
 }
