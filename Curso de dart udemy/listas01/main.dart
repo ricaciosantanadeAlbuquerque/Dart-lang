@@ -109,12 +109,16 @@ void main(List<String> args) {
    * O construtor nomeado List.filled() recebe a quantidade eeee o elemento que devera preencher a lista. 
    * Neste caso acima são 5 elementos String. 
    */
+  listaPreenchida.forEach((element) {
+    print(element);
+  });
   print('\n');
   listaPreenchida.forEach((element) => print(element));
   List<double> preco = List.generate(5, (index) {
     return double.parse(((index + 1) * Random().nextDouble()).toStringAsFixed(2));
   });
-
+  print('');
+  preco.forEach((element) => print(element));
   /**
    * O construtor List.generate() requer um tamanho para a lita e uma função anonima com parametro, o parametro da função anonima   *enxerga cada index da lista Gerada eee mais a função anonima deve retornar o elemento que compõem a lista.
    */
