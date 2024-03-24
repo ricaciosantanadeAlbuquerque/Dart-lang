@@ -74,5 +74,29 @@ void main(List<String> args) {
   print(frutas.contains('tomate')); // retorna true or false;
   // deu erro porque a linguagem Case sensitive
   print(frutas.contains('Tomate'));
-  
+
+  print('=====================================================================================');
+
+  // construtores nomeados da classe List
+
+  List<num> numeros = List.from(inteiros)..addAll(doubles);
+  print(numeros);
+
+  numeros.shuffle(); // embaralha elementos da  lista.
+  print(numeros);
+  numeros.sort();
+  print(numeros);
+
+  // .. operador em cascata
+  numeros
+    ..shuffle()
+    ..sort();
+  /**
+   * Com uma única referência a o bojeto  podemos realizar várias chamadas a atrubutos e métodos.
+   */
+  print('');
+  numeros.forEach((element) => print(element));
+
+  List<dynamic> listaValor = numeros.take(3).skip(1).toList();
+  print(listaValor);
 }
