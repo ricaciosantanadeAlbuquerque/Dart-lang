@@ -1,3 +1,5 @@
+import 'dart:math';
+
 void main(List<String> args) {
   var array = [0, 2.5, 5, 7.25, 10];
   print('\nMostrando elementos via função forEach()\n');
@@ -99,4 +101,21 @@ void main(List<String> args) {
 
   List<dynamic> listaValor = numeros.take(3).skip(1).toList();
   print(listaValor);
+
+  // preenchendo listas ========================================
+
+  List<String> listaPreenchida = List.filled(5, 'Ricacio');
+  /**
+   * O construtor nomeado List.filled() recebe a quantidade eeee o elemento que devera preencher a lista. 
+   * Neste caso acima são 5 elementos String. 
+   */
+  print('\n');
+  listaPreenchida.forEach((element) => print(element));
+  List<double> preco = List.generate(5, (index) {
+    return double.parse(((index + 1) * Random().nextDouble()).toStringAsFixed(2));
+  });
+
+  /**
+   * O construtor List.generate() requer um tamanho para a lita e uma função anonima com parametro, o parametro da função anonima   *enxerga cada index da lista Gerada eee mais a função anonima deve retornar o elemento que compõem a lista.
+   */
 }
