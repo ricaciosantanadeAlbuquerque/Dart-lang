@@ -42,4 +42,37 @@ void main(List<String> args) {
   frutas.add('Laranja');
   print('========== Mostrando Frutas List ==========\n');
   frutas.forEach((element) => print(element));
+
+  //============Removendo elementos=================
+
+  frutas.remove('Abacaxi'); // recebe o elemento que se deseja excluir como argumento.
+
+  print(frutas);
+  print('');
+
+  frutas.removeLast(); // remove o último elemento da lista;
+
+  frutas.forEach((element) {
+    print(element);
+  });
+
+  frutas.removeRange(0, 1); // Devemos passar o índice de início(Start) e o índice do fim do intervalo (end)
+  /**
+   *  O início do intervalo é inclusivo, mas o final do intervalo é exclusivo, o que significa que o início está incluído no intervalo, *  mas o final não está incluído no intervalo.
+   */
+
+  print('===3===');
+
+  frutas.forEach((element) => print(element));
+
+  frutas.removeWhere((element) => element == 'Banana'); // Se o elemento for igual a String Banana entãooooooo Banana será excluida da lista.
+  print('\n');
+
+  print(frutas);
+
+  print(frutas.elementAt(0));
+  print(frutas.contains('tomate')); // retorna true or false;
+  // deu erro porque a linguagem Case sensitive
+  print(frutas.contains('Tomate'));
+  
 }
