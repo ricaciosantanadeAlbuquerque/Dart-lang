@@ -17,4 +17,29 @@ void main(List<String> args) {
   estadosNordeste.forEach((element) {
     print('Estado: $element');
   });
+  print('');
+  List<int> inteiros = [1, 5, 10];
+  List<double> doubles = [2.5, 7.5];
+  List<bool> boleans = [true, false, !true, !false];
+  List<String> frutas = ['Morango', 'Banana', 'Tomate'];
+
+  print(frutas.runtimeType);
+
+  print('/nboleans[3]: ${boleans[inteiros.length] ? 'Verdadeiro' : 'falso'}');
+  print('\n');
+  print('/nboleans[3]: ${boleans[inteiros.length] ? 'verdadeiro' : 'falso'}');
+  print('');
+  frutas.forEach((element) {
+    print('$element');
+  });
+  print('');
+
+  doubles.forEach((element) {
+    print(element);
+  });
+
+  frutas.insert(0, 'Abacaxi');
+  frutas.add('Laranja');
+  print('========== Mostrando Frutas List ==========\n');
+  frutas.forEach((element) => print(element));
 }
