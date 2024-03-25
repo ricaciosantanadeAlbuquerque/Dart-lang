@@ -37,11 +37,29 @@ void main(List<String> args) {
   print(doublesMapeados);
 
   int cont = 0;
-  
+
   List<String> nomes = ['Ana', 'Lucas', 'ricacio'];
   final listNome = nomes.map((element) {
     return '${cont++}: $element';
   }).toList();
 
   print(listNome);
+
+  // Mapeando uma lista de int para double;
+
+  List<int> valoresInt = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  final listMape = valoresInt.map((e) {
+    return e.toDouble();
+  }).toList();
+
+  print(listMape);
+
+  /**
+   * A função  map() nos permite gerar uma nova lista de um tipo totalmente diferente ou igual e de mesmo tamanho.
+   * Criando novas coleções apartir das já existentes.
+   * PS!! é necessário passar uma função anonima com parametro como argumento para função map(), sendo que o parametro da função 
+   * anônima retorna para o corpo da mesma os elementos da lista. 
+   */
+
+  print(listMape.map((e) => e.toString()).toList().runtimeType);
 }
