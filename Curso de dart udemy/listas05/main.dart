@@ -32,5 +32,9 @@ void main(List<String> args) {
   print(testValores.every((element) {
     return element > 0;
   }) ? 'sim todos so valores são maiores que 0 ' : 'Não!! nem todos os valores são maiores que zero');
-  
+
+  /**
+   * A função every() faz um teste em todos os elementos da lista, se todos os elementos da lista forem true então a lista será ture.
+   */
+
 }
