@@ -73,5 +73,7 @@ void main() {
     }
   }
 
+  //listaFiltrada.removeWhere((e) =>  e == 7);
+
   print(listaFiltrada);
 }
