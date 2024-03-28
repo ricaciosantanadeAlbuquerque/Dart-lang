@@ -21,4 +21,15 @@ void main() {
   List<String> nome = ['ana', 'ricacio', 'biza', 'lucas', 'carmem', 'dora'];
   print(nome.every((e) => e.contains('a')) ? 'Sim' : 'Nao');
   print(nome.every((e) => e.contains('e')) ? 'Sim' : 'Nao');
+
+  // Um bom exemplo de uso dessa função é testar uma coleção contendo salários, neste caso queremos saber se a lista
+  // salario[] possui somente salários acima de 4500.
+
+  List<double> salario = [4500, 5000, 6200, 3500, 1200, 10000, 55000];
+
+  bool result = salario.every((element) {
+    return element > 4500;
+  });
+
+  print(result ? 'Sim ! A lista só possui salário maiores do que 4500' : 'Não !! A lista possui valores abaixo de 4500');
 }
