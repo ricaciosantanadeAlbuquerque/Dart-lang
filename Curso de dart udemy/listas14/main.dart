@@ -34,4 +34,55 @@ void main(List<String> args) {
 
   num menorValor = num1.fold(100, (anterior, atual) => (anterior < atual) ? anterior : atual);
   print(menorValor);
+
+  num media = num1.fold(0, (anterior, atual) => anterior + atual) / num1.length;
+
+  print(media.truncate());
+
+  /**
+   * forEach()
+   * expand()
+   * map()
+   * every()
+   * where()
+   * reduce()
+   * fold()
+   */
+  listFoldReduce();
+}
+
+void listFoldReduce() {
+  // ================================================= reduce ============================================
+
+  List<double> salario = [1500, 1670, 3500];
+
+  double menorSalario = salario.reduce((double anterior, double atual) {
+    print('$anterior && $atual');
+    return (anterior > atual) ? atual : anterior;
+  });
+
+  print('O menor salário da lista é $menorSalario');
+
+  double maiorSalario = salario.reduce((double anterior, double atual) {
+    return (anterior > atual) ? anterior : atual;
+  });
+
+  print('O  maior Salário da lista é $maiorSalario ');
+
+  double somaValores = salario.reduce((double anterior, double atual) => anterior + atual);
+
+  print('A soma dos valores $somaValores');
+
+  print('Média dos salários ${(salario.reduce((double anterior, double atual) => anterior + atual) / salario.length).toStringAsFixed(1)}');
+
+  // fold() ===========================================================================================================================
+  print('');
+  print(salario);
+  double menorSalario1 = salario.fold(0.0, (anterior, atual) => (anterior > atual) ? atual : anterior);
+  print(menorSalario1);
+  double maiorSalario1 = salario.fold(0.0, (anterior, atual) => (anterior > atual) ? anterior : atual);
+  print(maiorSalario1);
+  double media = salario.fold(0, (anterior, atual) => anterior + atual);
+
+  print('Media: ${(media / salario.length).toStringAsFixed(2)}');
 }
