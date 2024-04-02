@@ -98,4 +98,11 @@ void main(List<String> args) {
 
   num acumulador = numerico.fold(0, (anterior, atual) => anterior + atual);
   print(acumulador);
+
+  var resolucao = numerico.fold(acumulador, (anterior, atual) {
+    print('$anterior $atual');
+    return anterior - atual;
+  });
+
+  print(resolucao);
 }
