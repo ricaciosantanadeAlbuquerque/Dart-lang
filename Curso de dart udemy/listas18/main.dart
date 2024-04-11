@@ -46,6 +46,7 @@ void main(List<String> args) {
   listVendedor.sort((b, a) => a.listVenda.fold(0, (num anteriot, atual) => anteriot + atual.preco!).compareTo(b.listVenda.fold(0, (anterior, atual) => anterior + atual.preco!)));
   print('');
   print(listVendedor);
-
-  listVendedor.forEach((element) => print('vendedor:${element.nome}  ${listVendedor.length} vendas \t totalizando ${element.listVenda.fold(0, ( num anterior, atual) => anterior + atual.preco!)}'));
+  print('');
+  listVendedor.forEach((element) =>
+      print('vendedor:${element.nome}  ${listVendedor.length} vendas \t totalizando ${element.listVenda.fold(0, (num anterior, atual) => anterior + atual.preco!)}, vendas: ${element.listVenda.map((element) => element.preco).toList()}'));
 }
