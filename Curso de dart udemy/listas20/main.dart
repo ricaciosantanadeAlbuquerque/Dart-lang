@@ -1,4 +1,4 @@
-import '../listas20/main.dart';
+//import '../listas20/main.dart';
 import 'pessoa.dart';
 import 'venda.dart';
 import 'vendedor.dart';
