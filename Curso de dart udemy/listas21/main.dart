@@ -1,4 +1,8 @@
+import 'caracteristica.dart';
+import 'carro.dart';
+import 'multa.dart';
 import 'pessoa.dart';
+import 'propietario.dart';
 import 'venda.dart';
 import 'vendedor.dart';
 
@@ -39,6 +43,25 @@ listVendedor.sort((b,a) => a.listVenda!.fold(0,(anterior,atual) => (anterior + a
   print('\n');
   print('\n');
   listVendedor.forEach((e) => print('Nome:${e.nome},\t ${e.listVenda!.length} Vendas, \t totalizando${e.listVenda!.fold(0,(anterior,atual)=> (anterior + atual.preco!).toInt())}, \t Vendas:${e.listVenda!.map((e) => e.preco).toList()}'));
+  
+  print('');
+  print('');
+  List<Propietario> listPropietario = [];
+  listPropietario.add(Propietario(nome: 'Lucas', endereco: 'Rua da vitória', listCarro: [Carro(marca: 'Honda', modelo:'Civic', placa:'ABC1234', caracteristica: Caracteristicas(tipo: 'Passeio', passageiro: 5, potencia: 103, combustivel: 'Gasolina'), multas: [
+   Multa(descricao: 'Excesso de Velocidade', tipo: 'Gravissima', pontos: 7),Multa(descricao: 'Estacionar em local Proibido', tipo: 'Grave', pontos: 5),Multa(descricao: 'Sem Habilitação', tipo: 'Gravissima', pontos: 7)
+  ])]));
+    
+    //print(listPropietario);
+
+  print('\n');
+  print('\n');
+  print('\n');
 
 
+  for(var i = 0; i < listPropietario.length;i++){
+    var listaCarro = listPropietario[i].listCarro;
+    for(var carro in listaCarro!){
+      carro.multas!.forEach((e) => print('Nome:${listPropietario[i].nome}, Carro:${carro.modelo}, Placa:${carro.placa},Caracteristicas:${carro.caracteristica}, descrição:${e.descricao}, tipo:${e.tipo},pontos:${e.pontos}'));
+    }
+  }
 }
