@@ -6,7 +6,7 @@ void main(){
   List<Vendedor> listVendedor = [];
   listVendedor.add(Vendedor(nome: 'Lucas', listVenda: [Venda('Camisa', 150 ),Venda('Tênis' , 350),Venda('Celular',2200)]));
   listVendedor.add(Vendedor(nome: 'Ana', listVenda: [Venda('TV', 3500),Venda('Geladeira',4500),Venda('folgão',850)]));
-  listVendedor.add(Vendedor(nome: '', listVenda: [Venda('Celular',3600),Venda('Moto',28000),Venda('Notebook', 4500)]));
+  listVendedor.add(Vendedor(nome: 'Ricacio', listVenda: [Venda('Celular',3600),Venda('Moto',28000),Venda('Notebook', 4500)]));
 
   // ordenando pelo total de vendas feitas. 
   
