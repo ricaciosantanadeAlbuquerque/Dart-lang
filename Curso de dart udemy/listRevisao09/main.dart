@@ -44,4 +44,5 @@ void main(){
    print('');
    print('=======================================================');
   listVendedor.forEach((e) => print('Nome:${e.nome}, \t ${e.listVenda!.length} QTDvendas \t, TotalizandoVendas:${e.listVenda!.fold(0.0,(anterior,atual) => anterior + atual.preco!)}\t, Vendas:${e.listVenda!.map((e) => e.preco).toList()}'));
+
 }
