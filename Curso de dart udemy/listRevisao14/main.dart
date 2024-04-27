@@ -104,6 +104,6 @@ print(soma);
 var foldSoma = listNumero.fold(0.0,(anterior,atual) => anterior + atual).toInt();
 
 print(foldSoma);
-
+ print('Correção');
 
 }
