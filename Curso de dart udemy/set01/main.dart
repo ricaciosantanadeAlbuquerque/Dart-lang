@@ -1,7 +1,5 @@
 // set é uma colação de elementos únicos e ordenados entre chaves {}. e não tem acesso por index
 // set é uma coleção de elementos únicos e ordenados entre chaves {}. e não tem  acesso por index
-import 'dart:collection';
-
 void main(List<String> args){
   Set<int>? listaValor1 = {1,2,3,4};
   Set<String>? listaValor2 = {'valor','valor1','valor2','valor3','valor4'};
@@ -40,7 +38,6 @@ void main(List<String> args){
 
 
  print(listaValor1);
-
 
  Set<int> num1 = {1,2,3,4,5};
  Set<int> num2 = {4,5,6,7,8};
