@@ -40,7 +40,7 @@ void main(List<String> args){
 
 
  print(listaValor1);
- LinkedHashSet
+
 
  Set<int> num1 = {1,2,3,4,5};
  Set<int> num2 = {4,5,6,7,8};
