@@ -111,4 +111,29 @@ void main(List<String> args) {
   print('Diferença:${num2HashSet.difference(num3HashSet)}'); // num2HashSet tem  de diferente 12 13
   print('União ${num2HashSet.union(num3HashSet)}'); // junta as duas coleções HashSet
   print('intercessão ${num2HashSet.intersection(num3HashSet)}'); // mostra o que é comum as duas
+
+
+
+/// SplayTreeSet organiza os elementos em ordem automaticamente e em ordem crescente. Não pode ser acesso por index nem aceita valores null
+
+SplayTreeSet<int> splayTreeSet = SplayTreeSet();
+
+// adicionando os valores de forma aleatória;
+
+for(int j = 0; j < 12;j++){
+  splayTreeSet.add(Random().nextInt(10));
+}
+
+print(splayTreeSet); 
+
+SplayTreeSet<double> jj = new SplayTreeSet();
+jj.add(10.5);
+jj.add(1.0);
+jj.add(55);
+
+print('');
+print(jj);
+
+// veja que os valores são organizados em ordem crescente automaticamente. 
+
 }
