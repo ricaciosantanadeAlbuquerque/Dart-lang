@@ -89,7 +89,7 @@ print(hashSet03);
 
 void splayTreeSet(){
 SplayTreeSet<int> splayTreeSet01 = new SplayTreeSet();
-
+print(splayTreeSet01.runtimeType);
 
 // gerando valores aleatórios para  splayTreeSet01
   for(var j = 0; j < 100; j++){
@@ -103,4 +103,28 @@ SplayTreeSet<int> splayTreeSet01 = new SplayTreeSet();
    * Como vimos a coleção SplayTreeSet tem a capacidade de se organizar por si só, já que é uma arvore de comparações.
    * PS!!! SplayTreeSet não aceita valores null
    */
+
+  for(var i = 0; i < splayTreeSet01.length;i++){
+    print(splayTreeSet01.elementAt(i));
+  }
+  print('------------------------------');
+
+  for(var element in splayTreeSet01){
+      print(element);
+  }
+
+  print('------------------------------');
+
+  splayTreeSet01.forEach((e) => print( e));
+
+
+  SplayTreeSet<String?> args = SplayTreeSet();
+
+  args.add('c');
+  args.add('A');
+  args.add('B');
+ // args.add(null); não se pode adicionar elementos null para uma coleção SplayTreeSet
+
+  args.forEach((e)=> print(e)); // como vimos  a coleção SplayTreeSet organiza os elementos automaticamente.
+
 }
