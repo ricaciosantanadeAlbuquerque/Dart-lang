@@ -14,7 +14,7 @@ void linkedHashSet(){
   num1.add(13);
   num1.add(17);
   num1.add(17);
-
+  print(num1.runtimeType);
   print('Exibindo a colação set ${num1}'); // veja que a coleção não aceita valores repetidos.
 
   for(var i = 0; i < num1.length ; i++){
@@ -41,5 +41,11 @@ void linkedHashSet(){
  print(num2.difference(num3)); // a diferença de num2 para num3
  print(num2.union(num3)); // união das coleções num2 e num3
  print(num2.intersection(num3)); // intercessão de num2 e num3 
+ print(num2.lookup(5)); // busca um elemento na coleção, se existir então ele retorna o elemento se não retorna null
+ print(num2.lookup(6));  // retorna null
+}
+
+
+void hashSet(){
 
 }
