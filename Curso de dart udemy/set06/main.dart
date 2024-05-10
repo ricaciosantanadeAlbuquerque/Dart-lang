@@ -1,9 +1,12 @@
 import 'dart:collection';
+import 'dart:math';
 
 void main(List<String> args) {
   linkedHashSet();
   print('');
   hashSet();
+  print('');
+  splayTreeSet();
 }
 
 /// Set é uma coleção de elementos únicos e ordenados entre chaves, que Segue a ordem de inserção, e não podem ser acessados por index [].
@@ -107,5 +110,30 @@ void hashSet() {
   print(hashSet02.lookup(5));
   print(hashSet03.lookup(33));
 }
+ /// SplayTreeSet organiza automaticamente os elementos em ordem crescente
+ /// por ser uma arvore de comparações não aceita valores null
+ /// não pode ser acessado por index []
+ 
+void splayTreeSet() {
 
-void splayTreeSet() {}
+  SplayTreeSet<int> listaNumeros = new SplayTreeSet();
+
+  SplayTreeSet<int> listaNumeros02 = SplayTreeSet();
+
+  for(var j = 0; j < 10; j++){
+     listaNumeros.add(Random().nextInt(10) + 1);
+     listaNumeros02.add(Random().nextInt(20) + 1);
+  }
+
+  print(listaNumeros);
+
+  print(listaNumeros02);
+
+  print('');
+
+  print('Diferença entre listaNumeros para listaNumeros02 ${listaNumeros.difference(listaNumeros02)}');
+  print('A união da listaNumeros com a listaNumeros02 ${listaNumeros.union(listaNumeros02)}');
+  print('Numeros  em comum nas duas lista ${listaNumeros.intersection(listaNumeros02)}');
+  print('Buscando valores na coleção splayTreeSet ${listaNumeros02.lookup(5)}');
+
+}
