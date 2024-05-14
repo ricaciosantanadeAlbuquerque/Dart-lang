@@ -70,4 +70,11 @@ void queue() {
 
 
   print(listSplayTreeSet);
+
+/*
+ * Queue é uma coleção  dinâmica de elementos ordenados entre chaves {} sem acesso por index [], Que pode manipular o iníco e fim da lista
+ * Por meio de métodos
+ *
+ * Set é uma coleção dinâmica dele elementos únicos entre chaves {} Ou seja não pode haver valores repetidos nesta coleção e também  não podem ser acessados por index 
+*/
 }
