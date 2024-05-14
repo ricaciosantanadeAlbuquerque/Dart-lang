@@ -33,66 +33,74 @@ void main(List<String> args) {
   for (var j = 0; j < colecao.length; j++) {
     print('for ${colecao.elementAt(j)}');
   }
- print('');
-// for in 
+  print('');
+// for in
 
-for(var element in colecao01){
-  print('for in ${element}');
-}
+  for (var element in colecao01) {
+    print('for in ${element}');
+  }
 
 // forEach()
-print('');
+  print('');
 
-print('\n');
-colecao01.forEach((e) => print('forEach() ${e}'));
+  print('\n');
+  colecao01.forEach((e) => print('forEach() ${e}'));
 
-print(identical(colecao,colecao01));
+  print(identical(colecao, colecao01));
 
+  Queue<List<int>> lista = Queue();
 
-Queue<List<int>> lista = Queue();
-
- for(var i = 0; i < 10 ; i++){
-  List<int> num1 = [];
-  for(var j = 0; j < 10 ; j++){
+  for (var i = 0; i < 10; i++) {
+    List<int> num1 = [];
+    for (var j = 0; j < 10; j++) {
       num1.add(Random().nextInt(100) + 1);
+    }
+    lista.add(num1);
   }
-  lista.add(num1);
- }
 
- print(lista); // Queue é uma coleção dinamica de elementos entre chaves {} que não possuem index e podem  manipular o inicio e fim da lista
+  print(lista); // Queue é uma coleção dinamica de elementos entre chaves {} que não possuem index e podem  manipular o inicio e fim da lista
 
-print('Implementação ${lista.runtimeType}');
+  print('Implementação ${lista.runtimeType}');
 
-lista.addFirst([1,2,3,4,5,]);
-lista.addLast([10,10,10,]);
+  lista.addFirst([
+    1,
+    2,
+    3,
+    4,
+    5,
+  ]);
+  lista.addLast([
+    10,
+    10,
+    10,
+  ]);
 
-print('');
+  print('');
 
-print(lista);
-
+  print(lista);
 
 // pegando acada elemnto da minha coleção Queue<> e concatenando
 
-final List<int> concat = lista.expand((e) => e).toList();
-print('');
-print(concat);
+  final List<int> concat = lista.expand((e) => e).toList();
+  print('');
+  print(concat);
 
-Queue<int> receberValor = Queue();
+  Queue<int> receberValor = Queue();
 
-receberValor.addAll(concat);
+  receberValor.addAll(concat);
 
-print('');
-print(receberValor.runtimeType);
-print('');
+  print('');
+  print(receberValor.runtimeType);
+  print('');
 
-print(receberValor.length);
-print('');
-for(var j  = 0;  j < receberValor.length;j++){
+  print(receberValor.length);
+  print('');
   receberValor.clear();
-  //receberValor.remove(receberValor.elementAt(j));
-   //receberValor.removeLast();
-  //receberValor.removeFirst();
-}
-print('');
-print(receberValor);
+  for (var j = 0; j < receberValor.length; j++) {
+    //receberValor.remove(receberValor.elementAt(j));
+    //receberValor.removeLast();
+    //receberValor.removeFirst();
+  }
+  print('');
+  print(receberValor);
 }
