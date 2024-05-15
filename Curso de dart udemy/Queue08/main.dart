@@ -21,7 +21,7 @@ if(entradaQTD != null && entradaQTD.isNotEmpty){
 
         // tratamento
 
-        if (entradaNome != null && entradaIdade != null && entradaSalario != null && entradaQTD != null) {
+        if (entradaNome != null && entradaIdade != null && entradaSalario != null) {
           if (entradaNome.isNotEmpty && entradaIdade.isNotEmpty && entradaSalario.isNotEmpty && entradaQTD.isNotEmpty) {
             try {
               int num1 = int.parse(entradaIdade);
