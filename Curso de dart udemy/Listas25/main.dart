@@ -6,12 +6,11 @@ void main(){
 
 
  List<String> preencher(){
-   int cont = 0;
   List<String> hotel = [];
 
   for (var i = 0; i < 50; i++) {  
-    hotel.add('$cont Livre');
-    cont++;
+    hotel.add('Livre');
+    
   }
 
   return hotel;
@@ -25,12 +24,14 @@ void opcoes(){
   print('Digite [2] para Definir ocupação dos quartos');
   print('Digite [3] para Sair');
   String? entradaOP = stdin.readLineSync();
+  int cont = 0;
 
     switch(int.parse(entradaOP!)){
       case 1:
 
       for(var element in hotel){
-        print(element);
+        print('${cont + 1} $element');
+        cont++;
       }
 
       case 2:
@@ -41,10 +42,9 @@ void opcoes(){
       if(entradaBusca != null && entradaBusca.isNotEmpty){
           for( var i  = 0; i < hotel.length; i++){
                if(i == int.parse(entradaBusca)){
-                
-                   hotel[i] = 'Ocupado';
-                   break;
-                
+                if(hotel[i] == 'Livre'){
+                  hotel[i] = 'Ocupado';
+                }               
                }
              }   
                        
