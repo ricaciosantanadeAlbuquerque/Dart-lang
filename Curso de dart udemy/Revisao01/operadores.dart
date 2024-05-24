@@ -43,7 +43,7 @@ void main(){
       ~/= divisão inteira igual
       %= resto da divisão igual
       ++  incremento unitário
-      --  decremento unitário
+      --  decremento unitário.
     */
 
 
