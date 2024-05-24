@@ -22,6 +22,7 @@ void main(){
   print(valorQuebrado.runtimeType);
   print(valorQuebrado);
 
+  // ignore: unused_local_variable
   bool isTrue = 1 < 0 ; // operadores relacionais retornam  sempre um valor boleano
 
   bool status = true;
@@ -38,6 +39,7 @@ void main(){
    print(nome2);
    print(nome2.runtimeType);
   
+   // ignore: unused_local_variable
    var numero = 10;
    numero = 100; // sobreposição de valores, var permite sobreposição desde que o dado seja de mesmo tipo.
 
@@ -64,5 +66,8 @@ void main(){
      bool? valor3 = true;
      var sobreNome3 = 'Santana';
      dynamic test3  = ' teste';
+
+     print('${nome3}, ${idade3}, ${altura}, ${valor3}, ${sobreNome3}, ${test3}');
+     
 
 }
