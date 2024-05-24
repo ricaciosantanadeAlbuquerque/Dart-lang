@@ -29,21 +29,21 @@ void main(){
   print('Soma:${soma}, Subtração ${subtracao}, multiplicação: ${multiplicacao}, divisao:${divisao} divisãoInt:${divisaoInt}');
 
    /**
-    * + 
-      -
-      *
-      /
-      ~/
-      ()
-      %
-      +=
-      -=
-      *=
-      /=
-      ~/=
-      %=
-      ++
-      --
+    * + soma
+      - subtracao
+      * multiplicação
+      / divisão
+      ~/ divisão inteira
+      () parênteses, maior ordem de presendencia
+      %  resto da divisão
+      += Soma igual
+      -= subtração igual
+      *= multiplicação iguaç
+      /= divisão igual
+      ~/= divisão inteira igual
+      %= resto da divisão igual
+      ++  incremento unitário
+      --  decremento unitário
     */
 
 
