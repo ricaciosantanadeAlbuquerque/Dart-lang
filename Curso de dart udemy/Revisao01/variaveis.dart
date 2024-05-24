@@ -66,8 +66,9 @@ void main(){
      bool? valor3 = true;
      var sobreNome3 = 'Santana';
      dynamic test3  = ' teste';
+     num? num4 = 100;  // num e pai de int e double, por tanto recebe os dois valores int e double
 
-     print('${nome3}, ${idade3}, ${altura}, ${valor3}, ${sobreNome3}, ${test3}');
-     
+     print('${nome3}, ${idade3}, ${altura}, ${valor3}, ${sobreNome3}, ${test3} ${num4}');
+
 
 }
