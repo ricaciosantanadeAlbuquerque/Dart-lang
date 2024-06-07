@@ -164,12 +164,17 @@ List<int> aleatorio = List.generate(10,(index){
   
 
 // ====== fold() ======
+/**
+ * Fold() é uma função que reduz uma coleção a um único valor. Deve receber um valor de início e uma função
+ * anonima com dois parâmetros, o anterior  e atual e deve retornar um valor.
+ */
 
  var menorF = listaFiltrada.fold(0.0,(anterior,atual) => (anterior < atual) ? anterior : atual);
  var maiorF = listaFiltrada.fold(0.0,(anterior,atual) => (anterior > atual) ? anterior : atual);
  var somaF = listaFiltrada.fold(0.0,(anterior,atual){
     return anterior + atual;
  });
+
  print('');
  print('Soma:$somaF, menor:$menorF, maior:$maiorF ');
 
