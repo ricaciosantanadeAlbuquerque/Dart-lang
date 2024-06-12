@@ -70,3 +70,20 @@ for(var value in novoMap.values){
     print('chave:${map.key}, valor:${map.value}');
  }
 }
+
+/**
+ * asMap();
+ * Map<int,String>
+ * Map<String,dynamic>
+ * Map<String,dynamic>
+ * maptFruta['banana'] = value
+ * containsKey()
+ * containsValue()
+ * forEach((key,value) => )
+ * update(key,(value) => ifAbsent: () =>)
+ * putIfAbsent(key,() => value);
+ * Map.from({})
+ * addAll({})
+ * map((key,value) => MapEntry(key,value))
+ * 
+ */
