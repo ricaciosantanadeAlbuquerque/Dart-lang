@@ -29,6 +29,9 @@ mapMap(){
    print(preco3);
 
   var precoMedio = (carrinho.map((map) => map['preco']).reduce((ant,atu) => ant + atu) / carrinho.length).toStringAsFixed(2);
+  print('');
+  print(precoMedio);
+  print('');
 
 
   List<Map<String,Object>> escola = [
