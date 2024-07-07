@@ -40,6 +40,16 @@ void everyMap(){
 
  print(numero.every((elemnt) => elemnt > 0));
 
+
+
+ List<Map<String,dynamic>> pessoasPeso = [
+  {'nome':'A','peso':87},
+  {'nome':'B','peso':150},
+  {'nome':'C','peso':98},
+ ];
+
+ print(pessoasPeso.every((map) => map['peso'] > 80));
+ print(pessoasPeso.every((map) => map.containsKey('nome')));
 }
 
 
