@@ -49,4 +49,15 @@ print('Média das Idade: ${mediaIdade}');
 print(pessoas.every((map) => map['idade'] >= 18));
 print(listPessoasMaiores.every((map) => map['idade'] >= 18));
 
+List<Map<String,dynamic>> folhaPagamento = [
+  {'nome':'ricacio','salario':1670},
+  {'nome':'lucas','salario':2200},
+  {'nome':'Ana','salario':3500},
+  {'nome':'Carmem','salario':4800},
+];
+
+// usar every() para saber se todos ganham mais que 1500
+print(folhaPagamento.every((map) => map['salario'] > 1500) ? 'Sim ! Todos ganham mais do que 1500': 'Não Nem todos ganham mais do que 1500');
+var salario3000 = folhaPagamento.where((map) => map['salario'] > 3000).toList();
+print(salario3000);
 }
