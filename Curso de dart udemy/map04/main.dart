@@ -45,4 +45,8 @@ var mediaIdade = pessoas.map(idades).reduce(soma) / pessoas.length;
 
 print('Média das Idade: ${mediaIdade}');
 
+// testando lista pessoas
+print(pessoas.every((map) => map['idade'] >= 18));
+print(listPessoasMaiores.every((map) => map['idade'] >= 18));
+
 }
