@@ -1,5 +1,6 @@
 void main(){
   linkedHashMap();
+  mapMap();
 }
 
 
@@ -49,6 +50,50 @@ print('Chaves:${usuario.keys} \n valor:${usuario.values}');
  for(var key in numeros.keys){
   final valor = numeros[key];
   print('chave:$key, valor:$valor');
+  
  }
 
+
+}
+
+void mapMap() {
+
+  List<Map<String,dynamic>> carrinho = [
+    {'nome':'Borracha','preco':3.45},
+    {'nome':'Caderno','preco':13.9},
+    {'nome':'KitLapis','preco':41.22},
+    {'nome':'Caneta','preco':7.5},
+  ];
+
+  dynamic Function(dynamic) porcentagem(dynamic desconto) => (map) => desconto * map['preco'];
+  final String Function(dynamic) moeda = (element) => 'RS ${element.toDouble().toStringAsFixed(2).replaceFirst('.',',')}';
+
+  List<String> listPreco01 = carrinho.map(porcentagem(0.9)).map(moeda).toList();
+  var  listPreco02 = carrinho.map((map) => map.update('preco',(value) => 0.9 * value)).map(moeda).toList();
+  var precoMedio = (carrinho.map((map) => map['preco']).reduce((ant,atu) => ant + atu) / carrinho.length).toStringAsFixed(2);
+  print('Lista preçoo 1 : $listPreco01\nLista preço 2 $listPreco02\n preço Médio $precoMedio' );
+  
+  List<Map<String,Object>> escola = [
+    {'nome':'Turma 1',
+     'alunos':[
+      {'nome':'ricacio','nota':7},
+      {'nome':'lucas','nota':8}
+     ],
+     },
+
+     {'nome':'Turma 2',
+      'alunos':[
+        {'nome':'Ana','nota':9},
+        {'nome':'Carmem','nota':10},
+      ],
+     }
+  ];
+
+  var listAlunos = escola.map((map) => map['alunos']).expand((e) => e as Iterable).toList();
+  print('Lista de alunos $listAlunos');
+  listAlunos.sort((b,a) => a['nota'].compareTo(b['nota']));
+  print('Litas de Alunos ordenada $listAlunos');
+  double mediaNotas =  listAlunos.map((map) => map['nota']).reduce((ant,atu) => ant + atu) / listAlunos.length;
+  print('Média das notas $mediaNotas');
+  listAlunos.forEach((map) => print('Nome:${map['nome']}, nota:${map['nota']}'));
 }
