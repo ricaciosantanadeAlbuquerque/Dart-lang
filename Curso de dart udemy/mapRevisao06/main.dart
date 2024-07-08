@@ -40,6 +40,8 @@ print('');
 print('Chaves:${usuario.keys} \n valor:${usuario.values}');
 
  Map<int,dynamic> numeros = {0:'zero',1:'um',2:'dois',3:'tres'};
+
+ print(numeros.map((key,value) => MapEntry(key,'${value.toUpperCase()}')));
  
  for(var chave in numeros.keys){
   print('Chave:$chave');
