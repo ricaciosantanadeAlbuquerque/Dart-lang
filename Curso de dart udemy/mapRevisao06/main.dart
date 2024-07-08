@@ -1,6 +1,8 @@
 void main(){
   linkedHashMap();
   mapMap();
+  everyMap();
+  whereMap();
 }
 
 
@@ -97,3 +99,67 @@ void mapMap() {
   print('Média das notas $mediaNotas');
   listAlunos.forEach((map) => print('Nome:${map['nome']}, nota:${map['nota']}'));
 }
+
+void everyMap(){
+ List<Map<String,dynamic>> pessoas = [
+  {'nome':'ricacio','idade':30},
+  {'nome':'lucas','idade':28},
+  {'nome':'dora','idade':56},
+ ];
+
+ print(pessoas.every((map) => map.containsKey('nome')));// containsKey() faz uma varredura no map() buscando a chave passada como argumento. se encontrar retorna true
+ print(pessoas.every((map) => map['idade'] >= 18));
+ var result = pessoas.every((map) => map['nome'].startsWith('l'));
+ print(result);
+
+ List<Map<String,dynamic>> salario = [
+  {'nome':'ricacio','salario':1670},
+  {'nome':'lucas','salario':2300},
+  {'nome':'Ana','salario':5000},
+  {'nome':'Carmem','salario':3000},
+ ];
+
+ var resposta = salario.every((map) => map['salario'] > 1500);
+ print(resposta ? 'Todos ganha acima de 1500' : 'Nem todos ganham acima de 1500');
+}
+
+
+void whereMap(){
+ List<Map<String,dynamic>> pessoas = [
+  {'nome':'ricacio','idade':30,'salario':1670},
+  {'nome':'lucas','idade':28,'salario':2300},
+  {'nome':'Ana','idade':35,'salario':6500},
+  {'nome':'Kalvin','idade':17,'salario':0}
+ ];
+ // filtrando pela idade
+ var deMaior = pessoas.where((map) => map['idade'] >= 18).toList();
+ print(deMaior);
+
+// filtrando pelo salario
+var salario = pessoas.where((map) => map['salario'] > 1500);
+print(salario);
+
+// menor idade
+
+var menor = pessoas.singleWhere((map) => map['idade'] < 18);
+print(menor);
+
+// media idades
+
+var mediaIdade = pessoas.map((map) => map['idade']).reduce((ant,atu) => ant + atu) / pessoas.length;
+print(mediaIdade);
+
+// media dos salario
+
+var mediaSalario = pessoas.map((map) => map['salario']).reduce((ant,atu)=> ant + atu) / pessoas.length;
+print(mediaSalario);
+
+}
+
+/**
+ * Formas de declarar um map()
+ * new Map()
+ * new Map.from()
+ * asMap()
+ * {}
+ */
