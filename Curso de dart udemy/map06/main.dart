@@ -44,4 +44,39 @@ var mulheresBrasileiras = funcionarios.where(brasileiro).where(mulheres).toList(
 print(mulheresBrasileiras);
 print(mulheresBrasileiras.reduce(menorSalario));
 print(mulheresBrasileiras.reduce(funcioMenorSala));
+
+
+List<Map<String,Object>> escola = [
+  {'nome':'Turma 1',
+   'alunos':[
+    {'nome':'ricacio','nota':8.8},
+    {'nome':'Ana','nota':9.2}
+   ]
+  },
+  {'nome':'turma 2',
+  'alunos':[
+    {'nome':'Carmem','nota':9.8},
+    {'nome':'larisa','nota':10}
+  ]
+  },
+];
+
+List<dynamic>  alunosList = escola.map((map) => map['alunos']).expand((e) => e as Iterable).toList();
+print(alunosList);
+
+var maiorNota = alunosList.map((map) => map['nota']).reduce((ant,atu) => ant > atu ? ant : atu);
+print(maiorNota);
+
+var menorNota = alunosList.map((map) => map['nota']).reduce((ant,atu) => ant < atu ? ant : atu);
+print(menorNota);
+
+var mediaNota = alunosList.map((map) => map['nota']).reduce((ant,atu) => ant + atu) / alunosList.length;
+print(mediaNota);
+
+
+var listaNotasMaior9 = alunosList.where((map) => map['nota'] > 9);
+print(listaNotasMaior9);
+
+print(listaNotasMaior9.every((map) => map['nota'] > 9));
+
  }
