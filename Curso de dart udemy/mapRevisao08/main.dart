@@ -77,6 +77,7 @@ mapCarros.forEach((chave,valor) => print('Marca:${valor.marca}, modelo:${valor.m
  // tentando  sobrepor os objetos singleton dentro do map
  Pessoa('ricacio',idade:63);
  Pessoa('lucas',idade:13);
+ Pessoa('Chloe');
 
  print('');
  Pessoa.mostrarPessoas();
