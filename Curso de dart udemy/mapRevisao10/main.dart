@@ -1,7 +1,35 @@
+import 'carro.dart';
+
 void main(){
-  
+
   mapReduce();
 
+ Carro carro1 = Carro('Honda','civic');
+ Carro carro2 = Carro('Toyota','corola');
+ Carro carro3 = Carro('Fiat','palio');
+
+ Map<String,Carro> carros = {'0':carro1,'1':carro2};
+ carros['2'] = carro3;
+
+ print(carros); 
+
+ for(int i = 0; i < carros.length;i++){
+  print('Marca: ${carros['${i}']!.marca}, modelo: ${carros['${i}']!.modelo}');
+ }
+
+  print('');
+
+ for(var key in carros.keys){
+  final carro = carros[key];
+  print('Marca:${carro!.marca}, modelo:${carro.modelo}'); 
+ }
+
+ print('');
+
+
+ carros.forEach((key,value){
+    print('Marca:${value.marca}, modelo: ${value.modelo}');
+ });
 
 
 }
