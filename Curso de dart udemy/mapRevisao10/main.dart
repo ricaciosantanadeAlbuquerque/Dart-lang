@@ -45,6 +45,7 @@ void main(){
  Pessoa('Marta');
  Pessoa.mostrarPessoa();
  p2.peso = 72;
+ p1.idade = 30;
 Pessoa.mostrarDetalhes(nome:'lucas');
 }
 
