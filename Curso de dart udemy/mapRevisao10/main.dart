@@ -1,4 +1,5 @@
 import 'carro.dart';
+import 'pessoa.dart';
 
 void main(){
 
@@ -31,7 +32,20 @@ void main(){
     print('Marca:${value.marca}, modelo: ${value.modelo}');
  });
 
+ Pessoa p1 = Pessoa('ricacio',idade:29,peso:65);
+ Pessoa p2 = Pessoa('lucas',idade:27,peso:80);
 
+ print('');
+ Pessoa.mostrarPessoa();
+
+ Pessoa.alterarDetalhes('ricacio',idade:32,peso:64);
+
+ Pessoa.mostrarDetalhes(nome: 'ricacio');
+ Pessoa('ricacio',idade:45); // essa Instânica já existe.
+ Pessoa('Marta');
+ Pessoa.mostrarPessoa();
+ p2.peso = 72;
+Pessoa.mostrarDetalhes(nome:'lucas');
 }
 
 void mapReduce(){
