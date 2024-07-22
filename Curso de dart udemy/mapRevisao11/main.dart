@@ -129,4 +129,10 @@ List<Map<String,Object>> escola = [
  print(listAlunos);
  var mediaNotas = listAlunos.map((map) => map['nota']).reduce((ant,atu) =>  ant + atu ) / listAlunos.length;
  print(mediaNotas.truncate());
+
+ Map<String,dynamic> salario = Map.from({'salario':1500,'idade':30,'peso':65});
+ var novoSalario = salario.map((key,value) => MapEntry(key,value + 150));
+ print('');
+ print(novoSalario);
+
  }
