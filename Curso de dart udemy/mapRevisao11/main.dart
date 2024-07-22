@@ -66,5 +66,21 @@ print(numeros);
 Map<int,String> novoMapNumero = numeros.map((key,value) =>  MapEntry(key,'${value.toUpperCase()}'));
 print(novoMapNumero);
 
+for(var chave in novoMapNumero.keys){
+  print('chave: $chave');
+}
+print('');
+for(var value in novoMapNumero.values){
+  print('Valor $value');
+}
+print('');
+for( var i = 0; i <  novoMapNumero.length;i++){
+  final valor = novoMapNumero[i];
+  print('chave:$i, valor ${valor}');
+}
+print('');
+for(var entries in numeros.entries){
+  print('chave:${entries.key}, valor:${entries.value}');
+}
 
 }
