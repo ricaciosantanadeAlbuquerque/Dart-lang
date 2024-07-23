@@ -6,6 +6,7 @@ void main() {
   everyMap();
   print('');
   whereMap();
+  mapReduce();
 }
 
 void linkedHashMap() {
@@ -218,7 +219,47 @@ print(mediaIdade);
   
 }
 
-
+//---------------------------------------Reduce()----------------------------------------------------
 void mapReduce(){
-  
+  List<Map<String,dynamic>> alunos = [
+    {'nome':'ricacio','nota':7,'bolsista':true},
+    {'nome':'lucas','nota':8.9,'bolsista':true},
+    {'nome':'Ana','nota':9.9,'bolsista':true},
+    {'nome':'Carmem','nota':10,'bolsista':false},
+  ];
+// delegando as funções anônimas para constantes finais
+
+final bool Function(dynamic) bolsista = (map) => map['bolsista'] as bool;
+final dynamic Function(dynamic) nome =  (map) => map['nome'];
+final dynamic Function(dynamic) nota =  (map) => map['nota'];
+final dynamic Function(dynamic,dynamic) soma =  (ant,atu) => ant + atu;
+
+// ----------------------------------------------------------------------
+
+  List<dynamic> listaBolsistasNome =  alunos.where(bolsista).map(nome).toList();
+  List<Map<String, dynamic>> mediaBolsista =  alunos.where(bolsista).toList();
+  dynamic media = mediaBolsista.map(nota).reduce(soma) / mediaBolsista.length;
+ var todosBolsistas =  alunos.map((map) => map['bolsista']).every((element) => element);
+ var temAlgumBolsista = alunos.map((map) => map['bolsista']).reduce((ant,atu) =>  ant || atu);
+ print('Todos são bolsistas ? ${todosBolsistas ? 'Sim !!!' : 'Não'}\nTem algum bolsista ? ${temAlgumBolsista ? 'Sim' : 'Não'}');
+ print('Lista dos nomes dos alunos Bolsistas $listaBolsistasNome,\n Média dos alunos bolsistas $media ');
+
+ List<dynamic> funcionarios = [
+  {'nome':'ricacio','genero':'H','pais':'Brasil','salario':1670},
+  {'nome':'lucas','genero':'H','pais':'Brasil','salario':1889},
+  {'nome':'Carmem','genero':'M','pais':'Peru','salario':2500},
+ ];
+
+final brasileiros = (map) => map['pais'] == 'Brasil';
+final homem = (map) => map['genero'] == 'H';
+final menorSalario = (ant,atu) => ant['salario'] < atu['salario'] ? ant['salario'] : atu['salario'];
+final funMenorSala = (ant,atu) => ant['salario'] < atu['salario'] ? ant : atu;
+List<dynamic> selecionados = funcionarios.where(brasileiros).where(homem).toList();
+
+print(selecionados);
+
+print(selecionados.reduce(menorSalario));
+print(selecionados.reduce(funMenorSala));
+
+ 
 }
