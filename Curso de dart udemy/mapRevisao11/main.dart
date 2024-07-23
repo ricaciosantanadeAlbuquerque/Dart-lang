@@ -2,6 +2,8 @@ void main() {
   linkedHashMap();
   print('');
   mapMap();
+  print('');
+  everyMap();
 }
 
 void linkedHashMap() {
@@ -136,3 +138,44 @@ List<Map<String,Object>> escola = [
  print(novoSalario);
 
  }
+
+void everyMap(){
+ List<Map<String,dynamic>> pessoas = [
+  {'nome':'ricacio','idade':30},
+  {'nome':'lucas','idade':28},
+  {'nome':'ana','idade':43},
+  {'nome':'Marcos','idade': 17},
+ ];
+
+ print(pessoas.every((map) => map.containsKey('nome')));
+ print('Todos são maiores de 18 anos ? ${pessoas.every((map) => map['idade'] >= 18) ? 'Sim !!!' : 'Não !!!'}');
+
+ Iterable<Map<String, dynamic>> result = pessoas.where((map) => map['idade'] > 18);
+ print(result);
+
+ print(result.every((map) => map['idade'] >= 18));
+
+ /**
+  * every() é uma função que faz testes lógicos em todos os elementos da lista  utilizando o operador && .Se todos forem true
+  * então every() retorna true. Aprovando a lista 
+  */
+ List<Map<String,dynamic>> salario = [
+  {'nome':'ricacio','salario':1670},
+  {'nome':'lucas','salario':1870},
+  {'nome':'ana','salario':2500},
+  {'nome':'carmem','salario':1770},
+ ];
+
+  // testando se todos possuem  o salário acima de 1800
+   print(salario.every((map) => map['salario'] > 1800));
+  // filtrando os salários maiores que 1700
+  Iterable<Map<String, dynamic>> resultado = salario.where((map) => map['salario'] > 1700);
+  print(resultado);
+  print(resultado.runtimeType); 
+  print('Todos ganham acima de 1700 ? ${resultado.every((map) => map['salario'] > 1700) ? 'SIM!!!': 'Não!!!'}');
+  // não se pode aplicar a função every() a um tipo Map()
+ 
+
+ 
+
+}
