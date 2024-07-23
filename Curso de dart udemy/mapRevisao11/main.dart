@@ -4,6 +4,8 @@ void main() {
   mapMap();
   print('');
   everyMap();
+  print('');
+  whereMap();
 }
 
 void linkedHashMap() {
@@ -174,8 +176,44 @@ void everyMap(){
   print(resultado.runtimeType); 
   print('Todos ganham acima de 1700 ? ${resultado.every((map) => map['salario'] > 1700) ? 'SIM!!!': 'Não!!!'}');
   // não se pode aplicar a função every() a um tipo Map()
- 
 
- 
+}
 
+void whereMap(){
+
+ List<Map<dynamic,dynamic>> produto = [
+  {'nome':'Notebook','preco':2500,'fragil':true},
+  {'nome':'iPad','preco':4200,'fragil':true},
+  {'nome':'iPhone','preco':2300,'fragil':true},
+  {'nome':'Magic Mause','preco':300,'fragil':false},
+ ];
+
+ // lista dos produtos frágeis
+ final fragil = (map) => map['fragil'] == true;
+ final nome = (map) => map['nome'];
+ var produtosFrageis = produto.where(fragil).map(nome);
+ print(produtosFrageis);
+
+ List<Map<String,dynamic>> pessoa = [
+  {'nome':'ricacio','idade':30},
+  {'nome':'Lucas','idade':28},
+  {'nome':'Kaio','idade':17},
+  {'nome':'Carmem','idade':45},
+ ];
+
+ // lista dos maiores de idade.
+
+ final idades = (map) => map['idade'];
+ final soma =  (ant,atu) => ant + atu;
+ Iterable<Map<String, dynamic>> maioresIdade = pessoa.where((map) => map['idade'] > 17);
+ print(maioresIdade);
+ Map<String, dynamic> comecaR = maioresIdade.firstWhere((map) => map['nome'].startsWith('r'), orElse: () => {});
+print(comecaR);
+var menorIdade = pessoa.singleWhere((map) => map['idade'] < 18 );
+print(menorIdade);
+
+double mediaIdade = pessoa.map(idades).reduce(soma) / pessoa.length;
+
+print(mediaIdade);
+  
 }
