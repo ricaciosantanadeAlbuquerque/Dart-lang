@@ -1,3 +1,5 @@
+import 'carro.dart';
+
 void main() {
   linkedHashMap();
   print('');
@@ -7,6 +9,7 @@ void main() {
   print('');
   whereMap();
   mapReduce();
+  mapObject();
 }
 
 void linkedHashMap() {
@@ -261,5 +264,35 @@ print(selecionados);
 print(selecionados.reduce(menorSalario));
 print(selecionados.reduce(funMenorSala));
 
- 
+}
+
+void mapObject(){
+  Carro carro1 = Carro('Honda','Civic');
+  var carro2 = Carro('Toyota','Corola');
+  Carro carro3 = new Carro('Fiat','Palio');
+
+/**
+ * Declaramos o Map() carros
+ * declaramos as chaves [''] e inicializamos as mesmas.
+ */
+  Map<String,Carro> carros = Map();
+  carros['0'] = carro1;
+  carros['1'] = carro2;
+  carros['2'] = carro3;
+
+ print(carros);
+
+ for(int i  = 0; i < carros.length;i++){
+  print('marca: ${carros['${i}']!.marca}, modelo:${carros['${i}']!.modelo}');
+ }
+
+ print('');
+
+ for(var key in carros.keys){
+  final valor = carros[key];
+  print('chave:$key,valor:$valor');
+ }
+ print('');
+ carros.forEach((key,value) => print('Marca:${value.marca}, Modelo:${value.modelo}'));
+ print('');
 }
