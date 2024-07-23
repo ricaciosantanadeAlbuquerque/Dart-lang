@@ -217,3 +217,8 @@ double mediaIdade = pessoa.map(idades).reduce(soma) / pessoa.length;
 print(mediaIdade);
   
 }
+
+
+void mapReduce(){
+  
+}
