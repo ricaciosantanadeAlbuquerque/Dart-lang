@@ -1,4 +1,5 @@
 import 'carro.dart';
+import 'pessoa.dart';
 
 void main() {
   linkedHashMap();
@@ -295,4 +296,25 @@ void mapObject(){
  print('');
  carros.forEach((key,value) => print('Marca:${value.marca}, Modelo:${value.modelo}'));
  print('');
+
+ Pessoa p1 = Pessoa('ricacio',idade:30,peso:65);
+ Pessoa p2 = Pessoa('lucas',idade:28,peso:82);
+
+ Pessoa.mostrarPessoa();
+
+ Pessoa('ricacio',idade:55);
+ Pessoa('lucas',peso:100);
+ Pessoa('chloe');
+ print('');
+ print('');
+ Pessoa.mostrarPessoa();
+ Pessoa.alterarDetalhes('ricacio',idade:28,peso:72);
+ Pessoa.mostrarDetalhes('ricacio');
+ Pessoa.alterarDetalhes('chloe',idade:22,peso:65);
+ Pessoa.mostrarDetalhes('chloe');
+
+ Map<String,dynamic> valores = {'0':0,'1':1,'2':2,'3':3,'4':4,'5':5,'6':6,'7':7};
+ var novoValores = valores.map((key,value) => MapEntry(key,++value));
+ print(novoValores);
+ 
 }
