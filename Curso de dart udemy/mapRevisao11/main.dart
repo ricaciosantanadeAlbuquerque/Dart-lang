@@ -305,6 +305,8 @@ void mapObject(){
  Pessoa('ricacio',idade:55);
  Pessoa('lucas',peso:100);
  Pessoa('chloe');
+ p1.idade = 20;
+ p2.peso = 85;
  print('');
  print('');
  Pessoa.mostrarPessoa();
@@ -316,5 +318,5 @@ void mapObject(){
  Map<String,dynamic> valores = {'0':0,'1':1,'2':2,'3':3,'4':4,'5':5,'6':6,'7':7};
  var novoValores = valores.map((key,value) => MapEntry(key,++value));
  print(novoValores);
- 
+
 }
