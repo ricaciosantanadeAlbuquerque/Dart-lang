@@ -135,5 +135,10 @@ void operadoresValidacaoTipo(){
 
  // como  o tipo num está relacionado a int então ele será validado como int mesmo sendo num, já que num é pai de double e int
 
-
+ /**
+  * as conversão typeCast 
+    is validação  E
+    is! validação NãoE
+  */
 }
+
