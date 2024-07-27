@@ -7,6 +7,8 @@ void main() {
   operadoresLogicos();
   print('======Incremento======');
   operadoresIncremento();
+  print('======validacaoTipo======');
+  operadoresValidacaoTipo();
 }
 
 /// Frequentemente utilizados para realizar operações matemáticas
@@ -102,6 +104,36 @@ void operadoresIncremento() {
   }
 
   posIncremento(); // a chamada a uma função deve ser feita depois de sua declração.
+
+
+}
+/// Utilizados para validação e converção de tipo em tempo de execução
+void operadoresValidacaoTipo(){
+  /**
+   * as  conversão de tipo typeCast
+   *  is  validação de tipo, retorna true se for do tipo.
+   *  is! validação de tipo, retorna true se não for do tipo. 
+   */
+
+   num a = 42;
+
+ print( (a as int).bitLength);  // o get bitLength retorna a quantidade de bit que a variável possui. está função só existe no tipo int.
+
+
+  num b = 42;
+//print( (b as int).bitLength); não é possível fazer conversão de typeCast com tipo não relacionados
+
+ // é possível saber o tipo da varivável  antes da conversão por typeCast, utilizando o operador de validação (is)
+
+ if(b is int){ // true
+    print( (b as int).bitLength);
+ }
+
+ if(b is! int){ // false
+   print('Não é um tipo inteiro');
+ }
+
+ // como  o tipo num está relacionado a int então ele será validado como int mesmo sendo num, já que num é pai de double e int
 
 
 }
