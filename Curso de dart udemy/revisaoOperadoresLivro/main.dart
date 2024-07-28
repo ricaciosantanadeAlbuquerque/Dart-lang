@@ -9,6 +9,10 @@ void main() {
   operadoresIncremento();
   print('======validacaoTipo======');
   operadoresValidacaoTipo();
+  print('======Operadores Geraies======');
+  operadoresGerais();
+  print('====== Operadores de nulidade ======');
+  operadoresDeNulidade();
 }
 
 /// Frequentemente utilizados para realizar operações matemáticas
@@ -140,5 +144,107 @@ void operadoresValidacaoTipo(){
     is validação  E
     is! validação NãoE
   */
+}
+
+void operadoresGerais(){
+  /**
+ * . Operador de acesso a menbros
+ * () chamada a função
+ * .. Operador de acesso cascade ou em cascata
+ * ... spread ou espalhar
+ *  A == B ? A : B ;
+ * [] acesso a itens de lista 
+ * 
+ */
+
+/// operador de acesso .
+final frase = StringBuffer();
+frase.write('operação');
+frase.write('em');
+frase.write('cascade');
+
+print(frase);
+
+final frase2 = StringBuffer()..write('Operação')..write('em')..write('cascade');
+print(frase2);
+
+/**
+ * write() deve receber como argumento um  elemento,  e escrever o mesmo no console.
+ * Para usar a função write(), crie um objeto     StringBuffer().
+ * O operador em cascade, permite fazer várias chamadas a métodos e atributos, 
+ * com apenas uma referência ao objeto
+ */
+
+final vogais = ['a','e','i','o','u'];
+final consoantes = ['b','c','d'];
+
+final alfabeto = [...vogais,...consoantes]; // O operador Spread espalha tudo de uma lista dentro de outra lista e em ordem.
+
+print(alfabeto);
+
+int numero = 42;
+print(numero % 2 == 0 ? 'Par' : 'Impar'); // O ternário executa uma operação booleana  condicional com três valores
+// se true executa o que está depois da enterrogação se não executa o que está nos dois pontos.
+
+/// operador de acesso a itens de lista ou map. Lista via index Map<> via chave.
+/// 
+Map<String,String> map = {
+  'vogais':'a,e,i,o,u',
+  'consoantes':'b,c,d',
+};
+
+List<String> vogais2 = ['a','e','i','o','u']; // 0  a 4
+
+print(vogais2[0]); // a
+print(vogais[4]); // u;
+print(map['vogais']);// 'a,e,i,o,u'
+
+}
+
+void operadoresDeNulidade(){
+  /**
+   *  ?? ternário nulo
+   *  ??=  atribuição caso nulo
+   *  ?. acesso a atributo caso não nulo
+   *  ?.. operações em cascade caso não nulo
+   *  ?[] acesso a index caso não nulo
+   */
+ /// ternário nulo
+  int?  a  =  null ;
+ var resposta = a ?? 42; // se a for nulo então resposta recebe 42
+
+ print(resposta);
+/// atribuição caso nulo 
+ int? resposta2 = null;
+ resposta2 ??= 42;
+
+ print(resposta2);
+
+ int? num1 = null;
+ var result = num1 ?? 100; // ternário null
+
+ print(result);
+ int? num2 = null; // Primeiro num2 tem que ser inicializada como null, só então podemos usar ??=
+ num2 ??= 250; // caso num2 seja null atribui.
+
+ /// acesso nulo ?.
+ int? resposta3 = null;
+ print(resposta3?.bitLength); // null
+ /**
+  * O intuito do operador de acesso nulo, é evitar que seja lançada uma exceção caso a variável seja nula. 
+  */
+
+  /// cascade nulo ?..
+  
+  StringBuffer? frasesDia = null;
+  frasesDia?..write('Bom')..write(' dia ')..write('João pessoa');
+  print(frasesDia); // ?.. caso o objeto seja null, então não será lançada uma exceção. Mas retornará null.
+  // Caso ele esteja com valor Object então mostrará a frase;
+
+  // Acesso a itens nulo ?[]: Valida o acesso a valores de uma lista ou map quando  a variável pode conter um valor nulo.
+  List<String>? vogais3 ;
+ // print(vogais3?[1]);
+  print(vogais3![1]);// estou informando ao compilador  que pode executar pois está variável não está null
+
 }
 
