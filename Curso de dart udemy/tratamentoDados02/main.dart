@@ -61,7 +61,7 @@ void caso4(){
   }
 }
 
-/// O usuário pode tratar e lançar  execeções j[a]  tratadas o catch
+/// O usuário pode tratar e lançar  execeções j[a]  tratadas no catch
 void caso5(){
   try{
     int num1 = 1, num2 = 0;
