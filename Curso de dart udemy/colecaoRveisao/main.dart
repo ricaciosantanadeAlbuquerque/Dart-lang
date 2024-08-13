@@ -1,3 +1,5 @@
+import '../Relacionamento_Entre_Classes05/atum.dart';
+
 void main(List<String> args) {
   lista();
 }
@@ -105,7 +107,7 @@ void lista() {
   print(numero);
   numero.sort((b, a) => a.compareTo(b));
   print(numero);
- // uma vez que aplicamos a função sort() ela fica ordenada.
+  // uma vez que aplicamos a função sort() ela fica ordenada.
 // ======================List.from()=========================
 
 /**
@@ -129,8 +131,8 @@ void lista() {
  * Captura uma quantidade de elementos da lista de acordo com a parâmetro passado como argumento.
  */
 
- print(num1.take(3)); 
- /**
+  print(num1.take(3));
+  /**
   * Como passamos o valor 3 como argumento, então serão capturados os três primeiros valores da coleção.
   */
 
@@ -139,8 +141,8 @@ void lista() {
  * A função Skip() ignora ou pula os elemntos de uma coleção de acordo com o argumento passado
  */
 
- print(numero.skip(3));
- print(valores.skip(6));
+  print(numero.skip(3));
+  print(valores.skip(6));
 
 // ======================List.generate()=========================
 /**
@@ -149,24 +151,108 @@ void lista() {
  * anônima  enxerga os index da lista. a função anônima deve retornar um elemento para List.generate() que gera uma nova lista.
  */
 
-List<int> listValores = new List.generate(10,(index) => index++);
-print(listValores);
+  List<int> listValores = new List.generate(10, (index) => index++);
+  print(listValores);
 
-var num2 = List.generate(14,(index){
-     return ++index;
-});
- print('Lista gerada $num2');
-
+  var num2 = List.generate(14, (index) {
+    return ++index;
+  });
+  print('Lista gerada $num2');
 
 // ======================forEach()=========================
+// Deve receber como argumento um função anônima com parâmetro e sem retorno.
+// o parâmetro da função anônima enxerga cada elemento da lista.
+// forEach() Não tem retorno, faz Iterações sobre listas ou coleções
 
   num2.forEach((element) => print(element));
 
 // ======================expand()=========================
- 
-var matriz = [[1,2,3],[4,5,6],[6,7,9]];
-Iterable colecaoConcatenada  = matriz.expand((element) => element);
-print(colecaoConcatenada);
+  /**
+  * Deve receber como argumento uma função anônima com parâmtro e com retorno genérico. 
+  expand() retorna uma coleção de Iterable
+ o parâmetro da função anônima enxerga cada elemento da lista. 
+
+  */
+  var matriz = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [6, 7, 9]
+  ];
+  Iterable colecaoConcatenada = matriz.expand((element) => element);
+  print(colecaoConcatenada);
+
+// ======================map()=========================
+  /**
+  * Deve receber como argumento uma função anônima com parâmetro e com retorno genérico,
+   map() por sua vez, retorna uma coleção e Iterable
+   o parâmetro da função anônima enxerga cada elemento da lista. 
+
+  */
+
+  Iterable<int> listaTriplicada = numero.map((element) => element * 3);
+  print(listaTriplicada);
+  // convertendo para lista use : to.List()
+
+  print(listaTriplicada.toList());
+
+// ======================every()=========================
+/**
+ * Deve receber como argumento uma função anônima como parâmetro, e que retorna um tipo bool.
+ * every() retorna um tipo bool, o parâmetro da função anônima enxerga cada elemento da lista. 
+ * every() faz um teste lógico em cada elemento da coleção,via parâmetro da função anônima, utilizando o operador &&
+ * se todos forem true então every retornará true massss se apenas um elemento for false então every retornará false 
+ */
+
+   bool resultado = listaTriplicada.every((e) => e > 0);
+   print('Todos são maiores que zero ? ${resultado ? 'Sim' : 'Não'}');
+   print('Todos são maiores que 10 ? ${(listaTriplicada.every((e) => e > 10)) ? 'Sim':'Não'}');
+
+// ======================where()=========================
+/**
+ * Deve receber como argumento uma função anônima com parâmetro e com retorno  booleano.
+ * where() retorna uma coleção filtrada do tipo Iterable.
+ * A função where() é utilizada para fazer filtragem em coleções. 
+ */
+
+ var listFiltrada = listaTriplicada.where(((e) => e > 10)); // estamos filtrando listaTriplicada
+ print(listFiltrada.runtimeType);
+ print(listFiltrada);
+
+ List<int> num3 = [100,200,300,1,2,3,4,5,6].where((e) => e <  100).toList(); // queremos uma lista com os valores abixo de 100
+ // toList() converte para lista.
+
+ print(num3);
+
+ // ======================reduce()=========================
+ /**
+  * Deve receber como argumento uma função com dois parâmetros anterior e atual
+    onde o anterior é index 0 e o atual é index 1, todo resultado de qualquer operação será 
+    guardado em anterior.
+    Afunção reduce() reduz uma lista ou coleção a um único valor 
+
+  */
+
+ int soma  =  num3.reduce((anterior,atual) => anterior + atual);
+ int menorValor = num3.reduce((anterior,atual) => anterior < atual ? anterior : atual);
+ int maiorValor = num3.reduce((anterior,atual) => anterior > atual ? anterior : atual);
+ int media =  soma ~/ num3.length;
+ print('Soma:$soma, menor:$menorValor, maior:$maiorValor, media:$media');
+
+
+ // ======================fold()=========================
+ /**
+  * fold(start,(anterior,atual) => )
+  * Deve receber dois argumentos um valor de início start e uma função com dois parâmetros (ant,atu) =>.
+    fold() reduz uma coleção a um único termo.
+     anterior será o valor de início e o atual será o index 0
+  */
+
+  int soma2 = num3.fold(0,(ant,atu) => ant + atu); // reduzimos a coleção num3 a um único valor de retorno
+  print(soma2);
+  int menor2 = num3.fold(0,(ant,atu) =>  ant <  atu ? ant : atu);
+  int maior2 = num3.fold(0,(ant,atu) => ant > atu ? ant : atu);
+  print(menor2);
+  print(maior2);
 }
 
 /**
