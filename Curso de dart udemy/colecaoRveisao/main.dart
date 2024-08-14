@@ -2,6 +2,8 @@ import 'dart:collection';
 void main(List<String> args) {
   lista();
   colecaoSet();
+  print('');
+  colecaoQueue();
 }
 
 /// Lista é uma coleção dinâmica de elementos separados por virgula e indexados, contidos por []. Aceitam valores redundantes e podem
@@ -357,6 +359,49 @@ autoList.forEach((e) => print(e));
  * SplayTreeSet
  * 
  */
+
+// ==================Queue()=====================
+/** 
+ * Queue() ou ListQueue() é uma coleção dinâmica de valores entre chaves {}, separados por virgula. 
+ * Aceitam valores redundantes.porém não podem ser acessados por index
+ */
+void colecaoQueue(){
+  Queue<num> valores = Queue(); // linhas de instânciamento Queue()
+  valores.addAll([1,2,3,3,4,4,5]);
+  print(valores.runtimeType);
+  print(valores);
+
+  ListQueue<num> valores2 = new ListQueue.from({1,2.5,4,55.6}); // um novo objeto ListQueue() via construtor nomeado
+
+ // ==================métodos=====================
+ valores2.addFirst(15687);
+ print(valores2);
+ valores2.removeLast();
+ print(valores2);
+
+ /**
+  * add()
+  * addFist()
+    addLast()
+    removeLast()
+    removeFirst()
+    elementAt()
+    addAll()
+  */
+  /// for in
+  for(var j in valores2){
+     print(j);
+  }
+  print('');
+
+  /// for
+  for(var i = 0; i < valores2.length; i++){
+    print(valores2.elementAt(i));
+  }
+ print('');
+ /// forEach()
+ valores2.forEach((e) => print(e));
+} 
 
 /**
  * forEach()
