@@ -1,7 +1,7 @@
-import '../Relacionamento_Entre_Classes05/atum.dart';
-
+import 'dart:collection';
 void main(List<String> args) {
   lista();
+  colecaoSet();
 }
 
 /// Lista é uma coleção dinâmica de elementos separados por virgula e indexados, contidos por []. Aceitam valores redundantes e podem
@@ -203,9 +203,9 @@ void lista() {
  * se todos forem true então every retornará true massss se apenas um elemento for false então every retornará false 
  */
 
-   bool resultado = listaTriplicada.every((e) => e > 0);
-   print('Todos são maiores que zero ? ${resultado ? 'Sim' : 'Não'}');
-   print('Todos são maiores que 10 ? ${(listaTriplicada.every((e) => e > 10)) ? 'Sim':'Não'}');
+  bool resultado = listaTriplicada.every((e) => e > 0);
+  print('Todos são maiores que zero ? ${resultado ? 'Sim' : 'Não'}');
+  print('Todos são maiores que 10 ? ${(listaTriplicada.every((e) => e > 10)) ? 'Sim' : 'Não'}');
 
 // ======================where()=========================
 /**
@@ -214,17 +214,17 @@ void lista() {
  * A função where() é utilizada para fazer filtragem em coleções. 
  */
 
- var listFiltrada = listaTriplicada.where(((e) => e > 10)); // estamos filtrando listaTriplicada
- print(listFiltrada.runtimeType);
- print(listFiltrada);
+  var listFiltrada = listaTriplicada.where(((e) => e > 10)); // estamos filtrando listaTriplicada
+  print(listFiltrada.runtimeType);
+  print(listFiltrada);
 
- List<int> num3 = [100,200,300,1,2,3,4,5,6].where((e) => e <  100).toList(); // queremos uma lista com os valores abixo de 100
- // toList() converte para lista.
+  List<int> num3 = [100, 200, 300, 1, 2, 3, 4, 5, 6].where((e) => e < 100).toList(); // queremos uma lista com os valores abixo de 100
+  // toList() converte para lista.
 
- print(num3);
+  print(num3);
 
- // ======================reduce()=========================
- /**
+  // ======================reduce()=========================
+  /**
   * Deve receber como argumento uma função com dois parâmetros anterior e atual
     onde o anterior é index 0 e o atual é index 1, todo resultado de qualquer operação será 
     guardado em anterior.
@@ -232,28 +232,131 @@ void lista() {
 
   */
 
- int soma  =  num3.reduce((anterior,atual) => anterior + atual);
- int menorValor = num3.reduce((anterior,atual) => anterior < atual ? anterior : atual);
- int maiorValor = num3.reduce((anterior,atual) => anterior > atual ? anterior : atual);
- int media =  soma ~/ num3.length;
- print('Soma:$soma, menor:$menorValor, maior:$maiorValor, media:$media');
+  int soma = num3.reduce((anterior, atual) => anterior + atual);
+  int menorValor = num3.reduce((anterior, atual) => anterior < atual ? anterior : atual);
+  int maiorValor = num3.reduce((anterior, atual) => anterior > atual ? anterior : atual);
+  int media = soma ~/ num3.length;
+  print('Soma:$soma, menor:$menorValor, maior:$maiorValor, media:$media');
 
-
- // ======================fold()=========================
- /**
+  // ======================fold()=========================
+  /**
   * fold(start,(anterior,atual) => )
   * Deve receber dois argumentos um valor de início start e uma função com dois parâmetros (ant,atu) =>.
     fold() reduz uma coleção a um único termo.
      anterior será o valor de início e o atual será o index 0
   */
 
-  int soma2 = num3.fold(0,(ant,atu) => ant + atu); // reduzimos a coleção num3 a um único valor de retorno
+  int soma2 = num3.fold(0, (ant, atu) => ant + atu); // reduzimos a coleção num3 a um único valor de retorno
   print(soma2);
-  int menor2 = num3.fold(0,(ant,atu) =>  ant <  atu ? ant : atu);
-  int maior2 = num3.fold(0,(ant,atu) => ant > atu ? ant : atu);
+  int menor2 = num3.fold(0, (ant, atu) => ant < atu ? ant : atu);
+  int maior2 = num3.fold(0, (ant, atu) => ant > atu ? ant : atu);
   print(menor2);
   print(maior2);
 }
+
+/**
+ * Set<> é uma coleção dinâmica de valores únicos e ordenados  entre {}, separados por virgula e que não aceitam acesso por index
+ * 
+ */
+void colecaoSet() {
+  Set<int> setNum1 = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+  Set<int> setNum2 = new Set();
+
+// ============ add() ============
+/**
+ *  Adiciona um elemento  na coleção sempre  na ultima posição.
+ */
+
+  setNum2.add(250);
+  print(setNum2);
+
+// ============ addAll() ============
+/**
+ * Recebe uma coleção como argumento, e inseri todos os elementos desta coleção passada como argumento para a coleção 
+ * que evoca a função. 
+ */
+
+  setNum2.addAll(setNum1); // num2 evoca addAll() para adicionar todos os elementos de num1.
+  print(setNum2);
+// ============ difference() ============
+/**
+ * A função difference mostra a diferença de uma coleção set<> para a outra coleção set<>
+ * A coleção que evoca a função difference() que saber o que  tem  de diferente da coleção passada como argumento.
+ */
+  setNum1.add(3500);
+  setNum2.add(555);
+
+  print(setNum1.difference(setNum2)); // o que  setNum1 tem que setNum2 não tem
+  print(setNum2.difference(setNum1));
+
+// ================== union() =====================
+/**
+ * Cria uma nova coleção Set<>, aparti de duas coleções distintas. 
+ */
+Set<double> setList1 = {1.1,2.2,3.3};
+Set<double> setList2 = {1.1,2.2,3.3,4.4};
+
+Set<double> result = setList1.union(setList2); // Não entrará valores duplicados, pois set<> é um coleção de valores únicos
+print(result);
+
+// result[0] = 2500; não aceita a cesso por index
+
+// ==================intersection()=====================
+/**
+ * a função intersection() mostra o que é comum as duas coleções set<>, retornando uma intercessão.
+ */
+
+ print('O que é comum entre as duas coleções setList1 e setList2 ${setList1.intersection(setList2)}');
+
+ Set<double> resultValue = setList1.intersection(setList2);
+ print(resultValue);
+
+// ==================lookup()=====================
+  /**
+   * Esta função realiza buscas na coleção set<> e para tal deve receber como argumento um (element Object? ) um elemento qualquer,
+   * em geral passamos o elemento que buscamos  como argumento para lookup(), 
+   * heeee se o elemento existe na coleção, então ele é retornado,
+   * se não existe então retorna null.
+   */
+
+  var x = setList1.lookup(5);
+  print(x);
+
+  print(setList1.lookup(1.1));
+
+// ==================HashSet<>=====================
+/**
+ * Colção dinâmica de valores únicos e desordenados entre {} separados por virgula e que não aceita acesso por index.
+ */
+
+ HashSet<int> listHashSet = new HashSet();
+
+ listHashSet.addAll({1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20});
+
+ print(listHashSet); // coleção de valores desordenados
+ 
+ for(int i = 0; i < listHashSet.length;i++){
+    print(listHashSet.elementAt(i));
+ }
+
+// ==================SplayTreeSet()=====================
+/**
+ * Coleção dinâmica de valores únicos que são automaticamente ordenados, contidos por {} e separados por virgula.
+ * que não aceitam acesso por index ou  recebem valores null. Pois se trata de uma arvore de comparação
+ */
+
+SplayTreeSet<int> autoList = new SplayTreeSet();
+// todos os elementos de "listHashSet" que estavam desordenados passaram para "autoList" e foram ordenados em ordem crescente.
+autoList.addAll(listHashSet);
+print(autoList);
+autoList.forEach((e) => print(e));
+}
+/**
+ * Set<>
+ * HashSet<>
+ * SplayTreeSet
+ * 
+ */
 
 /**
  * forEach()
