@@ -2,11 +2,12 @@
 ///  É um objeto que retorna um valor ou um erro, Future é uma execuçao assincrona/future.
 ///  Resultado de uma ação futura.
 
-void main()async{ // para chamar uma função assincrona, esta função deve ser marcada como async
+ main() async { // para chamar uma função assincrona, esta função deve ser marcada como async
 novaTarefa(tempo: 6);
-//print(await tarefa(tempo:4)); // await deve esperar, espera o retorno do objeto Future<String>
+print(await tarefa(tempo:4)); // await deve esperar, espera o retorno do objeto Future<String>
 contagemAssincrona(tempo:4);
 contagemSincrona();
+print(await status2(10));
 
 }
 
@@ -62,3 +63,14 @@ void novaTarefa({int tempo = 3}){
  * Como não estamos retornando um objeto Future() para a função main(),Não há necessidade de marca a main como async
  *  nem há necessidade de setar  novaTarefa() como await. 
  */
+
+
+Future<String>? status2([int tempo = 3]){
+  try{
+    if(tempo < 4) throw Exception('ERRO! tempo insuficiente');
+    return Future.delayed(Duration(seconds: tempo), () => 'Teste Future retornado');
+  }catch(e){
+    print('$e');
+    return null;
+  }
+}
