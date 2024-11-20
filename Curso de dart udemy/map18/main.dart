@@ -47,8 +47,21 @@ void main() {
 /// parâmetro nomeado default
 dynamic adicionarAluno(
     [String key = '---', List<String>? nome = null, var mapa]) {
+  
+
+  if (mapa.containsKey(key)) {
+  // Se a série já existe, adiciona os alunos à lista existente
+  mapa[key]!.addAll(nome);
+  /**
+   * Sanbendo que  map na chave existente tem uma lista o addAll() não sobrepoem a lista existente na chave nesta chave 
+   * mass pega todos os elementos da lista passada como parâmetro e joga para dentro da lista que já existe na chave .
+   */
+  } else {
+  // Se a série não existe, cria uma nova entrada
   mapa[key] = nome;
+ }
   //print(mapa);
 
   return mapa;
 }
+
