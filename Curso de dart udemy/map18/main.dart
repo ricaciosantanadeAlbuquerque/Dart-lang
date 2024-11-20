@@ -13,6 +13,7 @@ void main() {
   Map<String, List<String>> mapaEscolar = Map();
   print('--------------Olá seja Bem vindo !!!-------------');
   do {
+    // ignore: dead_code
     for (int i = 0; i < 1; i++) {
       List<String> listName1 = [];
       for (var j = 0; j < 3; j++) {
