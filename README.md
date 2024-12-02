@@ -15,7 +15,7 @@ Todos os algoritmos implementados no Dart, são para fins de aprendizagem e trei
    * double
    * bool
    * num
-   * dynacmin
+   * dynamic
 * **Operadores**.
    * Lógico.
    * Relacional.
