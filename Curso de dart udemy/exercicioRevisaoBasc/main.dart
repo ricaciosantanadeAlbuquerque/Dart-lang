@@ -1,6 +1,11 @@
 import 'dart:io';
 import 'dart:math';
 
+import 'animal.dart';
+import 'cachorro.dart';
+import 'gato.dart';
+import 'pessoa.dart';
+
 void main(List<String> args) {
   // inicio();
   // nome
@@ -14,9 +19,36 @@ void main(List<String> args) {
   //diasSemana();~
   //lista();
   //matriz();
-  print(soma(10, 25));
-  parImpa(num1: 2);
-  print(maiuscula('RICACIO'));
+  // print(soma(10, 25));
+  //parImpa(num1: 2);
+  //print(maiuscula('RICACIO'));
+
+  var pessoa1 = Pessoa();
+
+  pessoa1
+    ..nome = "Ricacio Santana"
+    ..idade = 30;
+
+  print("Nome: ${pessoa1.nome}");
+  print("Idade: ${pessoa1.idade}");
+
+  var animal = Animal(tipo: 'Animal');
+  Cachorro cachorro = Cachorro(nome: "MAX", idade: 3, tipo: "Cachorro");
+  Gato gato = Gato(nome: "Frajola", idade: 4, tipo: "Gato");
+
+  chamada(animal);
+  chamada(cachorro);
+  chamada(gato);
+}
+
+void chamada(Animal animal) {
+  if (animal.tipo == 'Gato') {
+    animal.fazerSom();
+  } else if (animal.tipo == "Cachorro") {
+    animal.fazerSom();
+  } else {
+    animal.fazerSom();
+  }
 }
 
 void inicio() {
