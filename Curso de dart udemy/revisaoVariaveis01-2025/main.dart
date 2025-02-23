@@ -106,11 +106,12 @@ void main() {
 
   print('valor de $num1');
 
+  // ignore: unused_local_variable
   var num2 = 10;
   //num2 = 10.50;
   //num2 = '72';
 
- /**
+  /**
   * sobre o tipo [var] podemos afirma que, 
     ser uma variável for declarada e inicialida na mesma linha recebendo um tipo de dado, Ela será tipada por inferência e
     não poderá alterar seu tipo durante a execução do programa.
@@ -118,4 +119,17 @@ void main() {
     Ela será dinâmica, podendo ter seu tipo altera no decorrer da execução do app.
 
   */
+
+  /// Variável tipo dynamic
+
+  dynamic valor = 22; // int
+  valor = 22.50; // double
+  valor = 'aprovado'; // String
+  valor = true; // bool
+
+  print(valor); 
+
+  /**
+   * Variáveis dinâmicas recebem qualque valor.
+   */
 }
