@@ -42,4 +42,30 @@ void main(List<String> args) {
       }
     }
   }
+
+  String textoInt = '10';
+  String textoDouble = '10.12345';
+  int numeroInt = int.parse(textoInt);
+  var numeroDouble = double.parse(textoDouble).toStringAsFixed(2);
+  print('ParseInt: $numeroInt, ParseDouble: $numeroDouble');
+  // ignore: unnecessary_type_check
+  print(
+      'ParseString: ${numeroDouble.toString() is String}'); // is é uma validação retorna true ou false
+
+  double peso = 65;
+  double altura = 1.72;
+
+  var imc = peso / (altura * altura);
+
+  if (imc < 18.5) {
+    print('IMC ${imc.truncate()} Abaixo do peso');
+  } else if (imc >= 18 && imc < 25) {
+    print('IMC ${imc.truncate()} peso Normal');
+  } else if (imc >= 30 && imc < 35) {
+    print('IMC ${imc.truncate()} Obesidade Grau 1');
+  } else if (imc >= 35 && imc < 40) {
+    print('IMC ${imc.truncate()} Obesidade Grau 2');
+  } else {
+    print('IMC ${imc.truncate()} Obesidade Grau 3');
+  }
 }
