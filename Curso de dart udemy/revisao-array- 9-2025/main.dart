@@ -39,6 +39,7 @@ void main() {
   print(arrayDinamico);
   print(arrayDinamico.length);
   arrayDinamico.clear();
+  // ignore: unnecessary_null_comparison
   print('$arrayDinamico == null: ${arrayDinamico == null}');
   print('$arrayDinamico == empty: ${arrayDinamico.isEmpty}');
   arrayDinamico.length = 1;
