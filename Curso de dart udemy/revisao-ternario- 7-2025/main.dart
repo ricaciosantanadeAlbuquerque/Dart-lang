@@ -14,6 +14,7 @@ void main() {
 
   int nota = 70;
 
+  // ignore: unused_local_variable
   String resultado = (nota < 40)
       ? 'Reprovado'
       : (nota < 70)

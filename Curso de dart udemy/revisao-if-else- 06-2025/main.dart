@@ -50,6 +50,7 @@ void main(List<String> args) {
   print('ParseInt: $numeroInt, ParseDouble: $numeroDouble');
   // ignore: unnecessary_type_check
   print(
+      // ignore: unnecessary_type_check
       'ParseString: ${numeroDouble.toString() is String}'); // is é uma validação retorna true ou false
 
   double peso = 65;
