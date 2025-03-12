@@ -5,7 +5,7 @@ void main() {
   print(somaValores(40, 50));
   print(calcularAreaCirculo(12));
   print(exibirDados2('RIcacio', peso: 68, altura: 1.72));
-  exibirDados1('Lucas',68,1.80);
+  exibirDados1('Lucas', 68, 1.80);
 }
 
 converterKMpramilha(dynamic array) {
@@ -28,4 +28,11 @@ void exibirDados1(String nome, [int peso = 0, double altura = 0]) {
 
 String exibirDados2(String nome, {int peso = 0, double? altura}) {
   return 'Nome: $nome peso:$peso altura: ${altura ?? 'Não informado !'}';
+}
+
+void funcoesAnonimas() {
+  var variavelAnonima = () => print('variavel anônima!');
+  var variavelAnonimaComparametro = (String texto) => print('Variavel Anonima $texto');
+  variavelAnonima();
+  variavelAnonimaComparametro('Força');
 }
