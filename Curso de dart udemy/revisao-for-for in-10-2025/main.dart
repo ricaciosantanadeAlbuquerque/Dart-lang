@@ -44,4 +44,33 @@ void main(List<String> rags) {
   for (var element in frutas) {
     print('forin: $element');
   }
+
+  testeLaco();
+  test2();
+}
+
+void testeLaco() {
+  for (var i = 0; i < 2; i++) {
+    for (int j = i; j < 2; j++) {
+      for (num k = j; k < 2; k++) {
+        print('i: $i j: $j k: $k');
+      }
+    }
+  }
+}
+
+void test2() {
+  loopExterno:
+  for (var i = 0; i < 3; i++) {
+    // i = 3
+    print('LoopExterno: i: $i');
+    loopInterno:
+    for (var j = 0; j <= 3; j++) {
+      print('loopInterno: i: $i j: $j');
+      if (j > 2) break;
+      if (i == 1) break loopInterno;
+      if (i == 2) break loopExterno;
+      print('loopCompleto');
+    }
+  }
 }
