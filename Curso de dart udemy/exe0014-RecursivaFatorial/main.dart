@@ -5,7 +5,7 @@ void main(List<String> args) {
   int numero = int.parse(stdin.readLineSync()!);
 
   stdout.write(
-      'O fatorial de $numero é ${numero >= 30 ? fatorialGande(numero) : fatorial(numero)}');
+      'O fatorial de $numero é ${numero >= 26 ? fatorialGande(numero) : fatorial(numero)}');
 }
 
 /**
