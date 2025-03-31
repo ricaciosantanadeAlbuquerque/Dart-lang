@@ -15,7 +15,7 @@ void main() {
 
   if (frase != null && frase.isNotEmpty) {
     Map<String, int> resultado = contadorVogaisConsoantesEspacos(frase: frase);
-    print('\n Número de vogais ${resultado['voagis']}');
+    print('\n Número de vogais ${resultado['vogais']}');
     print('\n Número de consoantes ${resultado['consoantes']}');
     print('\n Número de espaços ${resultado['espacos']}');
   } else {
