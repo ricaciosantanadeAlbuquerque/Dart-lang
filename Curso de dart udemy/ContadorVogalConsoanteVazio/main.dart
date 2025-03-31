@@ -14,20 +14,23 @@ void main() {
   String? frase = stdin.readLineSync();
 
   if (frase != null && frase.isNotEmpty) {
-    print(contadorVogaisConsoantesvazio(frase: frase));
+    Map<String, int> resultado = contadorVogaisConsoantesEspacos(frase: frase);
+    print('\n Número de vogais ${resultado['voagis']}');
+    print('\n Número de consoantes ${resultado['consoantes']}');
+    print('\n Número de espaços ${resultado['espacos']}');
   } else {
     print('ERRO! Digite valores válidos');
   }
 }
 
-Map<String, int> contadorVogaisConsoantesvazio({required String frase}) {
+Map<String, int> contadorVogaisConsoantesEspacos({required String frase}) {
   // constantes
   const String vogais = 'aeiouAEIOU';
   const String consantes = 'bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ';
 
   // contadores
   int contadorVogais = 0;
-  int contadorConsoante = 0;
+  int contadorConsoantes = 0;
   int contadorVazio = 0;
 
   for (var i in frase.split('')) {
@@ -36,13 +39,13 @@ Map<String, int> contadorVogaisConsoantesvazio({required String frase}) {
     } else if (vogais.contains(i)) {
       contadorVogais++;
     } else if (consantes.contains(i)) {
-      contadorConsoante++;
+      contadorConsoantes++;
     }
   }
 
   return {
     'vogais': contadorVogais,
-    'vazio': contadorVazio,
-    'consoante': contadorConsoante,
+    'espacos': contadorVazio,
+    'consoantes': contadorConsoantes,
   };
 }
