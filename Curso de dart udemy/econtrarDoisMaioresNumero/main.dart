@@ -76,6 +76,6 @@ void main() {
     }
   }
 
-  print('O maior valor $maior');
+  print('O maior valor $maior');  
   print('O segundo maior valor $segundoMaior');
 }
