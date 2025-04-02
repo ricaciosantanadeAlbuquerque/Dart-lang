@@ -1,4 +1,7 @@
 /**
+ * Uma frase palíndroma é uma sequência de caracteres que pode ser lida da mesma forma 
+ * da esquerda para a direita e da direita para a esquerda, ignorando espaços, acentos e pontuação.
+ * 
  * Implemente uma função que verifica se uma palavra ou frase é um palíndromo (exemplo: "A base do teto desaba").
  */
 
