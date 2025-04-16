@@ -22,7 +22,7 @@ class ContaBancaria {
   bool sacar({required double valor}) {
     if (!valor.isNegative && valor > 0) {
       if (this._saldo >= valor) {// se tiver em conta
-        this._setSaldo = this.saldo - valor;
+        this._setSaldo = (this.saldo - valor);
         return true;
       } else {
         return false;
