@@ -39,4 +39,4 @@ void main() {
    */
 
   print('A soma total dos valores no estoque é de [${somaTotal}]');
-}
+} 
