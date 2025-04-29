@@ -15,11 +15,11 @@ void main() {
     'Arroz': 450,
     'Lula': 50,
     'Polvo': 40,
-    'Carne de sol': 75,
+    'Carne de Sol': 75,
     'Sabonete': 4,
-    'Pasta de dente': 4,
+    'Pasta de Dente': 4,
     'Lampada': 3,
-    'Água sanitária': 2,
+    'Água Sanitária': 2,
   };
 
   // Exiba: Todos os produtos com menos de 5 unidades.
