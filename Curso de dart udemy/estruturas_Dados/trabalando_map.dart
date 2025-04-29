@@ -25,7 +25,7 @@ void main() {
   // Exiba: Todos os produtos com menos de 5 unidades.
   estoque.forEach((key, value) {
     if (value < 5) {
-      print('Produto:$key, Qtd:$value');
+      print('Produto :$key, Qtd :$value');
     }
   });
 
