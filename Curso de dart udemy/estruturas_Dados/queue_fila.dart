@@ -1,32 +1,42 @@
+/**
+ *   Crie uma Queue<String> para simular uma fila de atendimento.
+ *   Adicione 5 pessoas na fila.
+ *   Remova a primeira pessoa e exiba o próximo a ser atendido.
+ *   Exiba o tamanho da fila antes e depois do atendimento.
+ */
 import 'dart:collection';
 import 'dart:io';
 
-/**
- * Crie uma Queue<String> para simular uma fila de atendimento.
-
-Adicione 5 pessoas na fila.
-
-Remova a primeira pessoa e exiba o próximo a ser atendido.
-
-Exiba o tamanho da fila antes e depois do atendimento
- */
 void main() {
-  Queue<String> fila = Queue();
+  Queue<String> fila =  Queue();
 
+  //Adicione 5 pessoas na fila.
   for (var i = 0; i < 5; i++) {
     print('Digite seu nome');
     String? nome = stdin.readLineSync();
-    // Adicione 5 pessoas na fila.
+
     if (nome != null && nome.isNotEmpty) {
       fila.add(nome);
     }
   }
 
-  print('Fila com tamanho de ${fila.length} integrantes ${fila}');
+  print('Fila antes do atendimento\n');
+  print('Quantidade de pessoas em espera na fila: ${fila.length}');
+  print('Fila:$fila\n');
 
-  // Remova a primeira pessoa e exiba o próximo a ser atendido.
-  fila.removeFirst();
+  print('Realizando atendimento\n');
+  String atendimento = fila.removeFirst();
+  print('Cliente atendido $atendimento \n');
 
-  print('Fila com tamanho de ${fila.length} integrantes ${fila}');
-  print('Tipo de estrutura de dados ${fila.runtimeType}');
+  print('Fila após o primeiro atendimento');
+  print('Quantidade de pessoas em espera na fila: ${fila.length}');
+  print('Fila:$fila\n');
+
+  if (fila.isNotEmpty) {
+    print('Próximo a ser atendido  ${fila.first}');
+  } else {
+    print('nenhuma pessoa para ser atendida.');
+  }
+
+  print('Tipo de estrutura de dados. ${fila.runtimeType}');
 }
