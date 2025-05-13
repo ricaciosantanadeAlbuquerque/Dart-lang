@@ -32,21 +32,21 @@ void main(List<String> args) {
         int numero2 = int.parse(valor2);
 
         if (numero1.isNegative || numero2.isNegative) {
-          throw NumeroNegativoException(valor1,valor2);
+          throw NumeroNegativoException(valor1, valor2);
         }
 
         int result = numero1 ~/ numero2;
 
         print('O resultado da divisão é $result\n');
-
       } on FormatException {
-        print('ERRO ! o valor $valor1 e $valor2 não são valores numéricos');
+        print('ERRO ! o valor $valor1 e $valor2 não são va lores numéricos');
       } on NumeroNegativoException catch (e) {
         print('ERRO !  $e');
       } on UnsupportedError {
         print('Não é possível divisão por zero');
-      } catch (e) {
+      } catch (e, s) {
         print('ERRO inesperado. $e');
+        print('Stack Trace: $s');
       }
     } else {
       print('ERRO ! Digite valores válidos\n');
