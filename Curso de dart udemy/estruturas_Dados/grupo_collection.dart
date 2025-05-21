@@ -1,5 +1,5 @@
 import 'dart:collection';
-import 'dart:math';
+
 
 void main(List<String> args) {
   List<int> listaNumero = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -176,6 +176,7 @@ void main(List<String> args) {
 
   List<int> num1 = [100, 101, 102, 103, 104, 105, 106, 107, 108, 109];
 
+  // ignore: unused_local_variable
   final mapa = num1.asMap(); // converte  uma lista em Map<>
 
   // filtrando os dados maiores que 105
