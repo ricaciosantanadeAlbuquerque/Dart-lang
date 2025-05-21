@@ -30,8 +30,8 @@ void converterEdividir(String numero1, String numero2) {
     print('ERRO !!! $numero1 e $numero2 não são valores numéricos');
   } on UnsupportedError {
     print('Não é possível dividir por zero');
-  } catch (e,s) {
+  } catch (e) {
     print('Excecao:$e');
-    print('Stack Trace $s');
+  
   }
 }
