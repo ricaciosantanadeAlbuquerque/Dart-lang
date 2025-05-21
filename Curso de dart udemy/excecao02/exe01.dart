@@ -17,7 +17,7 @@ Use catch (e) para tratar qualquer outro erro genérico
 Ao final, imprima o resultado ou a mensagem de erro
  */
 void main() {
-  converterEdividir('12', '0');
+  converterEdividir('pp', 'pp');
 }
 
 void converterEdividir(String numero1, String numero2) {
@@ -30,7 +30,8 @@ void converterEdividir(String numero1, String numero2) {
     print('ERRO !!! $numero1 e $numero2 não são valores numéricos');
   } on UnsupportedError {
     print('Não é possível dividir por zero');
-  } catch (e) {
+  } catch (e,s) {
     print('Excecao:$e');
+    print('Stack Trace $s');
   }
 }
