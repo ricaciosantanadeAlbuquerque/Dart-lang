@@ -23,7 +23,7 @@ void main() async {
 
   // ===========================================================================
 
-  leituraTexto('exerciciosFuture/poema.txt')!
+  leituraTexto('exerciciosFuture/poema.txt')
       .then((value) {
         print(value);
       })
