@@ -9,11 +9,11 @@ void model() {
 
   final contador = Contador(termino: 10, erro: 7);
   final stream = contador.stream.asBroadcastStream();
-  
-// inscrito 01
-  stream.listen(
+
+  // inscrito 01
+  final inscrito01 = stream.listen(
     (onData) {
-      print('valor $onData');
+      print('inscrito1: $onData');
       lista.add(onData);
     },
     onDone: () {
@@ -23,17 +23,27 @@ void model() {
     onError: (onError) {
       print(onError);
     },
+    cancelOnError: true,
   );
 
-// segunda escuta ==========================================================
-  stream
-      .toList()
-      .then((value) {
-        print(value);
-      })
-      .catchError((onError) {
-        print(onError);
-      });
+  // segunda escuta ==========================================================
+  var par = (e) => e % 2 == 0;
+  var texto = (e) => e.toString().padLeft(2, '0');
+
+  // ignore: unused_local_variable
+  var inscrito02 = stream.where(par)
+    .map(texto).listen(
+      (onData) {
+        print('Inscrito2: $onData');
+      },
+      onError: (error) => print('$error'),
+      onDone: () => print('Finalizado'),
+      cancelOnError: false,
+    );
+
+  for (int i = 1; i < 10; i++) {
+    if (i == 1) inscrito01.pause();
+  }
 }
 
 class Contador {
