@@ -33,6 +33,7 @@ void main() async {
   print(await list);
 
   teste();
+  relogioDigital();
 }
 
 void teste() {
@@ -44,5 +45,11 @@ void teste() {
     print(onData);
   });
 
-  Future.delayed(Duration(seconds: 5), () => subscription.cancel());
+  Future.delayed(Duration(seconds: 7), () => subscription.cancel());
+}
+
+void relogioDigital() {
+  Stream.periodic(Duration(seconds: 1), (_) => DateTime.now()).listen((onData) {
+    print('Agora: ${onData.hour}:${onData.minute}:${onData.second}');
+  });
 }
