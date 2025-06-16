@@ -1,3 +1,5 @@
+import 'dart:async';
+
 void main() async {
   var stream = Stream.periodic(
     Duration(seconds: 1),
@@ -15,7 +17,6 @@ void main() async {
 
   // =================
 
-  
   /**
    * // ==================
   stream.forEach((e) {
@@ -30,4 +31,18 @@ void main() async {
    */
   var list = stream.toList();
   print(await list);
+
+  teste();
+}
+
+void teste() {
+  final stream = Stream.periodic(Duration(seconds: 1), (count) {
+    return 'Evento número: $count';
+  });
+
+  final StreamSubscription<String> subscription = stream.listen((onData) {
+    print(onData);
+  });
+
+  Future.delayed(Duration(seconds: 5), () => subscription.cancel());
 }
