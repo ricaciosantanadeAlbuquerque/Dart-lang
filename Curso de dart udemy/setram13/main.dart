@@ -29,7 +29,7 @@ void main() async {
 
   // testStreamPeriodic();
   // streamFormadireta();
-  relogio();
+  relogio(); 
 }
 
 void testStreamPeriodic() {
