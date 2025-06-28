@@ -5,6 +5,7 @@ void main() async {
 
   /// inscrito 01
 
+  // ignore: unused_local_variable
   final StreamSubscription<dynamic> inscrito01 = streamController.stream.listen(
     (onData) {
       print('inscrito01:$onData');
@@ -13,6 +14,7 @@ void main() async {
     onDone: () => print('Stream Finalizada!!'),
   );
 
+  // ignore: unused_local_variable
   final StreamSubscription<dynamic> inscrito02 = streamController.stream.listen(
     (onData) {
       print('Inscrito02:$onData');
