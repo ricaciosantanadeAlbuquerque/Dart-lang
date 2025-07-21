@@ -47,6 +47,7 @@ void main(List<String> argument) {
   String nome1 = 'ricacio';
   int idade = 29;
   double altura = 1.72;
+  // ignore: unused_local_variable
   bool valor = true;
   dynamic dados = 10;
   print("$nome1 tem $idade e possui ${altura}"); // $ para variáveis e ${} para operações mais complexas
