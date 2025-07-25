@@ -12,6 +12,7 @@ expect(..., allOf([isA<bool>(), equals(true)]))
  */
 
 bool validarEmail(String email) {
+  assert(email.contains('@'),'ERRO! nesse email. falta @');
   final regex = RegExp(r'^[^@]+@[^@]+\.[^@]+$');
   return regex.hasMatch(email);
 }
