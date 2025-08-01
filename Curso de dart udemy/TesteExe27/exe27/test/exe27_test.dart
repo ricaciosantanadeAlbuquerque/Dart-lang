@@ -2,7 +2,6 @@ import 'package:exe27/exe27.dart';
 import 'package:test/test.dart';
 
 void main() {
-  late List<int> listaNumeros;
 
   group('Todos os Test', () {
     group('Test com inteiros', () {
