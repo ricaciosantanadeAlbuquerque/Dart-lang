@@ -6,12 +6,12 @@ void main() {
   setUp(() => nomes = []); // inicializando
   tearDown(() => nomes.clear()); // limpando os Dados
 
-  test('Adiciona nome', () {
+  test('Adiciona nome', () { // test 1
     nomes.add('João');
     expect(nomes.length, greaterThan(0));
   });
 
-  test('Começa vazio novamente', () {
+  test('Começa vazio novamente', () { // test
     expect(nomes, isEmpty);
   });
 }
