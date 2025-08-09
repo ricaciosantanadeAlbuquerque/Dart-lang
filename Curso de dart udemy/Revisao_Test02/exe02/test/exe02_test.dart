@@ -1,4 +1,3 @@
-import 'package:exe02/exe02.dart';
 import 'package:test/test.dart';
 
 void main() {
