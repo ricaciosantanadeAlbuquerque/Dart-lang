@@ -30,6 +30,5 @@ void main() {
  *  greaterThan(x) maior que x
  *  greaterThan(x) maior que x 
  *  lessThan(x)
- * 
  */
 
