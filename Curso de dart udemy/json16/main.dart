@@ -124,15 +124,15 @@ void convertJsonObject() {
 
   Pessoa pessoa = Pessoa.fromJson(fromJson);
 
-  print('Bens: ${pessoa.bens?.imoveis![0].endereco}');
+  print('Bens: ${pessoa.bens?.imoveis[0].endereco}');
 
   print(
-    'Nome: ${pessoa.nome}, Descrição da multa ${pessoa.bens?.veiculos?[0].multas?.elementAt(0).descrisao}',
+    'Nome: ${pessoa.nome}, Descrição da multa ${pessoa.bens?.veiculos[0].multas?.elementAt(0).descrisao}',
   );
 
   print('');
 
-  pessoa.bens?.imoveis?.forEach((e) {
+  pessoa.bens?.imoveis.forEach((e) {
     print(
       'Tipo: ${e.tipo}, endereço: ${e.endereco}, contas: ${e.contas?.elementAt(0).tipo} e valor ${e.contas?.elementAt(0).valor}',
     );
