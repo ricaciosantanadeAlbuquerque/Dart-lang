@@ -1,6 +1,5 @@
 import 'dart:convert';
 
-import '../jsonConstrutorLista/main.dart';
 
 void main() {
   //conversaoDireta();
