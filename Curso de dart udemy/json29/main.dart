@@ -41,7 +41,7 @@ void conversaoObjeto() {
 }
 
 class ListPessoa {
-  final List<Pessoa> listPessoa;
+   List<Pessoa> listPessoa;
 
   ListPessoa({required this.listPessoa});
 
@@ -57,9 +57,9 @@ class ListPessoa {
 }
 
 class Pessoa {
-  final String nome;
-  final int idade;
-  final String email;
+   String nome;
+   int idade;
+   String email;
 
   Pessoa({required this.nome, required this.idade, required this.email});
 
