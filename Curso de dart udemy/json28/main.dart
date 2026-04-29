@@ -115,9 +115,16 @@ void main(List<String> args) {
   // print(parsedJson);
 
   Pessoa pessoa = new Pessoa.fromJson(map: parsedJson);
-  print('Descrição da multa, ${pessoa.bens.veiculos[0].multas[0].descrisao}');
+  //print('Descrição da multa, ${pessoa.bens.veiculos[0].multas[0].descrisao}');
   print('\n Nome do Filho, ${pessoa.filhos.elementAt(0).nome}');
   print('Imóvel: ${pessoa.bens.imoveis.elementAt(0).tipo}');
+
+  //? ENCODE
+
+  Map<String,dynamic> map = pessoa.toJson();
+  String toJson = jsonEncode(map);
+
+  print('toJson: ${toJson}');
 }
 
 class Pessoa {
@@ -157,10 +164,10 @@ class Pessoa {
     return {
       'nome': nome,
       'idade': idade,
-      'parentes': parentes,
-      'conjuge': conjuge,
-      'filhos': filhos,
-      'bens': bens,
+      'parentes': parentes.toJson(),
+      'conjuge': conjuge.toJson(),
+      'filhos': filhos.map((e) => e.toJson()).toList(),
+      'bens': bens.toJson(),
     };
   }
 }
@@ -196,7 +203,11 @@ class Conjuge {
   }
 
   Map<String, dynamic> toJson() {
-    return {'nome': nome, 'idade': idade, 'parentes': parentes};
+    return {
+      'nome': nome,
+      'idade': idade,
+      'parentes': parentes.toJson()
+      };
   }
 }
 
@@ -216,7 +227,11 @@ class Filhos {
   }
 
   toJson() {
-    return {'nome': nome, 'idade': idade, 'vacinas': vacinas};
+    return {
+      'nome': nome, 
+      'idade': idade, 
+      'vacinas': vacinas
+      };
   }
 }
 
@@ -238,7 +253,10 @@ class Bens {
   }
 
   Map<String, dynamic> toJson() {
-    return {'veiculos': veiculos, 'imoveis': imoveis};
+    return {
+      'veiculos': veiculos.map((e) => e.toJson()).toList(),
+       'imoveis': imoveis.map((e) => e.toJson()).toList()
+       };
   }
 }
 
@@ -270,8 +288,8 @@ class Veiculos {
     return {
       'marca': marca,
       'modelo': modelo,
-      'caracteristicas': caracteristicas,
-      'multas': multas,
+      'caracteristicas': caracteristicas.toJson(),
+      'multas': multas.map((e) => e.toJson()).toList(),
     };
   }
 }
@@ -287,7 +305,10 @@ class Caracteristicas {
   }
 
   Map<String, dynamic> toJson() {
-    return {'tipo': tipo, 'passageiros': passageiros};
+    return {
+      'tipo': tipo, 
+      'passageiros': passageiros
+      };
   }
 }
 
@@ -329,7 +350,10 @@ class Imoveis {
   }
 
   Map<String, dynamic> toJson() {
-    return {'tipo': tipo, 'endereco': endereco, 'contas': contas};
+    return {
+      'tipo': tipo,
+       'endereco': endereco,
+        'contas': contas.map((e) => e.toJson()).toList()};
   }
 }
 
@@ -343,7 +367,7 @@ class Contas {
     return Contas(tipo: map['tipo'], valor: map['valor']);
   }
 
-  Map<String, dynamic> toJSon() {
+  Map<String, dynamic> toJson() {
     return {'tipo': tipo, 'valor': valor};
   }
 }
