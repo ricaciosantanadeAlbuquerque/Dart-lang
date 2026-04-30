@@ -111,9 +111,11 @@ void main() {
 ''';
   //? DECODE
 
-  Map<String, dynamic> parsedJson = jsonDecode(jsonData);
+  Map<String,dynamic> parsedJson = jsonDecode(jsonData);
 
   // print('parsedJson ${parsedJson}');
+
+  //? Serialização
 
   Pessoa pessoa = Pessoa.fromJson(map: parsedJson);
 
@@ -121,16 +123,23 @@ void main() {
   pessoa.filhos.forEach((e) {
     print('${e.nome}');
   });
+
+  //? ENCODE
+
+  Map<String, dynamic> map = pessoa.toJson();
+  String toJson = jsonEncode(map);
+
+  print(' toJson $toJson');
 }
 
 class Pessoa {
-  final String nome;
-  final int idade;
-  final Parentes parentes;
-  final List<String> tarefas;
-  final Conjuge conjuge;
-  final List<Filhos> filhos;
-  final Bens bens;
+  String nome;
+  int idade;
+  Parentes parentes;
+  List<String> tarefas;
+  Conjuge conjuge;
+  List<Filhos> filhos;
+  Bens bens;
 
   Pessoa({
     required this.nome,
@@ -160,18 +169,18 @@ class Pessoa {
     return {
       'nome': nome,
       'idade': idade,
-      'parentes': parentes,
+      'parentes': parentes.toJson(),
       'tarefas': tarefas,
-      'conjuge': conjuge,
-      'filhos': filhos,
-      'bens': bens,
+      'conjuge': conjuge.toJson(),
+      'filhos': filhos.map((e) => e.toJson()).toList(),
+      'bens': bens.toJson(),
     };
   }
 }
 
 class Parentes {
-  final String mae;
-  final String pai;
+  String mae;
+  String pai;
 
   Parentes({required this.mae, required this.pai});
 
@@ -185,9 +194,9 @@ class Parentes {
 }
 
 class Conjuge {
-  final String nome;
-  final int idade;
-  final Parentes parentes;
+  String nome;
+  int idade;
+  Parentes parentes;
 
   Conjuge({required this.nome, required this.idade, required this.parentes});
 
@@ -200,14 +209,18 @@ class Conjuge {
   }
 
   Map<String, dynamic> toJson() {
-    return {'nome': nome, 'idade': idade, 'parentes': parentes};
+    return {
+      'nome': nome,
+      'idade': idade, 
+      'parentes': parentes.toJson()
+      };
   }
 }
 
 class Filhos {
-  final String nome;
-  final int idade;
-  final List<String> vacinas;
+  String nome;
+  int idade;
+  List<String> vacinas;
 
   Filhos({required this.nome, required this.idade, required this.vacinas});
 
@@ -225,8 +238,8 @@ class Filhos {
 }
 
 class Bens {
-  final List<Veiculos> veiculos;
-  final List<Imoveis> imoveis;
+  List<Veiculos> veiculos;
+  List<Imoveis> imoveis;
 
   Bens({required this.veiculos, required this.imoveis});
 
@@ -242,15 +255,18 @@ class Bens {
   }
 
   Map<String, dynamic> toJson() {
-    return {'veiculos': veiculos, 'imoveis': imoveis};
+    return {
+      'veiculos': veiculos.map((e) => e.toJson()).toList(),
+      'imoveis': imoveis.map((e) => e.toJson()).toList(),
+    };
   }
 }
 
 class Veiculos {
-  final String marca;
-  final String modelo;
-  final Caracteristicas caracteristicas;
-  final List<Multas> multas;
+  String marca;
+  String modelo;
+  Caracteristicas caracteristicas;
+  List<Multas> multas;
 
   Veiculos({
     required this.marca,
@@ -274,15 +290,15 @@ class Veiculos {
     return {
       'marca': marca,
       'modelo': modelo,
-      'multas': multas,
-      'caracteristicas': caracteristicas,
+      'multas': multas.map((e) => e.toJson()).toList(),
+      'caracteristicas': caracteristicas.toJson(),
     };
   }
 }
 
 class Caracteristicas {
-  final String tipo;
-  final int passageiros;
+  String tipo;
+  int passageiros;
 
   Caracteristicas({required this.tipo, required this.passageiros});
 
@@ -296,9 +312,9 @@ class Caracteristicas {
 }
 
 class Multas {
-  final String descrisao;
-  final String tipo;
-  final int pontos;
+  String descrisao;
+  String tipo;
+  int pontos;
 
   Multas({required this.descrisao, required this.tipo, required this.pontos});
 
@@ -316,9 +332,9 @@ class Multas {
 }
 
 class Imoveis {
-  final String tipo;
-  final String endereco;
-  final List<Contas> contas;
+  String tipo;
+  String endereco;
+  List<Contas> contas;
 
   Imoveis({required this.tipo, required this.endereco, required this.contas});
 
@@ -333,13 +349,17 @@ class Imoveis {
   }
 
   Map<String, dynamic> toJson() {
-    return {'tipo': tipo, 'endereco': endereco, 'contas': contas};
+    return {
+      'tipo': tipo,
+      'endereco': endereco,
+      'contas': contas.map((e) => e.toJson()).toList(),
+    };
   }
 }
 
 class Contas {
-  final String tipo;
-  final int valor;
+  String tipo;
+  int valor;
 
   Contas({required this.tipo, required this.valor});
 
