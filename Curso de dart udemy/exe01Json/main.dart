@@ -1,3 +1,9 @@
+/**
+Criar classe Usuario
+Fazer fromJson e toJson
+Imprimir nome e idade
+ */
+
 import 'dart:convert';
 
 void main() {
