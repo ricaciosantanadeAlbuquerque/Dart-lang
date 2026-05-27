@@ -2,8 +2,8 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 
-void main() {
-  consumoApiCep(); // chamada a função
+Future<void> main()async{
+  await consumoApiCep(); // chamada a função
 }
 
 Future<void> consumoApiCep() async {
