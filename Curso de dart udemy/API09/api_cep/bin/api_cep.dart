@@ -3,9 +3,7 @@ import 'dart:io';
 import 'package:http/http.dart' as http;
 import 'dart:convert' as convert;
 
-Future<void> main(List<String> args) async {
-  await cepApi(cep: entradaCep());
-}
+Future<void> main(List<String> args) async => await cepApi(cep: entradaCep());
 
 int entradaCep() {
   late int resultCep;
@@ -41,7 +39,7 @@ Future<void> cepApi({required int cep}) async {
 
       Cep cep = Cep.fromJson(map: jsonResponse);
 
-      print('Bairro: ${cep.bairro}, logradouro: ${cep.logradouro}');
+      print(cep.toString());
 
       //? ENCODE
       Map<String, dynamic> map = cep.toJson();
@@ -120,5 +118,24 @@ class Cep {
       'ddd': ddd,
       'siafi': siafi,
     };
+  }
+
+  @override
+  String toString(){
+    return '''
+      CEP:$cep, 
+      Logradouro:$logradouro,
+      Complemento:$complemento,
+      Unidade:$unidade,
+      Bairro:$bairro,
+      Localidade:$localidade,
+      Uf:$uf,
+      Estado:$estado,
+      Região:$regiao,
+      Ibge:$ibge,
+      Gia:$gia,
+      DDD:$ddd,
+      Siafi:$siafi
+      ''';
   }
 }
