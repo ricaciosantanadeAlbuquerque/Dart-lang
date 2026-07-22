@@ -13,7 +13,7 @@ String entradaDados() {
   print('Por favor digite seu CEP');
   String? entradaDado = stdin.readLineSync();
 
-  if (entradaDado != null && entradaDado.isNotEmpty) {
+  if (entradaDado != null && entradaDado.trim().isNotEmpty) {
     if (entradaDado.length == 8) {
       cep = entradaDado;
     } else {
