@@ -65,7 +65,7 @@ Future<void> buscarCep(String cep) async {
 
   //? Encode
 
-  print(jsonEncode(endereco));
+  print(jsonEncode(endereco.toJson()));
 }
 
 class Cep {
@@ -115,6 +115,24 @@ class Cep {
       ddd: map['ddd'] ?? '',
       siafi: map['siafi'] ?? '',
     );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+   'cep': cep,
+  'logradouro': logradouro,
+  'complemento': complemento,
+  'unidade': unidade,
+  'bairro': bairro,
+  'localidade': localidade,
+  'uf': uf,
+  'estado': estado,
+  'regiao': regiao,
+  'ibge': ibge,
+  'gia': gia,
+  'ddd':  ddd,
+  'siaf': siafi,
+    };
   }
 
   @override
