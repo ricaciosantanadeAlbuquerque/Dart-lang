@@ -47,7 +47,7 @@ void main() {
 
 /// parâmetro nomeado default
 dynamic adicionarAluno(
-    [String key = '---', List<String>? nome = null, var mapa]) {
+    [String key = '---', List<String>? nome = null, dynamic mapa]) {
   
 
   if (mapa.containsKey(key)) {
