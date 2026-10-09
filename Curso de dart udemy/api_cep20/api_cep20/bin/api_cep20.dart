@@ -50,7 +50,7 @@ Future<void> cep({required String cep}) async {
 
       //? Serialização
       Cep cep = Cep.fromJson(parsedJson);
-      print('Dados: ${cep}');
+      print('Dados: $cep');
 
       //? ENCODE
       String toJson = jsonEncode(cep.toJson());
