@@ -39,7 +39,7 @@ String entradaCep() {
 }
 
 Future<void> cep({required String cep}) async {
-  final Uri url = Uri.https('viacep.com.br', '/ws/01001000/json/');
+  final Uri url = Uri.https('viacep.com.br', '/ws/$cep/json/');
 
   try {
     var response = await http.get(url);
